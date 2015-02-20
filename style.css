@@ -416,7 +416,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #fff;
 	text-decoration: none;
 }
 a:hover {
@@ -1743,3 +1743,6 @@ Index and Archive
 
 .continue-reading i { margin-left: .5em; }
 
+.index-box {
+    color: #fff;
+}
