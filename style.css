@@ -416,7 +416,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: white;
+	color: #fff;
 	text-decoration: none;
 }
 a:hover {
@@ -1744,5 +1744,5 @@ Index and Archive
 .continue-reading i { margin-left: .5em; }
 
 .index-box {
-    color: white;
+    color: #fff;
 }
