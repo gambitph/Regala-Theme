@@ -550,7 +550,7 @@ a:active {
     content: '\f406';
 }
 .main-navigation.toggled .nav-menu {
-		z-index: 2;
+		z-index: 99999 !important;
 		border-top: 1px solid;
 		border-top-color: #fff;
 		border-top-color: hsla(0, 0%, 100%, .5);
