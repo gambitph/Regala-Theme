@@ -439,15 +439,15 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    top: 40px;
-    left: 40px;
+    z-index: 2;
+    top: 0;
+    left: 0;
     position: absolute;
-    float: left;
-    clear: both;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     background: #313131;
     background: hsl(0, 0%, 19%);
+    right: 0;
 }
 
 .main-navigation ul {
@@ -534,18 +534,30 @@ a:active {
 	display: block;
     text-decoration: none;
     color: white;
+    top: 40px;
+    left: 40px;
 }
 
+.menu {
+    width: 100%;
+}
 .genericon-menu:before {
     color: white;
     font-size: 25px;
 }
 
+.main-navigation.toggled .genericon.genericon-menu:before {
+    content: '\f406';
+}
 .main-navigation.toggled .nav-menu {
-		display: block;
+		z-index: 2;
 		border-top: 1px solid;
 		border-top-color: #fff;
 		border-top-color: hsla(0, 0%, 100%, .5);
+		position: relative;
+		display: inline-block;
+		margin-left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.main-navigation ul {
