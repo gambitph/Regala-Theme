@@ -1,0 +1,127 @@
+@media (min-width: 955px) and (max-width: 1000px) {
+	body.has-sidebar {
+	    article {
+	        .sticky-post, .entry-icon {
+	            transform: translateX(0px);
+	            width: 50px;
+	            line-height: 50px;
+	            &:after {
+	                display: none;
+	            }
+	        }
+	        .sticky-post + .entry-icon {
+	            transform: translateY(100%);
+	        }
+	    }
+	
+
+		.navigation {
+			.nav-previous, .nav-next {
+				a {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 620px) {
+    article {
+        .sticky-post, .entry-icon {
+            transform: translateX(0px);
+            width: 50px;
+            line-height: 50px;
+            &:after {
+                display: none;
+            }
+        }
+        .sticky-post + .entry-icon {
+            transform: translateY(100%);
+        }
+    }
+	
+
+	.navigation {
+		.nav-previous, .nav-next {
+			a {
+				font-size: 22px;
+			}
+		}
+	}
+	
+}
+
+@media (min-width: 955px) {
+	body.has-sidebar {
+		#primary {
+			float: left;
+			width: calc(100% - 350px);
+			margin-right: 0;
+		}
+		#secondary {
+			position: relative;
+			float: left;
+			margin-left: 30px;
+		}
+	}
+}
+
+@media (min-width: 620px) and (max-width: 955px) {
+	#content {
+		background: transparent;
+	}
+	#primary {
+		margin: 0 30px;
+	}
+}
+
+@media (max-width: 1000px) {
+	body.no-sidebar {
+		#primary {
+			max-width: 100%;
+			margin: 0 30px;
+		}
+	}
+}
+
+@media (max-width: 621px) {
+	#content {
+		background: #fff;
+	}
+	body.no-sidebar {
+		#primary {
+			max-width: 100%;
+			margin: 0;
+		}
+	}
+	.navigation {
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	
+	// Better article images in mobile view
+	#content article.has-post-thumbnail {
+		padding: 50px 0;
+		> * {
+			padding: 0 50px;
+		}
+		> i, > img {
+			padding: 0;
+		}
+	}
+	body.single {
+		#content article.has-post-thumbnail {
+			.entry-header {
+				padding: 0;
+				> * {
+					padding: 0 50px;
+				}
+				> i, > img {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+
+

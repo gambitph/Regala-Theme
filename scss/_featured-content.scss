@@ -1,0 +1,109 @@
+/**
+ * Featured content of Jetpack
+ * @see inc/jetpack.php
+ * @see http://jetpack.me/support/featured-content/
+ */
+
+.featured-content {
+    margin-bottom: 50px;
+    .featured-item {
+        display: block;
+//		width: 32%;
+		width: 33.333333%;
+//		margin-right: 2%;
+        float: left;
+//        border: 1px solid #fff;
+        position: relative;
+        background: #000;
+        overflow: hidden;
+        img {
+            display: block;
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+            -ms-transition: all .4s;
+            -o-transition: all .4s;
+            transition: all .4s;
+            position: relative;
+			margin: 0 auto;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.47) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.47))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#78000000',GradientType=0 ); /* IE6-9 */
+        }
+    }
+//	&.featured-num-2 {
+//		.featured-item {
+//			width: 49%;
+//			margin-right: 2%;
+//		}
+//	}
+	.featured-item {
+        &:last-child {
+            margin-right: 0;
+        }
+	}
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-family: "Unica One";
+//        text-align: center;
+        padding: 30px 50px;
+        line-height: 1em;
+        z-index: 2;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+        span {
+            opacity: .7;
+            display: block;
+            font-size: 12px;
+            line-height: 1.5em;
+        }
+    }
+    .featured-item:hover {
+        border-color: orange;
+        img {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
+        figcaption {
+           color: orange;
+        }
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.featured-content.owl-carousel {
+    .featured-item {
+        width: auto;
+		float: none;
+//		margin: 3%;
+    }
+    &:after {
+        display: none;
+    }
+}

@@ -1,0 +1,23 @@
+/*
+ * Simple Author Box
+ */
+.saboxplugin-wrap {
+	margin-bottom: 1.5em !important;
+	* {
+		font-size: 16px;
+		line-height: 1.6em;
+	}
+	.saboxplugin-authorname a {
+		font-family: "Unica One";
+		font-size: 28px;
+		line-height: 1em;
+		margin-bottom: .5em;
+		display: block;
+	}
+}
+// Bug where author box appears in other pages
+body.archive {
+	.saboxplugin-wrap {
+		display: none;
+	}
+}

@@ -1,0 +1,153 @@
+// Essential styles
+html {
+	overflow-x: hidden;
+}
+
+
+table,
+th,
+td {
+	border: 1px solid #eaeaea;
+	border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 1.6em;
+	table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+	width: 100%;
+}
+
+
+
+blockquote, q {
+    margin: 0 -1em;
+    box-shadow: -5px 0 0 orange;
+    padding: 0 1em;
+    color: #777;
+    font-style: italic;
+	border: none;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	border-width: 0 1px 1px 0;
+	font-weight: 700;
+}
+
+td {
+	border-width: 0 1px 1px 0;
+}
+
+th, td {
+	padding: 0.4em;
+}
+dd {
+    margin-left: 0;
+}
+ul, ol {
+    margin: 0 0 1.5em 0;
+    padding-left: 0;
+}
+.site-main {
+	ul, ol {
+		padding-left: 1.9em;
+	}
+}
+pre {
+    background: #ECF0F1;
+    border-radius: 3px;
+    border: 1px solid #BDC3C7;
+}
+code, kbd, tt, var {
+    background: #ECF0F1;
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+    border: 1px solid #BDC3C7;
+	color: #333;
+	line-height: 2.5em;
+}
+.wp-caption-text {
+    text-align: left;
+    font-style: italic;
+    opacity: 0.8;
+}
+.gallery-item {
+    padding: 1.79104477%;
+}
+.genericon {
+    vertical-align: middle;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+body {
+	.comment-reply-link,
+	.comment-edit-link,
+    .btn, .btn-default, button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        color: #888;
+		border-color: #888;
+        text-shadow: none;
+        box-shadow: none;
+        background: transparent;
+        border: 1px solid;
+        line-height: 1em;
+        padding: .5em .8em;
+        vertical-align: middle;
+        border-radius: 3px;
+            
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        &:hover {
+			box-shadow: none;
+            border-color: #eee;
+            color: #333;
+        }
+    }
+}
+
+p:empty {
+	display: none;
+}
+*, *:focus, *:hover {
+	outline: none !important;
+}
+
+.format-chat {
+	p:nth-child(2n+2) {
+		background: #F2F1EF;
+		padding: .5em .8em;
+		margin: -.5em -.8em;
+		border-radius: 3px;
+		color: #646464;
+	}
+	p:nth-child(2n+1) {
+		margin: 1.5em 0;
+	}
+	p:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.more-link {
+	display: block;
+	margin: 1em 0 0;
+	.meta-nav {
+		display: none;
+	}
+}
