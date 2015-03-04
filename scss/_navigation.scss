@@ -181,3 +181,11 @@
 		display: none;
 	}
 }
+
+.main-navigation ul ul li:hover > ul {
+    left: 0;
+}
+
+.main-navigation .widget ul {
+    display: block;
+}

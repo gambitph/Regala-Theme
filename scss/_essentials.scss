@@ -151,3 +151,12 @@ p:empty {
 		display: none;
 	}
 }
+
+button:focus,
+button:active,
+button:hover,
+.main-navigation ul ul {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+}
