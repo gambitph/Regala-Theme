@@ -32,13 +32,15 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-branding -->
-
+        
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-            
+			<div class="menu">
+			    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
+			    <?php get_sidebar('main-menu'); ?>
+            </div>
 		</nav><!-- #site-navigation -->
-		
+		        
 		<?php theme1_social_menu(); ?>
 		
 		<div class="search-toggle">
