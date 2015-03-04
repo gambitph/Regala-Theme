@@ -483,7 +483,7 @@ a:active {
 
 /* Small menu */
 .menu-toggle {
-    position: absolute;
+    position: fixed;
 	width: 60px;
 	height: 60px;
 	background: #F2F1EF;
