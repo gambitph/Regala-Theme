@@ -532,6 +532,12 @@ a:active {
     opacity: 1;
 }
 
+.main-navigation.toggled {
+    bottom: 0;
+    position: fixed;
+    overflow: scroll;
+}
+
 @media screen and ( max-width: 550px ) {
     .main-navigation.toggled .nav-menu {
         margin-top: 60px;
