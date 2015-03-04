@@ -523,6 +523,15 @@ a:active {
     color: transparent;
 }
 
+.main-navigation.toggled .nav-menu a,
+.menu-toggle {
+    opacity: .8;
+}
+.main-navigation.toggled .nav-menu a:hover,
+.menu-toggle:hover {
+    opacity: 1;
+}
+
 @media screen and ( max-width: 550px ) {
     .main-navigation.toggled .nav-menu {
         margin-top: 60px;
