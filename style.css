@@ -924,6 +924,10 @@ a img {
   width: 100%;
   height: auto; }
 
+.site-header .search-toggle,
+.site-header .search-box-wrapper {
+  display: none; }
+
 .main-navigation {
   z-index: 2;
   top: 0;
@@ -1089,3 +1093,33 @@ a img {
 
 .main-navigation .widget ul {
   display: block; }
+
+.site-main .index-box {
+  position: relative; }
+
+.site-main a {
+  color: #404040;
+  text-decoration: none; }
+
+.site-main a:visited {
+  color: #404040;
+  text-decoration: none; }
+
+.site-main a:hover {
+  color: #404040;
+  text-decoration: underline; }
+
+.site-main a:visited:hover {
+  color: #404040;
+  text-decoration: underline; }
+
+.entry-title {
+  font-size: 50px; }
+
+.entry-content,
+.entry-meta {
+  font-size: 20px; }
+
+.hentry {
+  background-size: cover;
+  margin: 0; }
