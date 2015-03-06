@@ -1,4 +1,4 @@
-.site-main .index-box {
+.site-main .index-box{
     position: relative;
 }
 
@@ -21,15 +21,44 @@
 }
 
 .entry-title {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .entry-content,
 .entry-meta {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .hentry {
     background-size: cover;
     margin: 0;
+}
+
+.site-main .feat-image {
+    display: none;
+}
+
+.site-main img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and ( max-width: 600px ) {
+    .site-main article {
+        background-image: none !important;
+     }
+     .site-main .feat-image {
+         display: block;
+     }
+     .hentry {
+         width: auto !important;
+         height: auto !important;
+     }
+     .site-main .entry-title {
+         font-size: 25px;
+     }
+     .index-box .entry-content, 
+     .index-box .entry-meta {
+         font-size: 15px;
+     }
 }
