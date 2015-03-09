@@ -22,7 +22,14 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'theme1' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-	    <?php if ( get_header_image()) : ?>
+	    <?php 
+	    
+	    if ( is_single() && has_post_thumbnail() ) {
+            ?>
+            <a href="<?php echo get_permalink(); ?>" class="feat-image">
+                <img src="<?php echo $imageAttributes[0]; ?>" />
+            </a>
+        <?php } else if ( get_header_image()) : ?> 
     	    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
         	</a>

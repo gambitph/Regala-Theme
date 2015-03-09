@@ -3,10 +3,12 @@
 */
 
 jQuery(document).ready(function($) {
-  $('.hentry').height($(window).height());
-  $('.hentry').width($(window).width());
+  $('body:not(.single):not(.page) .hentry')
+    .height($(window).height())
+    .width($(window).width());
   $(window).resize(function() {
-    $('.hentry').height($(window).height());
-    $('.hentry').width($(window).width());
+    $('body:not(.single):not(.page) .hentry')
+        .height($(window).height())
+        .width($(window).width());
   });
 });
