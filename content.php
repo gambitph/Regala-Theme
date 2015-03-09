@@ -10,12 +10,19 @@ if ( has_post_thumbnail() ) {
     $imageAttributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // returns an array
     
     if ( $imageAttributes ) {
-        $articleStyle = 'style="background-image: url( ' . $imageAttributes[0] . ' )"';
+        $articleStyle = 'style="background-image: background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( ' . $imageAttributes[0] . ' )"';
+        
     }
 }
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php echo $articleStyle; ?>>
+<style>
+.site-main article.post-<?php the_ID(); ?> {
+    background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( <?php echo $imageAttributes[0]; ?> );
+    background-size: cover;
+}
+</style>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php 
     if ( has_post_thumbnail() ) {
         ?>
@@ -27,7 +34,7 @@ if ( has_post_thumbnail() ) {
     <div class='index-box'>
     
         <header class="entry-header">
-        	<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        	<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
         	<?php if ( 'post' == get_post_type() ) : ?>
         	<div class="entry-meta">

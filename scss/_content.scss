@@ -20,17 +20,22 @@
     text-decoration: underline;
 }
 
-.entry-title {
+.site-main article,
+.site-main a,
+.site-main a:visited,
+.site-main h2 {
+    color: white;
+}
+/*.entry-title {
     font-size: 45px;
 }
 
 .entry-content,
 .entry-meta {
     font-size: 18px;
-}
+}*/
 
 .hentry {
-    background-size: cover;
     margin: 0;
 }
 
@@ -54,11 +59,11 @@
          width: auto !important;
          height: auto !important;
      }
-     .site-main .entry-title {
+/*     .site-main .entry-title {
          font-size: 25px;
      }
      .index-box .entry-content, 
      .index-box .entry-meta {
          font-size: 15px;
-     }
+     }*/
 }
