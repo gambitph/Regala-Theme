@@ -896,7 +896,8 @@ button:hover,
   display: inline-block;
   float: right;
   right: 40px;
-  top: 0; }
+  top: 0;
+  z-index: 2; }
 
 .site-title {
   position: absolute;
@@ -1109,6 +1110,10 @@ body.light-footer ::-moz-placeholder {
 body.light-footer :-ms-input-placeholder {
   color: #fff; }
 
+.footer-widgets {
+  max-width: 710px;
+  width: 80%; }
+
 .main-navigation {
   z-index: 2;
   top: 0;
@@ -1275,11 +1280,22 @@ body.light-footer :-ms-input-placeholder {
 .main-navigation .widget ul {
   display: block; }
 
+.site-main .paging-navigation {
+  width: 100%;
+  background: #444;
+  margin: 0 0; }
+
+.site-main .page-numbers {
+  max-width: 710px;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 0; }
+
 .site-main .index-box {
   position: absolute;
-  width: 80%;
   bottom: 0;
-  max-width: 710px; }
+  max-width: 710px;
+  width: 80%; }
 
 .site-main a {
   color: #404040;
@@ -1337,3 +1353,16 @@ body.light-footer :-ms-input-placeholder {
 .ssingle h2,
 .single p {
   color: black; }
+
+body .entry-header,
+body .entry-content,
+body .entry-footer,
+body .post-navigation,
+body .comments-area,
+body .entry-meta,
+body .tag-links,
+body .index-box {
+  max-width: 710px; }
+
+body .navigation.post-navigation {
+  margin: 0 auto; }

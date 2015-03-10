@@ -1,8 +1,8 @@
 .site-main .index-box{
     position: absolute;
-    width: 80%;
     bottom: 0;
     max-width: 710px;
+    width: 80%;
 }
 
 .site-main a {
@@ -73,3 +73,18 @@
 .single p {
     color: black;
 } 
+
+body .entry-header,
+body .entry-content,
+body .entry-footer,
+body .post-navigation,
+body .comments-area,
+body .entry-meta,
+body .tag-links,
+body .index-box {
+        max-width: 710px;
+}
+
+body .navigation.post-navigation {
+    margin: 0 auto;
+}

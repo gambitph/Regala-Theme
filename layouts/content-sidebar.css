@@ -12,7 +12,6 @@ Layout: Content-Sidebar
 */
 
 .site-content {
-    padding-bottom: 4em;
     background: #b2b2b2 url(../images/pattern.svg) repeat;
 }
 .single .site-content,
@@ -38,8 +37,7 @@ Layout: Content-Sidebar
 .entry-footer,
 .tag-links,
 .post-navigation,
-.comments-area,
-.paging-navigation {
+.comments-area {
     position: relative;
     max-width: 780px;
     max-width: 78rem;
@@ -59,19 +57,6 @@ Layout: Content-Sidebar
     .content-area {
         width: 100%;
     }
-    
-    .entry-header,
-    .entry-content,
-    .entry-meta,
-    .entry-footer,
-    .tag-links,
-    .post-navigation,
-    .comments-area,
-    .paging-navigation 
-    .index-box { 
-        margin-right: 0; 
-    }
-    
 }
 
 @media screen and (max-width: 1159px) {  
