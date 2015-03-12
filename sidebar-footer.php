@@ -25,14 +25,6 @@ if ( is_active_sidebar( 'footer-1' ) ) {
 	<?php
 }
 
-if ( is_active_sidebar( 'footer-2' ) ) {
-	?>
-	<div id="footer-middle" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'footer-2' ); ?>
-	</div><!-- #footer-middle -->
-	<?php
-}
-
 if ( is_active_sidebar( 'footer-3' ) ) {
 	?>
 	<div id="footer-right" class="widget-area" role="complementary">

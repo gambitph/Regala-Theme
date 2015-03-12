@@ -21,9 +21,7 @@ Layout: Content-Sidebar
 }
 
 .site-content .widget-area {
-    width: 380px;
-    float: right;
-    padding: 4rem;
+    width: 340px;
     background: #fff;
     background: hsl(0, 0%, 100%);
 }
@@ -123,5 +121,5 @@ Layout: Content-Sidebar
     margin-bottom: 2em;
     list-style-type: none;
     background: #fff;
-    
 }
+

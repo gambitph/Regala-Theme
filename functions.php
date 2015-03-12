@@ -106,15 +106,6 @@ function theme1_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Middle', 'theme1' ),
-		'id'            => 'footer-2',
-		'description'   => __( 'The middle footer widget area', 'theme1' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
 		'name'          => __( 'Footer Right', 'theme1' ),
 		'id'            => 'footer-3',
 		'description'   => __( 'The right footer widget area', 'theme1' ),
