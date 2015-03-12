@@ -10,17 +10,22 @@ if ( has_post_thumbnail() ) {
     $imageAttributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // returns an array
     
     if ( $imageAttributes ) {
-        $articleStyle = 'style="background-image: background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( ' . $imageAttributes[0] . ' )"';
+        $articleStyle = 'style="background-image: url( ' . $imageAttributes[0] . ' )"';
         
     }
 }
 
 ?>
-<style>
-.site-main article.post-<?php the_ID(); ?> {
-    background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( <?php echo $imageAttributes[0]; ?> );
-    background-size: cover;
-}
+
+<?php
+if ( ! empty( $imageAttributes ) ) { ?>
+    <style>
+    .site-main article.post-<?php the_ID(); ?> {
+        background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( <?php echo $imageAttributes[0]; ?> );
+        background-size: cover;
+    }
+<?php } ?>
+
 </style>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php 
