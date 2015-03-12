@@ -5,20 +5,14 @@
  
 $articleStyle = "";
 
-if ( has_post_thumbnail() ) {
-    
+if ( has_post_thumbnail() ) { 
     $imageAttributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); // returns an array
-    
-    if ( $imageAttributes ) {
-        $articleStyle = 'style="background-image: url( ' . $imageAttributes[0] . ' )"';
-        
-    }
 }
 
 ?>
-
 <?php
 if ( ! empty( $imageAttributes ) ) { ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <style>
     .site-main article.post-<?php the_ID(); ?> {
         background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( <?php echo $imageAttributes[0]; ?> );
@@ -27,7 +21,6 @@ if ( ! empty( $imageAttributes ) ) { ?>
 <?php } ?>
 
 </style>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php 
     if ( has_post_thumbnail() ) {
         ?>
