@@ -17,51 +17,56 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'theme1' ); ?></a>
+<?php $additionalClasses = ""; ?>
+<?php if (is_active_sidebar( 'sidebar-1') ) {
+    $additionalClasses = "has-sidebar"; 
+} ?>
+    
+    <body <?php body_class( $additionalClasses ); ?>>
+    <div id="page" class="hfeed site">
+    	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'theme1' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-	    <?php 
+    	<header id="masthead" class="site-header" role="banner">
+    	    <?php 
 	    
-	    if ( is_single() && has_post_thumbnail() ) {
-            ?>
-            <a href="<?php echo get_permalink(); ?>" class="feat-image">
-                <img src="<?php echo $imageAttributes[0]; ?>" />
-            </a>
-        <?php } else if ( get_header_image()) : ?> 
-    	    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-        	</a>
-    	<?php endif; // End header image check. ?>
+    	    if ( is_single() && has_post_thumbnail() ) {
+                ?>
+                <a href="<?php echo get_permalink(); ?>" class="feat-image">
+                    <img src="<?php echo $imageAttributes[0]; ?>" />
+                </a>
+            <?php } else if ( get_header_image()) : ?> 
+        	    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+            	</a>
+        	<?php endif; // End header image check. ?>
     	
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+    		<div class="site-branding">
+    			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+    		</div><!-- .site-branding -->
         
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
-			<div class="menu">
-			    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
-			    <?php get_sidebar('main-menu'); ?>
-            </div>
-		</nav><!-- #site-navigation -->
+    		<nav id="site-navigation" class="main-navigation" role="navigation">
+    			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
+    			<div class="menu">
+    			    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
+    			    <?php get_sidebar('main-menu'); ?>
+                </div>
+    		</nav><!-- #site-navigation -->
 		        
-		<?php theme1_social_menu(); ?>
+    		<?php theme1_social_menu(); ?>
 		
-		<div class="search-toggle">
-            <i class="fa fa-search"></i>
-            <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'my-simone' ); ?></a>
-        </div>
-        
-		<div id="search-container" class="search-box-wrapper clear">
-            <div class="search-box clear">
-                <?php get_search_form(); ?>
+    		<div class="search-toggle">
+                <i class="fa fa-search"></i>
+                <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'my-simone' ); ?></a>
             </div>
-        </div>
         
-        </div>
-	</header><!-- #masthead -->
+    		<div id="search-container" class="search-box-wrapper clear">
+                <div class="search-box clear">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+        
+            </div>
+    	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+    	<div id="content" class="site-content">
