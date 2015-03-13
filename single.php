@@ -37,8 +37,7 @@ get_header(); ?>
 				endif;
 		    ?>
         </div>
-        	</div><?php get_sidebar(); ?>
-        	</div>		
+        	</div><?php get_sidebar(); ?></div>		
             </article><!-- #post-## -->
         			
 		<?php endwhile; // end of the loop. ?>

@@ -39,20 +39,21 @@
 		max-width: 900px;
 	}
 }
-@media (max-width: 955px) {
-	.footer-widgets {
-		width: 100%;
-		margin: 0;
-		> div {
-			margin: 30px 80px 0 !important;
-			float: none;
-			width: auto !important;
-			&:last-child {
-				margin-right: 80px !important;
-			}
-		}
-	}
+/*@media (max-width: 955px) {
+    .footer-widgets {
+        width: 100%;
+        margin: 0;
+        > div {
+            margin: 30px 80px 0 !important;
+            float: none;
+            width: auto !important;
+            &:last-child {
+                margin-right: 80px !important;
+            }
+        }
+    }
 }
+*/
 @media (min-width: 955px) and (max-width: 1000px) {
 	body.no-sidebar {
 		.footer-widgets {
@@ -295,4 +296,60 @@ body.light-footer {
     width: 80%;
 }
 
+#footer-left {
+    width: 340px;
+    margin-right: 30px;
+}
 
+#footer-right {
+    width: 340px;
+}
+
+.single #footer-left {
+    width: 340px;
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.single #footer-right {
+    width: 340px;
+    margin-left: 0;
+}
+
+
+@media screen and (max-width: 710px) {
+    .has-sidebar #footer-right,
+    .has-sidebar #footer-left {
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 710px) {
+    body.single.has-sidebar #footer-right,
+    body.single.has-sidebar #footer-left {
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .has-sidebar #secondary,
+    .has-sidebar .padding {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    body.has-sidebar #secondary,
+    body.has-sidebar .padding,
+    body.single .with-sidebar {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
