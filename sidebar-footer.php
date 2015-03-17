@@ -21,13 +21,10 @@ if ( is_active_sidebar( 'footer-1' ) ) {
 	?>
 	<div id="footer-left" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-1' ); ?>
-	</div><!-- #footer-left -->
-	<?php
+	</div><?php
 }
-
 if ( is_active_sidebar( 'footer-3' ) ) {
-	?>
-	<div id="footer-right" class="widget-area" role="complementary">
+	?><div id="footer-right" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-3' ); ?>
 	</div><!-- #footer-right -->
 	<?php
