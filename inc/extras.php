@@ -82,3 +82,17 @@ function regala_create_social_icons() {
 		echo "<a href='" . esc_attr( $url ) . "' target='_blank'></a>";
 	}
 }
+
+function regala_get_home_caption() {
+	if ( ! class_exists( 'TitanFramework' ) ) {
+	    return;
+	}
+	
+	$titan = TitanFramework::getInstance( 'regala' );
+	
+	if ( ! $titan->getOption( 'home_caption' ) ) {
+		return;
+	}
+	
+	echo "<p class='tagline-description'>" . $titan->getOption( 'home_caption' ) . "<p>";
+}
