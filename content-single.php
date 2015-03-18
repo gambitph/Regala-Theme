@@ -3,7 +3,6 @@
  * @package theme1
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php 

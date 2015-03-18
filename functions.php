@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'theme1_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function theme1_scripts() {
+function regala_scripts() {
     
     // Use our copy of genericons instead of Jetpack's since we are using a newer version
 	// wp_deregister_style( 'genericons' );
@@ -169,7 +169,7 @@ function theme1_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'theme1_scripts' );
+add_action( 'wp_enqueue_scripts', 'regala_scripts' );
 
 /**
  * Implement the Custom Header feature.

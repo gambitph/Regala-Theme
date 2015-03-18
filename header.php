@@ -19,7 +19,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'theme1' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'regala' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 	    <?php 
@@ -30,15 +30,13 @@
                 <img src="<?php echo $imageAttributes[0]; ?>" />
             </a>
         <?php } else if ( get_header_image()) : ?> 
-    	    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-        	</a>
+    		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
     	<?php endif; // End header image check. ?>
     	
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+			<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
+		</div>
         
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
@@ -46,20 +44,9 @@
 			    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
 			    <?php get_sidebar('main-menu'); ?>
             </div>
-		</nav><!-- #site-navigation -->
+		</nav>
 		        
-		<?php theme1_social_menu(); ?>
-		
-		<div class="search-toggle">
-            <i class="fa fa-search"></i>
-            <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'my-simone' ); ?></a>
-        </div>
-        
-		<div id="search-container" class="search-box-wrapper clear">
-            <div class="search-box clear">
-                <?php get_search_form(); ?>
-            </div>
-        </div>
+		<?php // TODO: regala_create_social_icons() ?>
         
         </div>
 	</header><!-- #masthead -->
