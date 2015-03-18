@@ -56,7 +56,7 @@ if ( is_single() && has_post_thumbnail() ) {
 			<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
 			<?php endif; ?>	
 		
-			<?php // TODO: regala_get_home_caption() ?>
+			<?php regala_get_home_caption() ?>
         
         </div>
 	</header>

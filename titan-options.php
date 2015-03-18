@@ -114,4 +114,19 @@ function regala_create_options() {
 		    'type' => 'text',
 		) );
 	}
+	
+	/*
+	* Header Caption
+ 	*/
+ 	
+ 	$caption = $titan->createThemeCustomizerSection( array(
+ 	    'name' => 'title_tagline',
+    ) );
+	
+	$caption->createOption( array(
+		'name' => __( 'Home Page Tagline Caption', 'regala' ),
+		'id' => 'home_caption',
+		'type' => 'text',
+	) );
+ 	
 }
