@@ -9,7 +9,7 @@
     if (has_post_thumbnail()) {
         echo '<div class="single-post-thumbnail clear">';
         echo '<div class="image-shifter">';
-        echo the_post_thumbnail('large-thumb');
+        echo the_post_thumbnail('regala-wallpaper');
         echo '</div>';
         echo '</div>';
     }

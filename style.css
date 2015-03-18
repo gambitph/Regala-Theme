@@ -884,52 +884,52 @@ button:hover,
   box-shadow: none;
   outline: none; }
 
-.site-header {
-  position: relative; }
+header {
+  height: 100vh; }
 
-.site-branding {
-  position: absolute;
-  width: 130px;
-  height: 70px;
-  background: black;
-  background: #404040;
-  display: inline-block;
-  float: right;
-  right: 40px;
-  top: 0; }
+.site-top {
+  position: relative; }
 
 .site-title {
   position: absolute;
-  font-size: 25px;
-  line-height: normal;
+  background: black;
+  font-size: 2em;
   text-align: center;
-  right: 0;
-  left: 0;
-  top: 25%;
-  transform: translateY(-50%); }
+  top: 0;
+  right: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+  padding: .4em .8em;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
+  .site-title:visited, .site-title:hover, .site-title:link {
+    color: #fff;
+    text-decoration: none; }
+  .site-title:hover {
+    opacity: 1; }
 
-.site-title a {
-  text-decoration: none;
-  color: white; }
+body.admin-bar .site-title {
+  top: 32px; }
 
-.site-description {
-  display: none;
+header {
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+
+#masthead-inner {
+  max-width: 710px;
+  width: 80%;
+  margin: 0 auto;
   position: absolute;
-  font-weight: 200;
-  font-size: 15px;
-  font-size: 1.5rem; }
+  bottom: 50px;
+  left: 0;
+  right: 0; }
 
-a img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.site-header .search-toggle,
-.site-header .search-box-wrapper {
-  display: none; }
-
-.single .feat-image {
-  display: none; }
+#masthead {
+  color: #fff; }
 
 .footer-widgets {
   max-width: 1100px;
