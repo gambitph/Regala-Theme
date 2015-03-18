@@ -1,0 +1,75 @@
+.site-main .index-box{
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    max-width: 710px;
+}
+
+.site-main a {
+    color: #404040;
+    text-decoration: none;
+}
+.site-main a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+
+.site-main a:hover {
+    color: #404040;
+    text-decoration: underline;
+}
+.site-main a:visited:hover {
+    color: #404040;
+    text-decoration: underline;
+}
+
+.site-main article {
+    position: relative;
+}
+
+.site-main article,
+.site-main a,
+.site-main a:visited,
+.site-main h2,
+.site-main p {
+    color: white;
+} 
+
+.hentry {
+    margin: 0;
+}
+
+.site-main .feat-image {
+    display: none;
+}
+
+.site-main img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and ( max-width: 600px ) {
+    .site-main article {
+        background-image: none !important;
+     }
+     .site-main .feat-image {
+         display: block;
+     }
+     .hentry {
+         width: auto !important;
+         height: auto !important;
+     }
+}
+
+.single article{
+    position: relative;
+    /*width: 80%;*/
+}
+
+.single article,
+.single a,
+.single a:visited,
+.ssingle h2,
+.single p {
+    color: black;
+} 

@@ -1,0 +1,221 @@
+/*
+ * Responsive video
+ */
+body {
+	.videopress-placeholder {
+		margin: 0 auto;
+	}
+}
+
+
+/*
+ * Infinite scroller
+ */
+body {
+	.infinite-loader {
+		margin: 0 0 1.5em;
+		.spinner {
+			margin: 0 auto;
+		}
+	}
+	#infinite-handle {
+		margin: 0 0 1.5em;
+		position: relative;
+		span {
+			background: $contentBackgroundColor;
+			color: $decorColor;
+			background: #fff;
+			font-family: "Unica One";
+			padding: 30px 50px;
+			font-size: 18px;
+			text-align: center;
+			display: block;
+	        -webkit-transition: all .4s;
+	        -moz-transition: all .4s;
+	        -ms-transition: all .4s;
+	        -o-transition: all .4s;
+	        transition: all .4s;
+			&:hover {
+				color: #6e6e6e;
+			}
+			&:before {
+				content: '\f431';
+				font-family: Genericons;
+				font-size: 20px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				text-align: center;
+				bottom: 10px;
+			}
+		}
+	}
+	
+	// Fade in effect, works in tandem with javascript
+	.infinite-wrap {
+		opacity: 0;
+	    -webkit-transition: all .4s;
+	    -moz-transition: all .4s;
+	    -ms-transition: all .4s;
+	    -o-transition: all .4s;
+	    transition: all .4s;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		-o-transform: translateY(30px);
+		transform: translateY(30px);
+		&.infinite-fade-in {
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+}
+
+
+/*
+ * Sharing / Social icons
+ */
+body {
+    div.sharedaddy {
+        text-align: center;
+		.sd-social-official {
+			text-align: left;
+		}
+        h3.sd-title {
+			font-family: "Unica One";
+            &:before {
+                display: none;
+            }
+        }
+        .sd-social-icon-text, .sd-social-text {
+            .sd-content > ul > li > a.sd-button {
+                &:before {
+                    left: 2px;
+                }
+                span {
+                    //display: none;
+                }
+                background: #fafafa;
+                border-radius: 3px;
+                border: 1px solid #ECF0F1;
+                color: #aaa !important;
+                box-shadow: none;
+                line-height: 30px;
+                padding: 1px 10px 0px 7px;
+				font-family: "Unica One";
+				text-transform: uppercase;
+                &:before {
+                    left: 2px;
+                    top: 6px;
+                }
+                &:hover {
+                    color: orange !important;
+                    background: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+        .sd-social-text {
+            .sd-content > ul > li > a.sd-button {
+                padding: 1px 10px 0px 10px;
+            }
+        }
+        .sd-social-icon .sd-content ul li {
+            a, a:hover {
+                padding: 12px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+
+/*
+ * Related Posts
+ */
+body {
+    div#jp-relatedposts h3.jp-relatedposts-headline {
+        font-size: 18px;
+        font-family: "Unica One";
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 34px;
+        text-transform: capitalize;
+		em {
+			font-weight: inherit;
+			font-style: inherit;
+		}
+        em:before {
+            //display: none;
+            margin-left: -50px;
+            margin-right: -50px;
+            width: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.05)
+        }
+    }
+    div#jp-relatedposts div.jp-relatedposts-items div.jp-relatedposts-post:hover .jp-relatedposts-post-title a {
+        text-decoration: none;
+    }
+    div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+        font-family: "Unica One";
+        font-size: 22px;
+        color: #6e6e6e;
+        text-decoration: none;
+        display: block;
+        margin-bottom: .5em;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context, div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+        font-style: italic;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+        color: orange;
+        font-family: "Unica One";
+    }
+    .jp-relatedposts-post-img {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+/*
+ * Likes
+ */
+body {
+    div.sharedaddy.jetpack-likes-widget-wrapper {
+        h3.sd-title {
+			font-family: "Unica One";
+            display: none;
+        }
+    }
+}
+
+
+
+
+/*
+ * Widgets
+ */
+body {
+	.widget-grofile {
+		.grofile-meta h4 {
+			margin-top: 1em !important;
+		}
+		.grofile-thumbnail {
+			border-radius: 100%;
+			width: 60%;
+			max-width: 200px;
+		}
+	}
+}

@@ -1,0 +1,134 @@
+#comments {
+	padding: 50px;
+	background: #fff;
+	.comment-respond:first-child #reply-title {
+		margin-top: 0;
+	}
+	
+	.comments-title {
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
+	
+	.comments-title {
+		background: #22a7f0;
+		display: inline-block;
+		padding: 25px 25px 25px 30px;
+		font-size: 20px;
+		color: #fff;
+		-webkit-transform: translateX(-80px);
+		-moz-transform: translateX(-80px);
+		-ms-transform: translateX(-80px);
+		-o-transform: translateX(-80px);
+		transform: translateX(-80px);
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			width: 0;
+			height: 0;
+			border-bottom: 15px solid transparent;
+			border-right: 30px solid #0e8cd1;
+			-webkit-transform: translateY(100%);
+			-moz-transform: translateY(100%);
+			-ms-transform: translateY(100%);
+			-o-transform: translateY(100%);
+			transform: translateY(100%);
+		}
+	}
+	article {
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	
+	.comment-list {
+		padding-left: 0;
+	}
+	
+	.comment-content {
+		background: #fafafa;
+		padding: 30px;
+		border: 1px solid #ECF0F1;
+		border-radius: 3px;
+		margin-top: 30px;
+		*:first-child {
+			margin-top: 0;
+		}
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.comment-author {
+		vertical-align: top;
+		display: inline-block;
+		margin: 3px 15px 3px 80px;
+		img {
+			border-radius: 100%;
+			position: absolute;
+			left: 0;
+		}
+	}
+	.comment-metadata {
+		margin-left: 80px;
+		> a, > a:visited {
+			color: #999;
+			font-style: italic;
+			font-size: 14px;
+			&:before {
+				content: '\f303';
+				font-family: genericons;
+				color: #999;
+				font-size: 20px;
+				vertical-align: middle;
+				font-style: normal;
+			}
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+	
+	.edit-link {
+		float: right;
+	}
+	.comment-reply-link {
+		float: right;
+		border-color: #fff;
+		border-top: 0;
+		background-color: orange;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		margin-right: 10px;
+		color: #fff;
+		font-family: "Unica One";
+		font-size: 14px;
+		&:hover {
+			background-color: transparent;
+			color: orange;
+			border-color: #ccc;
+		}
+	}
+	
+	.logged-in-as {
+		font-style: italic;
+		font-size: 14px;
+	}
+	textarea {
+		padding: .5em .8em;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	
+	ol ol {
+		margin-left: 30px;
+	}
+	li {
+		list-style: none;
+	}
+	
+	#respond {
+		margin-bottom: 30px;
+	}
+}

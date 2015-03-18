@@ -1,0 +1,53 @@
+.site-header {
+    position: relative;
+}
+.site-branding {
+    position: absolute;
+    width: 130px;
+    height: 70px;
+    background: black;
+    background: hsl( 0, 0%, 25% );
+    display: inline-block;
+    float: right;
+    right: 40px;
+    top: 0;
+}
+
+.site-title {
+    position: absolute;
+    font-size: 25px;
+    line-height: normal;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 25%;
+    transform: translateY(-50%);
+   
+}
+.site-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.site-description {
+    display: none;
+    position: absolute;
+    font-weight: 200;
+    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+a img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.site-header .search-toggle,
+.site-header .search-box-wrapper {
+    display: none;
+}
+
+.single .feat-image {
+    display: none;
+}
