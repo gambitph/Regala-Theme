@@ -38,4 +38,20 @@ body.admin-bar {
 header {
 	background-size: cover;
 	background-position: center;
+	position: relative;
+}
+
+// Header home text
+#masthead-inner {
+	max-width: 710px;
+	width: 80%;
+	margin: 0 auto;
+	
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+#masthead {
+	color: #fff;
 }

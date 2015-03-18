@@ -17,17 +17,19 @@
 <?php wp_head(); ?>
 <?php 
 
+// Get the header image to display
 $headerImageUrl = '';
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 }
 if ( is_single() && has_post_thumbnail() ) {
-	$imageAttachment = wp_get_attachment_image_src( get_the_ID(), 'regala-wallpaper' );
-	
+	$imageAttachment = wp_get_attachment_image_src( get_post_thumbnail_id(), 'regala-wallpaper' );
+
 	if ( ! empty( $imageAttachment ) ) {
 		$headerImageUrl = $imageAttachment[0];
 	}
 }
+
 ?>
 <style id="regala_header">
 	header {
@@ -39,14 +41,31 @@ if ( is_single() && has_post_thumbnail() ) {
 <body <?php body_class( ! empty( $headerImageUrl ) ? 'has-header-image' : '' ) ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'regala' ); ?></a>
-
-	<div id="site-top">
-		        
-		<?php // TODO: regala_create_social_icons() ?>
+	<?php
 		
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
-	</div>
-
+	
+	/**
+	 * Header image
+	 */	
+	if ( ! empty( $headerImageUrl ) ) : ?>
+	<header id="masthead" class="site-header" role="banner">
+		<div id="masthead-inner">
+			
+			<?php if ( get_bloginfo( 'description' ) ) : ?>
+			<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
+			<?php endif; ?>	
+		
+			<?php // TODO: regala_get_home_caption() ?>
+        
+        </div>
+	</header>
+	<?php endif;
+	
+	
+	/**
+	 * Main menu
+	 */	
+	?>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
 		<div class="menu">
@@ -54,16 +73,23 @@ if ( is_single() && has_post_thumbnail() ) {
 		    <?php get_sidebar('main-menu'); ?>
         </div>
 	</nav>
-
-	<?php if ( ! empty( $headerImageUrl ) ) : ?>
-	<header id="masthead" class="site-header" role="banner">
+	<?php
+	
+	
+	/**
+	 * Logo & social icons
+	 */
+	?>
+	<div id="site-top">   
+		<?php // TODO: regala_create_social_icons() ?>
 		
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		<?php
+		// TODO: Jetpack Logo
+		?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a>
+	</div>
+	<?php
 		
-		<?php // TODO: caption ?>
-        
-        </div>
-	</header><!-- #masthead -->
-	<?php endif; ?>
-
+		
+	?>
 	<div id="content" class="site-content">

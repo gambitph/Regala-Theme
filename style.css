@@ -916,7 +916,20 @@ body.admin-bar .site-title {
 
 header {
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  position: relative; }
+
+#masthead-inner {
+  max-width: 710px;
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0; }
+
+#masthead {
+  color: #fff; }
 
 .footer-widgets {
   max-width: 1100px;
