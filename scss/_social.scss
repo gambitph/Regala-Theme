@@ -3,9 +3,11 @@
 	height: 20px;
 	width: 30px;
 	vertical-align: middle;
-	float: right;
 	text-align: center;
 	line-height: 20px;
+	text-decoration: none;
+	padding: 5px;
+	
 	
 	&:before {
 		font-family: 'genericons';

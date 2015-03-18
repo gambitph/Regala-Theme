@@ -887,16 +887,15 @@ button:hover,
 header {
   height: 100vh; }
 
-.site-top {
-  position: relative; }
+#site-top {
+  position: absolute;
+  top: 0;
+  right: 40px; }
 
 .site-title {
-  position: absolute;
   background: black;
   font-size: 2em;
   text-align: center;
-  top: 0;
-  right: 40px;
   background: rgba(0, 0, 0, 0.7);
   opacity: 0.8;
   padding: .4em .8em;
@@ -911,7 +910,7 @@ header {
   .site-title:hover {
     opacity: 1; }
 
-body.admin-bar .site-title {
+body.admin-bar #site-top {
   top: 32px; }
 
 header {
@@ -1114,9 +1113,10 @@ body.light-footer :-ms-input-placeholder {
   height: 20px;
   width: 30px;
   vertical-align: middle;
-  float: right;
   text-align: center;
-  line-height: 20px; }
+  line-height: 20px;
+  text-decoration: none;
+  padding: 5px; }
   .social-navigation a:before {
     font-family: 'genericons';
     display: block;
