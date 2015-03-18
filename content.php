@@ -2,7 +2,7 @@
 /**
  * @package theme1
  */
- 
+return;
 $articleStyle = "";
 
 if ( has_post_thumbnail() ) { 

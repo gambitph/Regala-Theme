@@ -12,37 +12,45 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package theme1
+ * @package regala
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses theme1_header_style()
- * @uses theme1_admin_header_style()
- * @uses theme1_admin_header_image()
+ * @uses regala_header_style()
+ * @uses regala_admin_header_style()
+ * @uses regala_admin_header_image()
  */
-function theme1_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'theme1_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => 'white',
-		'width'                  => 1280,
-		'height'                 => 300,
-		'flex-height'            => false,
-		'wp-head-callback'       => 'theme1_header_style',
-		'admin-head-callback'    => 'theme1_admin_header_style',
-		'admin-preview-callback' => 'theme1_admin_header_image',
+function regala_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'regala_custom_header_args', array(
+		'default-image'          => get_template_directory_uri() . '/images/header-image-default1.jpg',
+		'default-text-color'     => 'ffffff',
+		'width'                  => 1600,
+		'height'                 => 900,
+		'flex-height'            => true,
+		'wp-head-callback'       => 'regala_header_style',
+		'admin-head-callback'    => 'regala_admin_header_style',
+		'admin-preview-callback' => 'regala_admin_header_image',
 	) ) );
+	
+	register_default_headers( array(
+		'fall' => array(
+			'url' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+			'description' => __( 'Fall', 'regala' ),
+		),
+	) );
 }
-add_action( 'after_setup_theme', 'theme1_custom_header_setup' );
+add_action( 'after_setup_theme', 'regala_custom_header_setup' );
 
-if ( ! function_exists( 'theme1_header_style' ) ) :
+if ( ! function_exists( 'regala_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see theme1_custom_header_setup().
+ * @see regala_custom_header_setup().
  */
-function theme1_header_style() {
+function regala_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -74,15 +82,15 @@ function theme1_header_style() {
 	</style>
 	<?php
 }
-endif; // theme1_header_style
+endif; // regala_header_style
 
-if ( ! function_exists( 'theme1_admin_header_style' ) ) :
+if ( ! function_exists( 'regala_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see theme1_custom_header_setup().
+ * @see regala_custom_header_setup().
  */
-function theme1_admin_header_style() {
+function regala_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -102,15 +110,15 @@ function theme1_admin_header_style() {
 	</style>
 <?php
 }
-endif; // theme1_admin_header_style
+endif; // regala_admin_header_style
 
-if ( ! function_exists( 'theme1_admin_header_image' ) ) :
+if ( ! function_exists( 'regala_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see theme1_custom_header_setup().
+ * @see regala_custom_header_setup().
  */
-function theme1_admin_header_image() {
+function regala_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -122,4 +130,4 @@ function theme1_admin_header_image() {
 	</div>
 <?php
 }
-endif; // theme1_admin_header_image
+endif; // regala_admin_header_image
