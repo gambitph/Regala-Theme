@@ -79,6 +79,6 @@ function regala_create_social_icons() {
 			continue;
 		}
 		
-		echo "<a href='{$url}' target='_blank'></a>";
+		echo "<a href='" . esc_attr( $url ) . "' target='_blank'></a>";
 	}
 }
