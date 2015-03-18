@@ -94,3 +94,4 @@ if ( is_single() && has_post_thumbnail() ) {
 		
 	?>
 	<div id="content" class="site-content">
+
