@@ -49,6 +49,7 @@ if ( is_single() && has_post_thumbnail() ) {
 	 */	
 	if ( ! empty( $headerImageUrl ) ) : ?>
 	<header id="masthead" class="site-header" role="banner">
+		
 		<div id="masthead-inner">
 			
 			<?php if ( get_bloginfo( 'description' ) ) : ?>
