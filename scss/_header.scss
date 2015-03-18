@@ -2,6 +2,9 @@ header {
 	height: 100vh;
 }
 
+#page {
+	position: relative;
+}
 #site-top {
 	position: absolute;;
 	top: 0;
@@ -9,8 +12,10 @@ header {
 }
 
 .site-title {
+	display: inline-block;
     background: black;
     font-size: 2em;
+	line-height: 1em;
     text-align: center;
     background: rgba(0, 0, 0, .7);
 	opacity: 0.8;
@@ -26,12 +31,6 @@ header {
 	}
 	&:hover {
 		opacity: 1;
-	}
-}
-
-body.admin-bar {
-	#site-top {
-		top: 32px;
 	}
 }
 
