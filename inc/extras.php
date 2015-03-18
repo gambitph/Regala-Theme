@@ -69,3 +69,16 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'theme1_render_title' );
 endif;
+
+function regala_create_social_icons() {
+	$titan = TitanFramework::getInstance( 'regala' );
+	
+	for ( $i = 0; $i <= 10; $i++ ) {
+		$url = $titan->getOption( 'social_' . $i );
+		if ( empty( $url ) ) {
+			continue;
+		}
+		
+		echo "<a href='{$url}' target='_blank'></a>";
+	}
+}

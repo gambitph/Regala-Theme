@@ -45,8 +45,8 @@
 			    <?php get_sidebar('main-menu'); ?>
             </div>
 		</nav>
-		        
-		<?php // TODO: regala_create_social_icons() ?>
+		
+		<span class='social-navigation'><?php regala_create_social_icons() ?></span>
         
         </div>
 	</header><!-- #masthead -->

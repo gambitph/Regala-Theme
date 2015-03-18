@@ -7,14 +7,14 @@
  */
 
 
-add_action( 'tf_create_options', 'theme1_create_options' );
+add_action( 'tf_create_options', 'regala_create_options' );
 
 /**
  * Initialize Titan & options here
  */
-function theme1_create_options() {
+function regala_create_options() {
 
-	$titan = TitanFramework::getInstance( 'theme1' );
+	$titan = TitanFramework::getInstance( 'regala' );
 	
 	
 	/**
@@ -23,23 +23,23 @@ function theme1_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Theme Options', 'theme1' ),
+	    'name' => __( 'Theme Options', 'regala' ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Color', 'theme1' ),
+	    'name' => __( 'Background Color', 'regala' ),
 	    'id' => 'sample_color1',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the background of your theme', 'theme1' ),
+	    'desc' => __( 'This color changes the background of your theme', 'regala' ),
 	    'default' => '#FFFFFF',
 		'css' => 'body { background-color: value }',
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Headings Font', 'theme1' ),
+	    'name' => __( 'Headings Font', 'regala' ),
 	    'id' => 'headings_font',
 	    'type' => 'font',
-	    'desc' => __( 'Select the font for all headings in the site', 'theme1' ),
+	    'desc' => __( 'Select the font for all headings in the site', 'regala' ),
 		'show_color' => false,
 		'show_font_size' => false,
 	    'show_font_weight' => false,
@@ -62,18 +62,18 @@ function theme1_create_options() {
 	 */
 	
 	$adminPanel = $titan->createAdminPanel( array(
-	    'name' => __( 'Theme Settings', 'theme1' ),
+	    'name' => __( 'Theme Settings', 'regala' ),
 	) );
 	
 	$generalTab = $adminPanel->createTab( array(
-	    'name' => __( 'General', 'theme1' ),
+	    'name' => __( 'General', 'regala' ),
 	) );
 
 	$generalTab->createOption( array(
-	    'name' => __( 'Custom Javascript Code', 'theme1' ),
+	    'name' => __( 'Custom Javascript Code', 'regala' ),
 	    'id' => 'custom_js',
 	    'type' => 'code',
-	    'desc' => __( 'If you want to add some additional Javascript code into your site, add them here and it will be included in the frontend header. No need to add <code>script</code> tags', 'theme1' ),
+	    'desc' => __( 'If you want to add some additional Javascript code into your site, add them here and it will be included in the frontend header. No need to add <code>script</code> tags', 'regala' ),
 	    'lang' => 'javascript',
 	) );
 	
@@ -83,17 +83,35 @@ function theme1_create_options() {
 	
 	
 	$footerTab = $adminPanel->createTab( array(
-	    'name' => __( 'Footer', 'theme1' ),
+	    'name' => __( 'Footer', 'regala' ),
 	) );
 	
 	$footerTab->createOption( array(
-		'name' => __( 'Copyright Text', 'theme1' ),
+		'name' => __( 'Copyright Text', 'regala' ),
 		'id' => 'copyright',
 		'type' => 'text',
-		'desc' => __( 'Enter your copyright text here (sample only)', 'theme1' ),
+		'desc' => __( 'Enter your copyright text here (sample only)', 'regala' ),
 	) );
 	
 	$footerTab->createOption( array(
 	    'type' => 'save',
 	) );
+	
+	
+	/*
+	* Social Icons
+	*/
+	
+	$social = $titan->createThemeCustomizerSection( array(
+	    'name' => __( 'Social Icons', 'regala' ),
+		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
+	) );
+	
+	for ( $i = 0; $i <= 10; $i++ ) {
+		$social->createOption( array(
+		    'name' => $i ? '' : __( 'Social Links', 'regala' ),
+		    'id' => 'social_' . $i,
+		    'type' => 'text',
+		) );
+	}
 }
