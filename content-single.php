@@ -27,7 +27,7 @@
                     }
                 ?>
         
-    			<?php theme1_posted_on(); ?>
+    			<?php regala_posted_on(); ?>
     			<?php 
                     if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { 
                         echo '<span class="comments-link">';
