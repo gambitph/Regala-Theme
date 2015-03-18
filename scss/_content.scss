@@ -4,25 +4,6 @@
     bottom: 0;
     max-width: 710px;
 }
-
-.site-main a {
-    color: #404040;
-    text-decoration: none;
-}
-.site-main a:visited {
-    color: #404040;
-    text-decoration: none;
-}
-
-.site-main a:hover {
-    color: #404040;
-    text-decoration: underline;
-}
-.site-main a:visited:hover {
-    color: #404040;
-    text-decoration: underline;
-}
-
 .site-main article {
     position: relative;
 }
@@ -65,11 +46,3 @@
     position: relative;
     /*width: 80%;*/
 }
-
-.single article,
-.single a,
-.single a:visited,
-.ssingle h2,
-.single p {
-    color: black;
-} 
