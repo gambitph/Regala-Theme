@@ -15,40 +15,55 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<?php 
+
+$headerImageUrl = '';
+if ( get_header_image() ) {
+	$headerImageUrl = get_header_image();
+}
+if ( is_single() && has_post_thumbnail() ) {
+	$imageAttachment = wp_get_attachment_image_src( get_the_ID(), 'regala-wallpaper' );
+	
+	if ( ! empty( $imageAttachment ) ) {
+		$headerImageUrl = $imageAttachment[0];
+	}
+}
+?>
+<style id="regala_header">
+	header {
+		background-image: url(<?php echo esc_url( $headerImageUrl ) ?>);
+	}
+</style>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( ! empty( $headerImageUrl ) ? 'has-header-image' : '' ) ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'regala' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-	    <?php 
-	    
-	    if ( is_single() && has_post_thumbnail() ) {
-            ?>
-            <a href="<?php echo get_permalink(); ?>" class="feat-image">
-                <img src="<?php echo $imageAttributes[0]; ?>" />
-            </a>
-        <?php } else if ( get_header_image()) : ?> 
-    		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-    	<?php endif; // End header image check. ?>
-    	
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
-		</div>
-        
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
-			<div class="menu">
-			    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
-			    <?php get_sidebar('main-menu'); ?>
-            </div>
-		</nav>
+	<div id="site-top">
 		        
 		<?php // TODO: regala_create_social_icons() ?>
+		
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
+	</div>
+
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
+		<div class="menu">
+		    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
+		    <?php get_sidebar('main-menu'); ?>
+        </div>
+	</nav>
+
+	<?php if ( ! empty( $headerImageUrl ) ) : ?>
+	<header id="masthead" class="site-header" role="banner">
+		
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		
+		<?php // TODO: caption ?>
         
         </div>
 	</header><!-- #masthead -->
+	<?php endif; ?>
 
 	<div id="content" class="site-content">

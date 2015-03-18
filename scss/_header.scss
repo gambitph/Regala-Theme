@@ -1,53 +1,41 @@
-.site-header {
-    position: relative;
-}
-.site-branding {
-    position: absolute;
-    width: 130px;
-    height: 70px;
-    background: black;
-    background: hsl( 0, 0%, 25% );
-    display: inline-block;
-    float: right;
-    right: 40px;
-    top: 0;
+header {
+	height: 100vh;
 }
 
+.site-top {
+	position: relative;
+}
 .site-title {
     position: absolute;
-    font-size: 25px;
-    line-height: normal;
+    background: black;
+    font-size: 2em;
     text-align: center;
-    right: 0;
-    left: 0;
-    top: 25%;
-    transform: translateY(-50%);
-   
+    top: 0;
+    right: 40px;
+    background: rgba(0, 0, 0, .7);
+	opacity: 0.8;
+	padding: .4em .8em;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+	&:visited, &:hover, &:link {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		opacity: 1;
+	}
 }
-.site-title a {
-    text-decoration: none;
-    color: white;
-}
-
-.site-description {
-    display: none;
-    position: absolute;
-    font-weight: 200;
-    font-size: 15px;
-    font-size: 1.5rem;
-}
-
-a img {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.site-header .search-toggle,
-.site-header .search-box-wrapper {
-    display: none;
+body.admin-bar {
+	.site-title {
+		top: 32px;
+	}
 }
 
-.single .feat-image {
-    display: none;
+// Header image styles
+header {
+	background-size: cover;
+	background-position: center;
 }
