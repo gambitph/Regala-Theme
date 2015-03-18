@@ -71,6 +71,9 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 endif;
 
 function regala_create_social_icons() {
+	if ( ! class_exists( 'TitanFramework' ) ) {
+		return;
+	}
 	$titan = TitanFramework::getInstance( 'regala' );
 	
 	for ( $i = 0; $i <= 10; $i++ ) {

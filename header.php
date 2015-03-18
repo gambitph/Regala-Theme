@@ -82,7 +82,7 @@ if ( is_single() && has_post_thumbnail() ) {
 	 */
 	?>
 	<div id="site-top">   
-		<?php // TODO: regala_create_social_icons() ?>
+		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
 		
 		<?php
 		// TODO: Jetpack Logo

@@ -887,16 +887,20 @@ button:hover,
 header {
   height: 100vh; }
 
-.site-top {
+#page {
   position: relative; }
 
-.site-title {
+#site-top {
   position: absolute;
+  top: 0;
+  right: 40px; }
+
+.site-title {
+  display: inline-block;
   background: black;
   font-size: 2em;
+  line-height: 1em;
   text-align: center;
-  top: 0;
-  right: 40px;
   background: rgba(0, 0, 0, 0.7);
   opacity: 0.8;
   padding: .4em .8em;
@@ -910,9 +914,6 @@ header {
     text-decoration: none; }
   .site-title:hover {
     opacity: 1; }
-
-body.admin-bar .site-title {
-  top: 32px; }
 
 header {
   background-size: cover;
@@ -1109,14 +1110,19 @@ body.light-footer ::-moz-placeholder {
 body.light-footer :-ms-input-placeholder {
   color: #fff; }
 
+.social-navigation {
+  margin: 10px;
+  vertical-align: top;
+  display: inline-block; }
+
 .social-navigation a {
   display: inline-block;
   height: 20px;
   width: 30px;
-  vertical-align: middle;
-  float: right;
   text-align: center;
-  line-height: 20px; }
+  line-height: 20px;
+  text-decoration: none;
+  padding: 5px; }
   .social-navigation a:before {
     font-family: 'genericons';
     display: block;
