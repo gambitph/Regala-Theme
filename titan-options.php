@@ -48,7 +48,7 @@ function regala_create_options() {
 	    'name' => __( 'Background Opacity', 'regala' ),
 	    'id' => 'logo_bg_opacity',
 	    'type' => 'number',
-		'default' => '0.7',
+		'default' => '0.5',
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
@@ -62,7 +62,7 @@ function regala_create_options() {
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
-		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover { opacity: value}',
+		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover, .site-logo-link:hover, .site-logo-link:visited:hover, .site-logo-link:link:hover { opacity: value}',
 	) );
 	
 	/**

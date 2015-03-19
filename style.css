@@ -1073,7 +1073,7 @@ header {
   position: absolute;
   top: 0;
   right: 40px;
-  z-index: 2; }
+  z-index: 1; }
 
 .site-title, .site-logo-link {
   display: inline-block;

@@ -132,7 +132,7 @@ function regala_titan_custom_css() {
 	$rgb = regala_hex2rgb( $bg );
 	
 	echo "<style>
-	    .site-title {
+	    .site-title, .site-logo-link {
     		background: rgba({$rgb[0]}, {$rgb[1]}, {$rgb[2]}, {$opacity});
     	}
     </style>";
