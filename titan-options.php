@@ -66,7 +66,7 @@ function regala_create_options() {
 	) );
 	
 	$font = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Font', 'regala' ),
+	    'name' => __( 'Frontpage Tagline Area', 'regala' ),
 	    'panel' => __( 'Theme Options & Colors', 'regala' ),
 	) );
 	
@@ -83,7 +83,7 @@ function regala_create_options() {
            'font-style' => 'italic',
 	   ),
 	   'desc' => __( 'Select a Style', 'regala' ),
-		'css' => 'h1.site-description { value }',
+	   'css' => 'h1.site-description { value }',
 	) );
 	
 	$font->createOption( array(
@@ -92,7 +92,7 @@ function regala_create_options() {
 	    'type' => 'color',
 	    'desc' => __( 'This color changes the color of the tagline caption', 'regala' ),
 	    'default' => '#FFFFFF',
-		'css' => 'p.tagline-description { color: value}',
+		'css' => 'p.tagline-description { color: value }',
 	) );
 	
 	$font->createOption( array(
