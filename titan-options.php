@@ -138,12 +138,12 @@ function regala_create_options() {
 	*/
 	
 	$menu = $titan->createThemeCustomizerSection( array(
-	   'name' => __( 'Menu ColorPicker', 'regala' ),
+	   'name' => __( 'Main Menu', 'regala' ),
 	   'panel' => __( 'Theme Options & Colors', 'regala' ),
 	) );
 	
 	$menu->createOption( array(
-	   'name' => __( 'Color Picker of the Menu', 'regala' ),
+	   'name' => __( 'Menu Button Background Color', 'regala' ),
 	   'id' => 'menu_color',
 	   'type' => 'color',
 	   'default' => '#DADFE1',
@@ -151,49 +151,49 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Opacity of the Menu', 'regala' ),
+	    'name' => __( 'Menu Button Opacity', 'regala' ),
 	    'id' => 'menu_opacity',
 	    'type' => 'number',
 		'default' => '0.7',
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
-		'css' => '.main-navigation.toggled .nav-menu a:hover, .menu-toggle { opacity: value}',
+		'css' => '.menu-toggle { opacity: value }',
 	) );
     
     $menu->createOption( array(
-	    'name' => __( 'Hover Opacity of the Menu', 'regala' ),
+	    'name' => __( 'Menu Button Hover Opacity', 'regala' ),
 	    'id' => 'menu_hover_opacity',
 	    'type' => 'number',
 		'default' => '1',
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
-		'css' => '.main-navigation.toggled .nav-menu a:hover, .menu-toggle:hover { opacity: value}',
+		'css' => '.menu-toggle:hover { opacity: value }',
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Icon color of the Menu', 'regala' ),
+	    'name' => __( 'Menu Button Icon Color', 'regala' ),
 	    'id' => 'menu_icon_color',
 	    'type' => 'color',
 		'default' => '#333333',
-		'css' => '.genericon-menu:before { color: value}',
+		'css' => '.genericon-menu:before { color: value }',
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Background color of the Inner Menu', 'regala' ),
+	    'name' => __( 'Menu Area Background Color', 'regala' ),
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
 		'default' => '#4d4d4d',
-		'css' => '.inner-menu { background: value}',
+		'css' => '.inner-menu { background: value }',
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Text color of the Inner Menu', 'regala' ),
+	    'name' => __( 'Menu Area Text Color', 'regala' ),
 	    'id' => 'inner_menu_text_color',
 	    'type' => 'color',
 		'default' => '#F2F1EF',
-		'css' => '.main-navigation .menu h1, .main-navigation .menu h2, .main-navigation .menu h3, .main-navigation .menu h4, .main-navigation .menu h5, .main-navigation .menu h6, .main-navigation .menu span, .main-navigation .menu p, .main-navigation .menu a, .main-navigation .menu a:visited, .main-navigation .menu div, .main-navigation.toggled .genericon-menu:before { color: value}',
+		'css' => '.main-navigation .menu h1, .main-navigation .menu h2, .main-navigation .menu h3, .main-navigation .menu h4, .main-navigation .menu h5, .main-navigation .menu h6, .main-navigation .menu span, .main-navigation .menu p, .main-navigation .menu a, .main-navigation .menu a:visited, .main-navigation .menu div, .main-navigation.toggled .genericon-menu:before { color: value }',
 	) );
     
 	/**
