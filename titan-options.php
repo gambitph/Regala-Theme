@@ -105,7 +105,7 @@ function regala_create_options() {
 	    'type' => 'number',
 	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'regala' ),
 	    'default' => '100',
-		'css' => '#masthead-inner { bottom: valuepx }',
+		'css' => '#masthead-inner.tagline { bottom: valuepx }',
 	) );
 	
 	/*
