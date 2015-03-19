@@ -43,3 +43,18 @@ body.blog {
 		font-size: .9em;
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	body.blog {
+		.entry-date {
+			top: -20px;
+			left: auto;
+			right: 0;
+		    -webkit-transform: translateY(-100%);
+		    -moz-transform: translateY(-100%);
+		    -ms-transform: translateY(-100%);
+		    -o-transform: translateY(-100%);
+		    transform: translateY(-100%);
+		}
+	}
+}

@@ -1,5 +1,4 @@
 body {
-	color: #F2F1EF;
 	font-family: 'Gudea', sans-serif;
 	font-size: 16px;
 	line-height: 1.6em;
@@ -15,17 +14,35 @@ a, a:link, a:visited {
 	opacity: 1;
 	&:hover {
 //		color: #F2F1EF;
-		opacity: .7;
+		opacity: .6;
 		text-decoration: none;
 	}
 }
-body .btn {
-	border: 2px solid #DADFE1;
-	padding: 1.4em 2.4em;
-	text-transform: uppercase;
-	line-height: 1em;
-	font-size: .9em;
-	display: inline-block;
+body {
+	.comment-reply-link,
+	.comment-edit-link,
+    .btn, .btn-default, button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+		&, &:link, &:visited {
+			color: #DADFE1;
+			border: 2px solid #DADFE1;
+			padding: 1.4em 2.4em;
+			text-transform: uppercase;
+			line-height: 1em;
+			font-size: .9em;
+			display: inline-block;
+			opacity: 1;
+			&:hover {
+				opacity: .6;
+				color: #DADFE1;
+			}
+		}
+	}
+}
+body.blog article {
+	color: #F2F1EF;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,10 +70,10 @@ h6 {
 }
 @media (max-width: 676px) {
 	h1 {
-	    font-size: 34px;
+	    font-size: 50px;
 	}
 	h2 {
-	    font-size: 28px;
+	    font-size: 40px;
 	}
 	h3 {
 	    font-size: 22px;
