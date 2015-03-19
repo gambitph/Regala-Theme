@@ -138,3 +138,37 @@ function regala_titan_custom_css() {
     </style>";
 }
 add_action( 'wp_head', 'regala_titan_custom_css' );
+
+
+/**
+ * Halves the size of the site-logo to make it retina ready
+ *
+ * @param	$html string The rendered site-logo html
+ * @param	$logo array The logo-Jetpack object
+ * @param	$size string The size of the logo
+ * @see	jetpack_the_site_logo filter in Jetpack
+ */
+function regala_the_site_logo( $html, $logo, $size ) {
+	
+	if ( empty( $logo ) ) {
+		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
+	}
+	if ( empty( $logo['url'] ) ) {
+		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
+	}
+	
+	// Checker, comes from jetpack_the_site_logo
+	if ( ! jetpack_has_site_logo() ) {
+		return $html;
+	}
+	
+	// Get the image size
+	$imageAttachment = wp_get_attachment_image_src( $logo['id'], $size );
+	
+	// Half the image size since we want a retina ready image
+	$html = preg_replace( '/width="(\d+)"/i', 'width="' . ( $imageAttachment[1] / 2 ) . '"', $html );
+	$html = preg_replace( '/height="(\d+)"/i', 'height="' . ( $imageAttachment[2] / 2 ) . '"', $html );
+	
+	return $html;
+}
+add_filter( 'jetpack_the_site_logo', 'regala_the_site_logo', 10, 3 );

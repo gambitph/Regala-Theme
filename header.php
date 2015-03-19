@@ -83,11 +83,15 @@ if ( is_single() && has_post_thumbnail() ) {
 	?>
 	<div id="site-top">   
 		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
-		
+
 		<?php
-		// TODO: Jetpack Logo
+		if ( function_exists( 'jetpack_the_site_logo' ) ) {
+			jetpack_the_site_logo();
+		} else {
+			?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title site-logo-link" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a><?php
+		}
 		?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a>
+		
 	</div>
 	<?php
 		

@@ -12,7 +12,7 @@ header {
 	z-index: 2;
 }
 
-.site-title {
+.site-title, .site-logo-link {
 	display: inline-block;
     background: black;
     font-size: 2em;
@@ -79,7 +79,7 @@ header {
 			transform: translateY(100%);
 		}
 	}
-	.site-title {
+	.site-title, .site-logo-link {
 	    font-size: 1.7em;
 	    position: relative;
 	    margin-left: 40vw;

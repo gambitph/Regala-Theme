@@ -58,3 +58,19 @@ body.blog, body.archive, body.search {
 		}
 	}
 }
+
+@media screen and (max-width: 710px) {
+	body.blog, body.archive, body.search {
+		article {
+			height: auto;
+			padding: 200px 0 50px;
+		}
+		.article-inner {
+		    position: relative;
+		    bottom: auto;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		}
+	}
+}

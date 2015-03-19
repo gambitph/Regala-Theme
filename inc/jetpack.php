@@ -17,3 +17,19 @@ function theme1_jetpack_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'theme1_jetpack_setup' );
+
+/**
+ * Make all videos responsive
+ * @see http://jetpack.me/support/site-logo/
+ */
+function regala_jetpack_site_logo() {
+	$args = array(
+	    'header-text' => array(
+	        'site-title',
+	        'site-description',
+	    ),
+	    'size' => 'full',
+	);
+	add_theme_support( 'site-logo', $args );
+}
+add_action( 'after_setup_theme', 'regala_jetpack_site_logo' );
