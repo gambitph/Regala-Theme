@@ -1072,7 +1072,8 @@ header {
 #site-top {
   position: absolute;
   top: 0;
-  right: 40px; }
+  right: 40px;
+  z-index: 2; }
 
 .site-title {
   display: inline-block;
