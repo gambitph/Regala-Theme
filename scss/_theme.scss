@@ -41,8 +41,10 @@ body {
 		}
 	}
 }
-body.blog article {
-	color: #F2F1EF;
+body.blog, body.archive, body.search {
+	article {
+		color: #F2F1EF;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

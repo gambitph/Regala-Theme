@@ -1422,7 +1422,7 @@ body input[type="submit"]:visited {
     opacity: .6;
     color: #DADFE1; }
 
-body.blog article {
+body.blog article, body.archive article, body.search article {
   color: #F2F1EF; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1471,13 +1471,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 50px;
   margin-bottom: 25px; }
 
-body.blog article {
+body.blog article, body.archive article, body.search article {
   height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
   margin: 0; }
-body.blog .article-inner {
+body.blog .article-inner, body.archive .article-inner, body.search .article-inner {
   max-width: 710px;
   width: 80%;
   margin: 0 auto;
@@ -1485,9 +1485,9 @@ body.blog .article-inner {
   left: 0;
   right: 0;
   bottom: 100px; }
-body.blog .entry-title {
+body.blog .entry-title, body.archive .entry-title, body.search .entry-title {
   margin-top: 0; }
-body.blog .entry-category {
+body.blog .entry-category, body.archive .entry-category, body.search .entry-category {
   position: absolute;
   top: -20px;
   -webkit-transform: translateY(-100%);
@@ -1495,7 +1495,7 @@ body.blog .entry-category {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%); }
-body.blog .entry-date {
+body.blog .entry-date, body.archive .entry-date, body.search .entry-date {
   position: absolute;
   top: -20px;
   left: -30px;
@@ -1505,12 +1505,12 @@ body.blog .entry-date {
   -ms-transform: translateY(-100%) translateX(-100%);
   -o-transform: translateY(-100%) translateX(-100%);
   transform: translateY(-100%) translateX(-100%); }
-body.blog .entry-date, body.blog .entry-category {
+body.blog .entry-date, body.blog .entry-category, body.archive .entry-date, body.archive .entry-category, body.search .entry-date, body.search .entry-category {
   font-style: italic;
   font-size: .9em; }
 
 @media screen and (max-width: 1000px) {
-  body.blog .entry-date {
+  body.blog .entry-date, body.archive .entry-date, body.search .entry-date {
     top: -20px;
     left: auto;
     right: 0;

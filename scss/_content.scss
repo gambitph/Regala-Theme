@@ -1,4 +1,4 @@
-body.blog {
+body.blog, body.archive, body.search {
 	article {
 		height: 100vh;
 		background-size: cover;
@@ -45,7 +45,7 @@ body.blog {
 }
 
 @media screen and (max-width: 1000px) {
-	body.blog {
+	body.blog, body.archive, body.search {
 		.entry-date {
 			top: -20px;
 			left: auto;
