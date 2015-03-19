@@ -66,7 +66,7 @@ function regala_create_options() {
 	) );
 	
 	/*
-	*   Taline font and color options
+	*   Tagline font and color options
 	*/
 	$font = $titan->createThemeCustomizerSection( array(
 	    'name' => __( 'Font', 'regala' ),
