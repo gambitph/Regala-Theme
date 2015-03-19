@@ -108,7 +108,6 @@ function regala_create_options() {
 		'css' => '#masthead-inner { bottom: valuepx }',
 	) );
 	
-	
 	/*
 	*   Social links color option
 	*/
@@ -135,6 +134,69 @@ function regala_create_options() {
 		'css' => '.social-navigation a:hover:before { color: value}',
 	) );
 	
+	/*
+	*   Menu button color option
+	*/
+	
+	$menu = $titan->createThemeCustomizerSection( array(
+	   'name' => __( 'Main Menu', 'regala' ),
+	   'panel' => __( 'Theme Options & Colors', 'regala' ),
+	) );
+	
+	$menu->createOption( array(
+	   'name' => __( 'Menu Button Background Color', 'regala' ),
+	   'id' => 'menu_color',
+	   'type' => 'color',
+	   'default' => '#DADFE1',
+	   'css' => '.menu-toggle { background: value }',
+	) );
+	
+	$menu->createOption( array(
+	    'name' => __( 'Menu Button Opacity', 'regala' ),
+	    'id' => 'menu_opacity',
+	    'type' => 'number',
+		'default' => '0.7',
+		'min' => '0.0',
+		'max' => '1.0',
+		'step' => '0.01',
+		'css' => '.menu-toggle { opacity: value }',
+	) );
+    
+    $menu->createOption( array(
+	    'name' => __( 'Menu Button Hover Opacity', 'regala' ),
+	    'id' => 'menu_hover_opacity',
+	    'type' => 'number',
+		'default' => '1',
+		'min' => '0.0',
+		'max' => '1.0',
+		'step' => '0.01',
+		'css' => '.menu-toggle:hover { opacity: value }',
+	) );
+	
+	$menu->createOption( array(
+	    'name' => __( 'Menu Button Icon Color', 'regala' ),
+	    'id' => 'menu_icon_color',
+	    'type' => 'color',
+		'default' => '#333333',
+		'css' => '.genericon-menu:before { color: value }',
+	) );
+	
+	$menu->createOption( array(
+	    'name' => __( 'Menu Area Background Color', 'regala' ),
+	    'id' => 'inner_menu_color',
+	    'type' => 'color',
+		'default' => '#4d4d4d',
+		'css' => '.inner-menu { background: value }',
+	) );
+	
+	$menu->createOption( array(
+	    'name' => __( 'Menu Area Text Color', 'regala' ),
+	    'id' => 'inner_menu_text_color',
+	    'type' => 'color',
+		'default' => '#F2F1EF',
+		'css' => '.main-navigation .menu h1, .main-navigation .menu h2, .main-navigation .menu h3, .main-navigation .menu h4, .main-navigation .menu h5, .main-navigation .menu h6, .main-navigation .menu span, .main-navigation .menu p, .main-navigation .menu a, .main-navigation .menu a:visited, .main-navigation .menu div, .main-navigation.toggled .genericon-menu:before { color: value }',
+	) );
+    
 	/**
 	 * Create an admin panel & tabs
 	 * You should put options here that do not change the look of your theme
@@ -159,7 +221,7 @@ function regala_create_options() {
 	$generalTab->createOption( array(
 	    'type' => 'save',
 	) );
-	
+
 	
 	$footerTab = $adminPanel->createTab( array(
 	    'name' => __( 'Footer', 'regala' ),
