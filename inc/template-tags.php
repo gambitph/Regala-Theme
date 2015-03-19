@@ -7,11 +7,11 @@
  * @package theme1
  */
 
-if ( ! function_exists( 'theme1_paging_nav' ) ) :
+if ( ! function_exists( 'regala_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
- function theme1_paging_nav(){
+ function regala_paging_nav(){
  	// Don't print empty markup if there's only one page.
  	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
  		return;
@@ -34,15 +34,15 @@ if ( ! function_exists( 'theme1_paging_nav' ) ) :
 
  	// Set up paginated links.
  	$links = paginate_links( array(
- 		'base'     => $pagenum_link,
- 		'format'   => $format,
- 		'total'    => $GLOBALS['wp_query']->max_num_pages,
- 		'current'  => $paged,
+ 		'base' => $pagenum_link,
+ 		'format' => $format,
+ 		'total' => $GLOBALS['wp_query']->max_num_pages,
+ 		'current' => $paged,
  		'mid_size' => 2,
  		'add_args' => array_map( 'urlencode', $query_args ),
- 		'prev_text' => __( '← Previous', 'theme1' ),
- 		'next_text' => __( 'Next →', 'my-simone' ),
-         'type'      => 'list',
+ 		'prev_text' => __( 'Previous', 'regala' ),
+ 		'next_text' => __( 'Next', 'regala' ),
+		'type' => 'list',
  	) );
 
  	if ( $links ) :
@@ -56,6 +56,8 @@ if ( ! function_exists( 'theme1_paging_nav' ) ) :
  	endif;
  }
 endif;
+
+
 
 if ( ! function_exists( 'theme1_post_nav' ) ) :
 /**
@@ -193,45 +195,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'theme1' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Category: %s', 'regala' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'theme1' ), single_tag_title( '', false ) );
+		$title = sprintf( __( 'Tag: %s', 'regala' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'theme1' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Author: %s', 'regala' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'theme1' ), get_the_date( _x( 'Y', 'yearly archives date format', 'theme1' ) ) );
+		$title = sprintf( __( 'Year: %s', 'regala' ), get_the_date( _x( 'Y', 'yearly archives date format', 'regala' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'theme1' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'theme1' ) ) );
+		$title = sprintf( __( 'Month: %s', 'regala' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'regala' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'theme1' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'theme1' ) ) );
+		$title = sprintf( __( 'Day: %s', 'regala' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'regala' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'theme1' );
+			$title = _x( 'Asides', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title', 'theme1' );
+			$title = _x( 'Galleries', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title', 'theme1' );
+			$title = _x( 'Images', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title', 'theme1' );
+			$title = _x( 'Videos', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title', 'theme1' );
+			$title = _x( 'Quotes', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title', 'theme1' );
+			$title = _x( 'Links', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title', 'theme1' );
+			$title = _x( 'Statuses', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title', 'theme1' );
+			$title = _x( 'Audio', 'post format archive title', 'regala' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title', 'theme1' );
+			$title = _x( 'Chats', 'post format archive title', 'regala' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'theme1' ), post_type_archive_title( '', false ) );
+		$title = sprintf( __( 'Archives: %s', 'regala' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', 'theme1' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( __( '%1$s: %2$s', 'regala' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'theme1' );
+		$title = __( 'Archives', 'regala' );
 	}
 
 	/**

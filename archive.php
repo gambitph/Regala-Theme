@@ -34,7 +34,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php theme1_paging_nav(); ?>
+			<?php regala_paging_nav(); ?>
 
 		<?php else : ?>
 

@@ -1052,17 +1052,40 @@ button:hover,
 .main-navigation .widget ul {
   display: block; }
 
-.site-main .paging-navigation {
-  width: 100%;
-  background: #444;
-  margin: 0 0; }
+/**
+ * Page navigation
+ */
+.paging-navigation {
+  margin: 0;
+  background: #222; }
+  .paging-navigation ul.page-numbers {
+    text-align: center;
+    padding: 0;
+    max-width: 710px;
+    width: 80%;
+    margin: 0 auto; }
+  .paging-navigation li {
+    display: inline-block; }
+    .paging-navigation li span, .paging-navigation li a, .paging-navigation li a:link, .paging-navigation li a:visited {
+      margin: 10px;
+      font-family: "Playfair Display";
+      font-style: italic;
+      font-size: 1.8em;
+      color: #999;
+      padding: 30px 0;
+      display: inline-block;
+      opacity: 1; }
+    .paging-navigation li .dots, .paging-navigation li .current {
+      opacity: .4; }
+    .paging-navigation li a:hover, .paging-navigation li a:link:hover, .paging-navigation li a:visited:hover {
+      opacity: .7; }
 
-.site-main .page-numbers {
-  max-width: 710px;
-  width: 80%;
-  margin: 0 auto;
-  padding-left: 0; }
-
+@media screen and (max-width: 710px) {
+  .paging-navigation li a.page-numbers, .paging-navigation li span.page-numbers {
+    display: none;
+    font-size: 1em; }
+    .paging-navigation li a.page-numbers.prev, .paging-navigation li a.page-numbers.next, .paging-navigation li span.page-numbers.prev, .paging-navigation li span.page-numbers.next {
+      display: inline-block; } }
 header {
   height: 100vh; }
 

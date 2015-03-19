@@ -50,15 +50,43 @@ if ( is_single() && has_post_thumbnail() ) {
 	if ( ! empty( $headerImageUrl ) ) : ?>
 	<header id="masthead" class="site-header" role="banner">
 		
-		<div id="masthead-inner">
+		<?php 
+		// For the frontpage, display the site tagline
+		if ( is_home() || is_front_page() ) {
+			?>
+			<div id="masthead-inner" class="tagline">
 			
-			<?php if ( get_bloginfo( 'description' ) ) : ?>
-			<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
-			<?php endif; ?>	
+				<?php if ( get_bloginfo( 'description' ) ) : ?>
+				<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
+				<?php endif; ?>	
 		
-			<?php regala_get_home_caption() ?>
+				<?php regala_get_home_caption() ?>
         
-        </div>
+	        </div>
+			<?php
+		
+		// For the rest of the pages, display the title
+		} else if ( is_single() ) {
+			?>
+			<div id="masthead-inner">
+				<h1 class="site-description"><?php the_title() ?></h1>
+	        </div>
+			<?php
+			
+		} else if ( is_archive() ) {
+			?>
+			<div id="masthead-inner">
+				<h1 class="site-description"><?php the_title() ?></h1>
+	        </div>
+			<?php
+			
+		} else if ( is_search() ) {
+			
+		} else if ( is_404() ) {
+			
+		}
+		?>
+		
 	</header>
 	<?php endif;
 	
