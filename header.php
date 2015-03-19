@@ -90,7 +90,7 @@ if ( is_single() && has_post_thumbnail() ) {
 	</header>
 	<?php endif;
 	
-	
+
 	/**
 	 * Main menu
 	 */	
