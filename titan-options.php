@@ -65,13 +65,14 @@ function regala_create_options() {
 		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover, .site-logo-link:hover, .site-logo-link:visited:hover, .site-logo-link:link:hover { opacity: value}',
 	) );
 	
+	
 	$font = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Font', 'regala' ),
+	    'name' => __( 'Frontpage Tagline Area', 'regala' ),
 	    'panel' => __( 'Theme Options & Colors', 'regala' ),
 	) );
 	
 	$font->createOption( array(
-	   'name' => __( 'Tagline Font', 'regala' ),
+	   'name' => __( 'Tagline Heading Font', 'regala' ),
 	   'id' => 'tagline_font',
 	   'type' => 'font',
 	   'default' => array(
@@ -83,24 +84,24 @@ function regala_create_options() {
            'font-style' => 'italic',
 	   ),
 	   'desc' => __( 'Select a Style', 'regala' ),
-		'css' => 'h1.site-description { value }',
+	   'css' => 'h1.site-description { value }',
 	) );
 	
 	$font->createOption( array(
-	    'name' => __( 'Text Color of the Tagline Caption', 'regala' ),
+	    'name' => __( 'Tagline Caption Text Color', 'regala' ),
 	    'id' => 'tagline_caption_color',
 	    'type' => 'color',
 	    'desc' => __( 'This color changes the color of the tagline caption', 'regala' ),
 	    'default' => '#FFFFFF',
-		'css' => 'p.tagline-description { color: value}',
+		'css' => 'p.tagline-description { color: value }',
 	) );
 	
 	$font->createOption( array(
-	    'name' => __( 'Tagline Area Bottom Offset', 'regala' ),
+	    'name' => __( 'Bottom Offset', 'regala' ),
 	    'id' => 'tagline_area_bottom_offset',
 	    'type' => 'number',
 	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'regala' ),
-	    'default' => '100px',
+	    'default' => '100',
 		'css' => '#masthead-inner { bottom: valuepx }',
 	) );
 	
