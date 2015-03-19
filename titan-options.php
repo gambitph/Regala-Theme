@@ -23,38 +23,47 @@ function regala_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Theme Options', 'regala' ),
+	    'name' => __( 'Logo', 'regala' ),
+	    'panel' => __( 'Theme Options & Colors', 'regala' ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Color', 'regala' ),
-	    'id' => 'sample_color1',
+	    'name' => __( 'Background Color of the Logo', 'regala' ),
+	    'id' => 'logo_bg_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the background of your theme', 'regala' ),
-	    'default' => '#FFFFFF',
-		'css' => 'body { background-color: value }',
+	    'desc' => __( 'This color changes the background of your logo', 'regala' ),
+	    'default' => '#000000',
 	) );
 	
-	// $section->createOption( array(
-// 	    'name' => __( 'Headings Font', 'regala' ),
-// 	    'id' => 'headings_font',
-// 	    'type' => 'font',
-// 	    'desc' => __( 'Select the font for all headings in the site', 'regala' ),
-// 		'show_color' => false,
-// 		'show_font_size' => false,
-// 	    'show_font_weight' => false,
-// 	    'show_font_style' => false,
-// 	    'show_line_height' => false,
-// 	    'show_letter_spacing' => false,
-// 	    'show_text_transform' => false,
-// 	    'show_font_variant' => false,
-// 	    'show_text_shadow' => false,
-// 	    'default' => array(
-// 	        'font-family' => 'Fauna One',
-// 	    ),
-// 		'css' => 'h1, h2, h3, h4, h5, h6 { value }',
-// 	) );
+	$section->createOption( array(
+	    'name' => __( 'Text Color of the Logo', 'regala' ),
+	    'id' => 'logo_text_color',
+	    'type' => 'color',
+	    'desc' => __( 'This color changes the color of the text logo', 'regala' ),
+	    'default' => '#FFFFFF',
+		'css' => '.site-title:visited, .site-title:hover, .site-title:link { color: value}',
+	) );
 	
+	$section->createOption( array(
+	    'name' => __( 'Background Opacity', 'regala' ),
+	    'id' => 'logo_bg_opacity',
+	    'type' => 'number',
+		'default' => '0.7',
+		'min' => '0.0',
+		'max' => '1.0',
+		'step' => '0.01',
+	) );
+	
+	$section->createOption( array(
+	    'name' => __( 'Hover Opacity', 'regala' ),
+	    'id' => 'logo_hover_opacity',
+	    'type' => 'number',
+		'default' => '0.7',
+		'min' => '0.0',
+		'max' => '1.0',
+		'step' => '0.01',
+		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover { opacity: value}',
+	) );
 	
 	/**
 	 * Create an admin panel & tabs
