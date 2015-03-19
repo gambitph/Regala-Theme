@@ -65,6 +65,9 @@ function regala_create_options() {
 		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover { opacity: value}',
 	) );
 	
+	/*
+	*   Taline font and color options
+	*/
 	$font = $titan->createThemeCustomizerSection( array(
 	    'name' => __( 'Font', 'regala' ),
 	    'panel' => __( 'Theme Options & Colors', 'regala' ),
@@ -102,6 +105,33 @@ function regala_create_options() {
 	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'regala' ),
 	    'default' => '100px',
 		'css' => '#masthead-inner { bottom: valuepx }',
+	) );
+	
+	
+	/*
+	*   Social links color option
+	*/
+	$social = $titan->createThemeCustomizerSection( array(
+	    'name' => __( 'Social Links', 'regala' ),
+	    'panel' => __( 'Theme Options & Colors', 'regala' ),
+	) );
+	
+	$social->createOption( array(
+	    'name' => __( 'Color Picker of the Social Links', 'regala' ),
+	    'id' => 'social_link_color',
+	    'type' => 'color',
+	    'desc' => __( 'This color changes the color of the social links', 'regala' ),
+	    'default' => '#FFFFFF',
+		'css' => '.social-navigation a:before { color: value}',
+	) );
+	
+	$social->createOption( array(
+	    'name' => __( 'Hover Color of the Social Links', 'regala' ),
+	    'id' => 'social_link_hover_color',
+	    'type' => 'color',
+	    'desc' => __( 'This color changes the hover color of the social links', 'regala' ),
+	    'default' => '#000000',
+		'css' => '.social-navigation a:hover:before { color: value}',
 	) );
 	
 	/**
@@ -144,7 +174,6 @@ function regala_create_options() {
 	$footerTab->createOption( array(
 	    'type' => 'save',
 	) );
-	
 	
 	/*
 	* Social Icons
