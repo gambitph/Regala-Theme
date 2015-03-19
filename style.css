@@ -1075,7 +1075,7 @@ header {
   right: 40px;
   z-index: 2; }
 
-.site-title {
+.site-title, .site-logo-link {
   display: inline-block;
   background: black;
   font-size: 2em;
@@ -1088,10 +1088,10 @@ header {
   -ms-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s; }
-  .site-title:visited, .site-title:hover, .site-title:link {
+  .site-title:visited, .site-title:hover, .site-title:link, .site-logo-link:visited, .site-logo-link:hover, .site-logo-link:link {
     color: #fff;
     text-decoration: none; }
-  .site-title:hover {
+  .site-title:hover, .site-logo-link:hover {
     opacity: 1; }
 
 header {
@@ -1132,7 +1132,7 @@ header {
       -o-transform: translateY(100%);
       transform: translateY(100%); }
 
-  .site-title {
+  .site-title, .site-logo-link {
     font-size: 1.7em;
     position: relative;
     margin-left: 40vw; } }
@@ -1519,3 +1519,13 @@ body.blog .entry-date, body.blog .entry-category, body.archive .entry-date, body
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%); } }
+@media screen and (max-width: 710px) {
+  body.blog article, body.archive article, body.search article {
+    height: auto;
+    padding: 200px 0 50px; }
+  body.blog .article-inner, body.archive .article-inner, body.search .article-inner {
+    position: relative;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    right: auto; } }
