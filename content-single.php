@@ -22,7 +22,7 @@
                     /* translators: used between list items, there is a space after the comma */
                     $category_list = get_the_category_list( __( ', ', 'theme1' ) );
 
-                    if ( theme1_categorized_blog() ) {
+                    if ( regala_categorized_blog() ) {
                         echo '<div class="category-list">' . $category_list . '</div>';
                     }
                 ?>

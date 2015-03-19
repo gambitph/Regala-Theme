@@ -1157,6 +1157,79 @@ body.single #footer-right {
 .social-navigation a[href*="twitch.tv"]:before {
   content: "\f516"; }
 
+body {
+  color: #F2F1EF;
+  font-family: 'Gudea', sans-serif;
+  font-size: 16px;
+  line-height: 1.6em; }
+
+a, a:link, a:visited {
+  color: #DADFE1;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  text-decoration: none;
+  opacity: 1; }
+  a:hover, a:link:hover, a:visited:hover {
+    opacity: .7;
+    text-decoration: none; }
+
+body .btn {
+  border: 2px solid #DADFE1;
+  padding: 1.4em 2.4em;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: .9em;
+  display: inline-block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic; }
+
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 50px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+@media (max-width: 676px) {
+  h1 {
+    font-size: 34px; }
+
+  h2 {
+    font-size: 28px; }
+
+  h3 {
+    font-size: 22px; }
+
+  h4 {
+    font-size: 18px; }
+
+  h5 {
+    font-size: 16px; }
+
+  h6 {
+    font-size: 14px; } }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  margin-top: 50px;
+  margin-bottom: 25px; }
+
 .main-navigation {
   z-index: 2;
   top: 0;
@@ -1368,3 +1441,6 @@ body.blog .entry-date {
   -ms-transform: translateY(-100%) translateX(-100%);
   -o-transform: translateY(-100%) translateX(-100%);
   transform: translateY(-100%) translateX(-100%); }
+body.blog .entry-date, body.blog .entry-category {
+  font-style: italic;
+  font-size: .9em; }

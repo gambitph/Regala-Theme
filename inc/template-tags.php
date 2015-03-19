@@ -159,7 +159,7 @@ function theme1_entry_footer() {
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'theme1' ) );
-		if ( $categories_list && theme1_categorized_blog() ) {
+		if ( $categories_list && regala_categorized_blog() ) {
 			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'theme1' ) . '</span>', $categories_list );
 		}
 
@@ -297,16 +297,16 @@ function regala_categorized_blog() {
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so theme1_categorized_blog should return true.
+		// This blog has more than 1 category so regala_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so theme1_categorized_blog should return false.
+		// This blog has only 1 category so regala_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in theme1_categorized_blog.
+ * Flush out the transients used in regala_categorized_blog.
  */
 function theme1_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {

@@ -35,25 +35,25 @@ function regala_create_options() {
 		'css' => 'body { background-color: value }',
 	) );
 	
-	$section->createOption( array(
-	    'name' => __( 'Headings Font', 'regala' ),
-	    'id' => 'headings_font',
-	    'type' => 'font',
-	    'desc' => __( 'Select the font for all headings in the site', 'regala' ),
-		'show_color' => false,
-		'show_font_size' => false,
-	    'show_font_weight' => false,
-	    'show_font_style' => false,
-	    'show_line_height' => false,
-	    'show_letter_spacing' => false,
-	    'show_text_transform' => false,
-	    'show_font_variant' => false,
-	    'show_text_shadow' => false,
-	    'default' => array(
-	        'font-family' => 'Fauna One',
-	    ),
-		'css' => 'h1, h2, h3, h4, h5, h6 { value }',
-	) );
+	// $section->createOption( array(
+// 	    'name' => __( 'Headings Font', 'regala' ),
+// 	    'id' => 'headings_font',
+// 	    'type' => 'font',
+// 	    'desc' => __( 'Select the font for all headings in the site', 'regala' ),
+// 		'show_color' => false,
+// 		'show_font_size' => false,
+// 	    'show_font_weight' => false,
+// 	    'show_font_style' => false,
+// 	    'show_line_height' => false,
+// 	    'show_letter_spacing' => false,
+// 	    'show_text_transform' => false,
+// 	    'show_font_variant' => false,
+// 	    'show_text_shadow' => false,
+// 	    'default' => array(
+// 	        'font-family' => 'Fauna One',
+// 	    ),
+// 		'css' => 'h1, h2, h3, h4, h5, h6 { value }',
+// 	) );
 	
 	
 	/**

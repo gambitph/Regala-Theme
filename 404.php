@@ -22,7 +22,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( theme1_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+					<?php if ( regala_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'theme1' ); ?></h2>
 						<ul>

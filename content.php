@@ -14,8 +14,7 @@ if ( ! empty( $backgroundImage ) ) {
 	?>
 	<style>
 	article.post-<?php the_ID(); ?> {
-        background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.1) 48%,rgba(0,0,0,0) 100%), url( <?php echo esc_url( $backgroundImage ) ?> );
-        background-size: cover;
+        background: linear-gradient(45deg, rgba(41,51,56,0.4) 0%,rgba(41,51,56,0.3) 48%,rgba(41,51,56,0) 100%), url( <?php echo esc_url( $backgroundImage ) ?> );
 	}
 	</style>
 	<?php
@@ -28,7 +27,7 @@ if ( ! empty( $backgroundImage ) ) {
 		<span class="entry-date"><?php regala_posted_on() ?></span>
 		<div class="entry-content">
 			<?php the_excerpt() ?>
-			<?php echo '<a href="' . get_permalink() . '" title="' . __( 'Continue Reading', 'regala' ) . ' ' . esc_attr( get_the_title() ) . '" rel="bookmark">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'regala' ) . '</a>' ?>
+			<?php echo '<a href="' . get_permalink() . '" class="btn" title="' . __( 'Continue Reading', 'regala' ) . ' ' . esc_attr( get_the_title() ) . '" rel="bookmark">' . __( 'Continue reading', 'regala' ) . '</a>' ?>
 		</div>
 	</div>
 </article>

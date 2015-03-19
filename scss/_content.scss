@@ -38,4 +38,8 @@ body.blog {
 		-o-transform: translateY(-100%) translateX(-100%);
 		transform: translateY(-100%) translateX(-100%);
 	}
+	.entry-date, .entry-category {
+		font-style: italic;
+		font-size: .9em;
+	}
 }
