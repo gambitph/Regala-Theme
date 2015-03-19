@@ -195,6 +195,45 @@ function regala_create_options() {
 		'default' => '#F2F1EF',
 		'css' => '.main-navigation .menu h1, .main-navigation .menu h2, .main-navigation .menu h3, .main-navigation .menu h4, .main-navigation .menu h5, .main-navigation .menu h6, .main-navigation .menu span, .main-navigation .menu p, .main-navigation .menu a, .main-navigation .menu a:visited, .main-navigation .menu div, .main-navigation.toggled .genericon-menu:before { color: value}',
 	) );
+	
+	/*
+	*   Default featured images
+	*/
+    
+    $image = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Default Featured Images', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+    ) );
+    
+    $image->createOption( array(
+        'name' => __( 'Image 1', 'regala' ),
+        'id' => 'featured_image',
+        'type' => 'upload',
+    ) );
+    
+    $image->createOption( array(
+        'name' => __( 'Image 2', 'regala' ),
+        'id' => 'featured_image2',
+        'type' => 'upload',
+    ) );
+    
+    $image->createOption( array(
+        'name' => __( 'Image 3', 'regala' ),
+        'id' => 'featured_image3',
+        'type' => 'upload',
+    ) );
+    
+    $image->createOption( array(
+        'name' => __( 'Image 4', 'regala' ),
+        'id' => 'featured_image4',
+        'type' => 'upload', 
+    ) );
+    
+    $image->createOption( array(
+        'name' => __( 'Image 5', 'regala' ),
+        'id' => 'featured_image5',
+        'type' => 'upload',
+    ) );
     
 	/**
 	 * Create an admin panel & tabs
