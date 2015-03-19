@@ -1,47 +1,45 @@
-.site-main .index-box{
-    position: absolute;
-    bottom: 0;
-    max-width: 710px;
-    width: 80%;
-}
-.site-main article {
-    position: relative;
-}
-
-.site-main article,
-.site-main a,
-.site-main a:visited,
-.site-main h2,
-.site-main p {
-    color: white;
-} 
-
-.hentry {
-    margin: 0;
-}
-
-.site-main .feat-image {
-    display: none;
-}
-
-.site-main img {
-    width: 100%;
-    height: auto;
-}
-
-@media screen and ( max-width: 600px ) {
-    .site-main article {
-        background-image: none !important;
-     }
-     .site-main .feat-image {
-         display: block;
-     }
-     .hentry {
-         width: auto !important;
-         height: auto !important;
-     }
-}
-
-.single article {
-    position: relative;
+body.blog {
+	article {
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		margin: 0;
+	}
+	.article-inner {
+		max-width: 710px;
+		width: 80%;
+		margin: 0 auto;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: 100px;
+	}
+	.entry-title {
+		margin-top: 0;
+	}
+	.entry-category {
+	    position: absolute;
+	    top: -20px;
+	    -webkit-transform: translateY(-100%);
+	    -moz-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	    -o-transform: translateY(-100%);
+	    transform: translateY(-100%);
+	}
+	.entry-date {
+		position: absolute;
+		top: -20px;
+		left: -30px;
+		white-space: nowrap;
+		-webkit-transform: translateY(-100%) translateX(-100%);
+		-moz-transform: translateY(-100%) translateX(-100%);
+		-ms-transform: translateY(-100%) translateX(-100%);
+		-o-transform: translateY(-100%) translateX(-100%);
+		transform: translateY(-100%) translateX(-100%);
+	}
+	.entry-date, .entry-category {
+		font-style: italic;
+		font-size: .9em;
+	}
 }
