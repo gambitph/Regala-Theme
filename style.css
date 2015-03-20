@@ -1401,8 +1401,9 @@ body {
   line-height: 1.6em;
   color: #555E67; }
 
-a, a:link, a:visited {
-  color: #DADFE1;
+a, a:link, a:visited,
+.saboxplugin-wrap .saboxplugin-web a {
+  color: #d9b760;
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -ms-transition: all .4s ease-in-out;
@@ -1410,7 +1411,8 @@ a, a:link, a:visited {
   transition: all .4s ease-in-out;
   text-decoration: none;
   opacity: 1; }
-  a:hover, a:link:hover, a:visited:hover {
+  a:hover, a:link:hover, a:visited:hover,
+  .saboxplugin-wrap .saboxplugin-web a:hover {
     opacity: .6;
     text-decoration: none; }
 
@@ -1430,8 +1432,8 @@ body input[type="reset"]:visited,
 body input[type="submit"],
 body input[type="submit"]:link,
 body input[type="submit"]:visited {
-  color: #DADFE1;
-  border: 2px solid #DADFE1;
+  color: #d9b760;
+  border: 2px solid #d9b760;
   padding: 1.4em 2.4em;
   text-transform: uppercase;
   line-height: 1em;
@@ -1455,7 +1457,112 @@ body input[type="submit"]:visited {
   body input[type="submit"]:link:hover,
   body input[type="submit"]:visited:hover {
     opacity: .6;
+    color: #d9b760; }
+
+body.blog article a, body.blog article a:link, body.blog article a:visited, body.archive article a, body.archive article a:link, body.archive article a:visited, body.search article a, body.search article a:link, body.search article a:visited {
+  color: #DADFE1; }
+  body.blog article a:hover, body.blog article a:link:hover, body.blog article a:visited:hover, body.archive article a:hover, body.archive article a:link:hover, body.archive article a:visited:hover, body.search article a:hover, body.search article a:link:hover, body.search article a:visited:hover {
+    color: #F2F1EF; }
+body.blog article .comment-reply-link, body.blog article .comment-reply-link:link, body.blog article .comment-reply-link:visited,
+body.blog article .comment-edit-link,
+body.blog article .comment-edit-link:link,
+body.blog article .comment-edit-link:visited,
+body.blog article .btn,
+body.blog article .btn:link,
+body.blog article .btn:visited, body.blog article .btn-default, body.blog article .btn-default:link, body.blog article .btn-default:visited, body.blog article button, body.blog article button:link, body.blog article button:visited,
+body.blog article input[type="button"],
+body.blog article input[type="button"]:link,
+body.blog article input[type="button"]:visited,
+body.blog article input[type="reset"],
+body.blog article input[type="reset"]:link,
+body.blog article input[type="reset"]:visited,
+body.blog article input[type="submit"],
+body.blog article input[type="submit"]:link,
+body.blog article input[type="submit"]:visited, body.archive article .comment-reply-link, body.archive article .comment-reply-link:link, body.archive article .comment-reply-link:visited,
+body.archive article .comment-edit-link,
+body.archive article .comment-edit-link:link,
+body.archive article .comment-edit-link:visited,
+body.archive article .btn,
+body.archive article .btn:link,
+body.archive article .btn:visited, body.archive article .btn-default, body.archive article .btn-default:link, body.archive article .btn-default:visited, body.archive article button, body.archive article button:link, body.archive article button:visited,
+body.archive article input[type="button"],
+body.archive article input[type="button"]:link,
+body.archive article input[type="button"]:visited,
+body.archive article input[type="reset"],
+body.archive article input[type="reset"]:link,
+body.archive article input[type="reset"]:visited,
+body.archive article input[type="submit"],
+body.archive article input[type="submit"]:link,
+body.archive article input[type="submit"]:visited, body.search article .comment-reply-link, body.search article .comment-reply-link:link, body.search article .comment-reply-link:visited,
+body.search article .comment-edit-link,
+body.search article .comment-edit-link:link,
+body.search article .comment-edit-link:visited,
+body.search article .btn,
+body.search article .btn:link,
+body.search article .btn:visited, body.search article .btn-default, body.search article .btn-default:link, body.search article .btn-default:visited, body.search article button, body.search article button:link, body.search article button:visited,
+body.search article input[type="button"],
+body.search article input[type="button"]:link,
+body.search article input[type="button"]:visited,
+body.search article input[type="reset"],
+body.search article input[type="reset"]:link,
+body.search article input[type="reset"]:visited,
+body.search article input[type="submit"],
+body.search article input[type="submit"]:link,
+body.search article input[type="submit"]:visited {
+  color: #DADFE1;
+  border: 2px solid #DADFE1; }
+  body.blog article .comment-reply-link:hover, body.blog article .comment-reply-link:link:hover, body.blog article .comment-reply-link:visited:hover,
+  body.blog article .comment-edit-link:hover,
+  body.blog article .comment-edit-link:link:hover,
+  body.blog article .comment-edit-link:visited:hover,
+  body.blog article .btn:hover,
+  body.blog article .btn:link:hover,
+  body.blog article .btn:visited:hover, body.blog article .btn-default:hover, body.blog article .btn-default:link:hover, body.blog article .btn-default:visited:hover, body.blog article button:hover, body.blog article button:link:hover, body.blog article button:visited:hover,
+  body.blog article input[type="button"]:hover,
+  body.blog article input[type="button"]:link:hover,
+  body.blog article input[type="button"]:visited:hover,
+  body.blog article input[type="reset"]:hover,
+  body.blog article input[type="reset"]:link:hover,
+  body.blog article input[type="reset"]:visited:hover,
+  body.blog article input[type="submit"]:hover,
+  body.blog article input[type="submit"]:link:hover,
+  body.blog article input[type="submit"]:visited:hover, body.archive article .comment-reply-link:hover, body.archive article .comment-reply-link:link:hover, body.archive article .comment-reply-link:visited:hover,
+  body.archive article .comment-edit-link:hover,
+  body.archive article .comment-edit-link:link:hover,
+  body.archive article .comment-edit-link:visited:hover,
+  body.archive article .btn:hover,
+  body.archive article .btn:link:hover,
+  body.archive article .btn:visited:hover, body.archive article .btn-default:hover, body.archive article .btn-default:link:hover, body.archive article .btn-default:visited:hover, body.archive article button:hover, body.archive article button:link:hover, body.archive article button:visited:hover,
+  body.archive article input[type="button"]:hover,
+  body.archive article input[type="button"]:link:hover,
+  body.archive article input[type="button"]:visited:hover,
+  body.archive article input[type="reset"]:hover,
+  body.archive article input[type="reset"]:link:hover,
+  body.archive article input[type="reset"]:visited:hover,
+  body.archive article input[type="submit"]:hover,
+  body.archive article input[type="submit"]:link:hover,
+  body.archive article input[type="submit"]:visited:hover, body.search article .comment-reply-link:hover, body.search article .comment-reply-link:link:hover, body.search article .comment-reply-link:visited:hover,
+  body.search article .comment-edit-link:hover,
+  body.search article .comment-edit-link:link:hover,
+  body.search article .comment-edit-link:visited:hover,
+  body.search article .btn:hover,
+  body.search article .btn:link:hover,
+  body.search article .btn:visited:hover, body.search article .btn-default:hover, body.search article .btn-default:link:hover, body.search article .btn-default:visited:hover, body.search article button:hover, body.search article button:link:hover, body.search article button:visited:hover,
+  body.search article input[type="button"]:hover,
+  body.search article input[type="button"]:link:hover,
+  body.search article input[type="button"]:visited:hover,
+  body.search article input[type="reset"]:hover,
+  body.search article input[type="reset"]:link:hover,
+  body.search article input[type="reset"]:visited:hover,
+  body.search article input[type="submit"]:hover,
+  body.search article input[type="submit"]:link:hover,
+  body.search article input[type="submit"]:visited:hover {
     color: #DADFE1; }
+
+body.single #masthead-inner a, body.single #masthead-inner a:link, body.single #masthead-inner a:visited {
+  color: #DADFE1; }
+  body.single #masthead-inner a:hover, body.single #masthead-inner a:link:hover, body.single #masthead-inner a:visited:hover {
+    color: #F2F1EF; }
 
 body.blog article, body.archive article, body.search article {
   color: #F2F1EF; }
@@ -1508,6 +1615,41 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
   padding-top: 50px; }
+
+/**
+ * Inner page post navigation
+ */
+.post-navigation .post-nav-box {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 710px; }
+.post-navigation .nav-indicator {
+  font-style: italic;
+  font-size: .9em; }
+.post-navigation h3 {
+  margin: 0; }
+.post-navigation .nav-previous, .post-navigation .nav-next {
+  border-top: 1px solid #ECF0F1;
+  padding-top: 20px;
+  width: 45%; }
+
+/**
+ * Tags
+ */
+.tags-links {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold; }
+
+span.tags-links a {
+  border: 1px solid #d9b760;
+  border-radius: 4px;
+  padding: .2em .5em;
+  margin-left: 7px;
+  font-weight: normal; }
+
+.edit-link {
+  float: right; }
 
 body.blog article, body.archive article, body.search article {
   height: 100vh;
@@ -1598,3 +1740,146 @@ body.single article.post {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
     transform: translateX(0%); } }
+#comments {
+  width: 80%;
+  max-width: 710px;
+  margin: 0 auto;
+  background: #fff; }
+  #comments .comment-respond:first-child #reply-title {
+    margin-top: 0; }
+  #comments .comments-title {
+    margin-top: 0;
+    margin-bottom: 50px; }
+  #comments .comments-title {
+    background: #22a7f0;
+    display: inline-block;
+    padding: 25px 25px 25px 30px;
+    font-size: 20px;
+    color: #fff;
+    -webkit-transform: translateX(-80px);
+    -moz-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    -o-transform: translateX(-80px);
+    transform: translateX(-80px); }
+    #comments .comments-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-bottom: 15px solid transparent;
+      border-right: 30px solid #0e8cd1;
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -o-transform: translateY(100%);
+      transform: translateY(100%); }
+  #comments article {
+    padding: 0;
+    margin-bottom: 50px; }
+  #comments .comment-list {
+    padding-left: 0; }
+  #comments .comment-content {
+    background: #fafafa;
+    padding: 30px;
+    border: 1px solid #ECF0F1;
+    border-radius: 3px;
+    margin-top: 30px; }
+    #comments .comment-content *:first-child {
+      margin-top: 0; }
+    #comments .comment-content *:last-child {
+      margin-bottom: 0; }
+  #comments .comment-author {
+    vertical-align: top;
+    display: inline-block;
+    margin: 3px 15px 3px 80px; }
+    #comments .comment-author img {
+      border-radius: 100%;
+      position: absolute;
+      left: 0; }
+  #comments .comment-metadata {
+    margin-left: 80px; }
+    #comments .comment-metadata > a, #comments .comment-metadata > a:visited {
+      color: #999;
+      font-style: italic;
+      font-size: 14px; }
+      #comments .comment-metadata > a:before, #comments .comment-metadata > a:visited:before {
+        content: '\f303';
+        font-family: genericons;
+        color: #999;
+        font-size: 20px;
+        vertical-align: middle;
+        font-style: normal; }
+      #comments .comment-metadata > a:hover, #comments .comment-metadata > a:visited:hover {
+        color: orange; }
+  #comments .edit-link {
+    float: right; }
+  #comments .comment-reply-link {
+    float: right;
+    border-color: #fff;
+    border-top: 0;
+    background-color: orange;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-right: 10px;
+    color: #fff;
+    font-family: "Unica One";
+    font-size: 14px; }
+    #comments .comment-reply-link:hover {
+      background-color: transparent;
+      color: orange;
+      border-color: #ccc; }
+  #comments .logged-in-as {
+    font-style: italic;
+    font-size: 14px; }
+  #comments textarea {
+    padding: .5em .8em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+  #comments ol ol {
+    margin-left: 30px; }
+  #comments li {
+    list-style: none; }
+  #comments #respond {
+    margin-bottom: 30px; }
+
+body .saboxplugin-wrap {
+  position: relative;
+  overflow: visible;
+  padding-top: 70px;
+  border: 0;
+  border-top: 1px solid #ECF0F1;
+  margin: 100px 0 50px; }
+  body .saboxplugin-wrap .saboxplugin-gravatar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    background: #fff;
+    border-radius: 100%;
+    padding: 5px;
+    border: 1px solid #ECF0F1; }
+    body .saboxplugin-wrap .saboxplugin-gravatar img {
+      border-radius: 100%;
+      display: block; }
+  body .saboxplugin-wrap > div[class*=saboxplugin] {
+    margin: 0 0 .5em;
+    font-size: 16px;
+    line-height: 1.6em; }
+  body .saboxplugin-wrap .saboxplugin-socials {
+    padding: 0;
+    box-shadow: none; }
+  body .saboxplugin-wrap .saboxplugin-authorname {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.1em; }
+
+/**
+ * Not all text are centered by the plugin, this fixes it
+ */
+@media screen and (max-width: 480px) {
+  body .saboxplugin-wrap > div[class*=saboxplugin] {
+    text-align: center; } }

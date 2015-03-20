@@ -24,6 +24,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php theme1_entry_footer(); ?>
+		<?php regala_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
