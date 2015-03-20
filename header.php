@@ -92,7 +92,14 @@ if ( is_single() && has_post_thumbnail() ) {
 		} else if ( is_search() ) {
 			
 		} else if ( is_404() ) {
-			
+		
+		// For the rest of the pages, display the title
+		} else {
+			?>
+			<div id="masthead-inner">
+				<h1 class="site-description"><?php the_title() ?></h1>
+	        </div>
+			<?php
 		}
 		?>
 		

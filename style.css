@@ -1105,6 +1105,10 @@ body.single header {
   height: 65vh;
   min-height: 400px; }
 
+body.page header {
+  height: 30vh;
+  min-height: 350px; }
+
 #page {
   position: relative; }
 
@@ -1244,17 +1248,19 @@ body.single .widget-area {
 
 .footer-widgets {
   max-width: 710px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 80%; }
 
 .footer-widgets #footer-left,
 .footer-widgets #footer-right {
   display: inline-block;
   vertical-align: top;
   padding: 0;
-  width: 340px; }
+  width: 48.5%;
+  margin: 0; }
 
 .footer-widgets #footer-left {
-  margin-right: 30px; }
+  margin-right: 3%; }
 
 .footer-widgets #footer-left.widget {
   margin: 0; }
@@ -1292,13 +1298,6 @@ body.single.has-sidebar #secondary {
   margin: 0 0 0 30px;
   padding: 0;
   width: 340px; }
-
-body.single #footer-left {
-  margin-left: 0;
-  margin-right: 30px; }
-
-body.single #footer-right {
-  margin: 0; }
 
 @media screen and (max-width: 710px) {
   .footer-widgets {
@@ -1680,7 +1679,8 @@ span.tags-links a {
   font-weight: normal; }
 
 .edit-link {
-  float: right; }
+  display: block;
+  text-align: right; }
 
 .entry-footer {
   margin-top: 50px; }
@@ -1774,13 +1774,21 @@ body.single article.post {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
     transform: translateX(0%); } }
+/**
+ * Page body
+ */
+body.page article {
+  margin: 50px auto 0;
+  width: 80%;
+  max-width: 710px; }
+
 #comments {
   width: 80%;
   max-width: 710px;
   margin: 0 auto;
   background: #fff;
   position: relative;
-  padding-top: 50px;
+  padding-top: 70px;
   border-top: 1px solid #eee;
   margin-top: 50px; }
   #comments > .genericon {
@@ -1807,7 +1815,8 @@ body.single article.post {
     margin-top: 0; }
   #comments .comments-title {
     margin-top: 0;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    text-align: center; }
   #comments article {
     padding: 0;
     margin-bottom: 50px; }
@@ -1876,6 +1885,8 @@ body.single article.post {
       margin-left: 10px; }
       #comments #respond input[type="submit"] {
         margin-left: 0; }
+    #comments #respond .comment-reply-title {
+      margin-top: 0; }
 
 body .saboxplugin-wrap {
   position: relative;
