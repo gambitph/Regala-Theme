@@ -35,10 +35,18 @@ function regala_custom_header_setup() {
 	) ) );
 	
 	register_default_headers( array(
-		'fall' => array(
+		'mountain' => array(
 			'url' => get_template_directory_uri() . '/images/header-image-default1.jpg',
 			'thumbnail_url' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
-			'description' => __( 'Fall', 'regala' ),
+			'description' => __( 'Mountain', 'regala' ),
+		),
+	) );
+	
+	register_default_headers( array(
+		'night' => array(
+			'url' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+			'description' => __( 'Night', 'regala' ),
 		),
 	) );
 }

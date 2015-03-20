@@ -19,21 +19,24 @@
 
 // Get the header image to display
 $headerImageUrl = '';
+$headerImageGradientColor = '';
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
+	$headerImageGradientColor = '41,51,56';
 }
 if ( is_single() && has_post_thumbnail() ) {
 	$imageAttachment = wp_get_attachment_image_src( get_post_thumbnail_id(), 'regala-wallpaper' );
 
 	if ( ! empty( $imageAttachment ) ) {
 		$headerImageUrl = $imageAttachment[0];
+		$headerImageGradientColor = '41,51,56';
 	}
 }
 
 ?>
 <style id="regala_header">
 	header {
-		background-image: url(<?php echo esc_url( $headerImageUrl ) ?>);
+		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,0.4) 0%,rgba(<?php echo $headerImageGradientColor ?>,0.3) 48%,rgba(<?php echo $headerImageGradientColor ?>,0) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
 	}
 </style>
 </head>
@@ -69,6 +72,12 @@ if ( is_single() && has_post_thumbnail() ) {
 		} else if ( is_single() ) {
 			?>
 			<div id="masthead-inner">
+				<?php
+				if ( 'post' == get_post_type() ) {
+					?><span class="entry-category"><?php regala_entry_category() ?></span><?php
+					?><span class="entry-date"><?php regala_posted_on() ?></span><?php
+				}
+				?>
 				<h1 class="site-description"><?php the_title() ?></h1>
 	        </div>
 			<?php

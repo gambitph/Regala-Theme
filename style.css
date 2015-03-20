@@ -1070,7 +1070,6 @@ button:hover,
       margin: 10px;
       font-family: "Playfair Display";
       font-style: italic;
-      font-size: 1.8em;
       color: #999;
       padding: 30px 0;
       display: inline-block;
@@ -1087,7 +1086,12 @@ button:hover,
     .paging-navigation li a.page-numbers.prev, .paging-navigation li a.page-numbers.next, .paging-navigation li span.page-numbers.prev, .paging-navigation li span.page-numbers.next {
       display: inline-block; } }
 header {
-  height: 100vh; }
+  height: 100vh;
+  min-height: 600px; }
+
+body.single header {
+  height: 65vh;
+  min-height: 400px; }
 
 #page {
   position: relative; }
@@ -1127,9 +1131,11 @@ header {
   width: 80%;
   margin: 0 auto;
   position: absolute;
-  bottom: 100px;
   left: 0;
-  right: 0; }
+  right: 0;
+  bottom: 50px; }
+  #masthead-inner.tagline {
+    bottom: 100px; }
 
 #masthead {
   color: #fff; }
@@ -1387,7 +1393,8 @@ body.single #footer-right {
 body {
   font-family: 'Gudea', sans-serif;
   font-size: 16px;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  color: #555E67; }
 
 a, a:link, a:visited {
   color: #DADFE1;
@@ -1552,3 +1559,34 @@ body.blog .entry-date, body.blog .entry-category, body.archive .entry-date, body
     top: auto;
     left: auto;
     right: auto; } }
+/**
+ * Single page title
+ */
+body.single .entry-category {
+  position: absolute;
+  font-style: italic;
+  font-size: .9em; }
+body.single .entry-date {
+  position: absolute;
+  left: -30px;
+  font-style: italic;
+  font-size: .9em;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%); }
+body.single article.post {
+  width: 80%;
+  max-width: 710px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1000px) {
+  body.single .entry-date {
+    left: auto;
+    right: 0;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%); } }

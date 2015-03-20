@@ -87,7 +87,7 @@ function regala_create_options() {
            'font-style' => 'italic',
 	   ),
 	   'desc' => __( 'Select a Style', 'regala' ),
-	   'css' => 'h1.site-description { value }',
+	   'css' => '#masthead-inner.tagline h1.site-description { value }',
 	) );
 	
 	$font->createOption( array(
@@ -104,8 +104,12 @@ function regala_create_options() {
 	    'id' => 'tagline_area_bottom_offset',
 	    'type' => 'number',
 	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'regala' ),
-	    'default' => '100',
-		'css' => '#masthead-inner.tagline { bottom: valuepx }',
+		'unit' => '%',
+	    'default' => '20',
+		'min' => '0',
+		'step' => '0.1',
+		'max' => '50',
+		'css' => '#masthead-inner.tagline { bottom: valuevh }',
 	) );
 	
 	/*

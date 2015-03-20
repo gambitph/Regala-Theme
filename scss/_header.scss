@@ -1,5 +1,12 @@
 header {
 	height: 100vh;
+	min-height: 600px;
+}
+body.single {
+	header {
+	  height: 65vh;
+	  min-height: 400px;
+	}
 }
 
 #page {
@@ -48,9 +55,12 @@ header {
 	margin: 0 auto;
 	
     position: absolute;
-    bottom: 100px;
     left: 0;
     right: 0;
+	bottom: 50px;
+	&.tagline {
+	    bottom: 100px;
+	}
 }
 #masthead {
 	color: #fff;

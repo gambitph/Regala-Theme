@@ -74,3 +74,45 @@ body.blog, body.archive, body.search {
 		}
 	}
 }
+
+
+/**
+ * Single page title
+ */
+body.single {
+	.entry-category {
+	    position: absolute;
+	    font-style: italic;
+	    font-size: .9em;
+	}
+	.entry-date {
+	    position: absolute;
+	    left: -30px;
+	    font-style: italic;
+	    font-size: .9em;
+	    -webkit-transform: translateX(-100%);
+	    -moz-transform: translateX(-100%);
+	    -ms-transform: translateX(-100%);
+	    -o-transform: translateX(-100%);
+	    transform: translateX(-100%);
+	}
+	article.post {
+		width: 80%;
+		max-width: 710px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body.single {
+		.entry-date {
+			left: auto;
+			right: 0;
+		    -webkit-transform: translateX(0%);
+		    -moz-transform: translateX(0%);
+		    -ms-transform: translateX(0%);
+		    -o-transform: translateX(0%);
+		    transform: translateX(0%);
+		}
+	}
+}

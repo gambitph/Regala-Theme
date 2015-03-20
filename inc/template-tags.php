@@ -59,11 +59,11 @@ endif;
 
 
 
-if ( ! function_exists( 'theme1_post_nav' ) ) :
+if ( ! function_exists( 'regala_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-function theme1_post_nav() {
+function regala_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
