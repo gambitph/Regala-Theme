@@ -269,8 +269,51 @@ function regala_create_options() {
            'font-style' => 'italic',
 	   ),
 	   'desc' => __( 'Select a Style', 'regala' ),
-	   'css' => 'ul.page-numbers a.page-numbers { value }',
+	   'css' => 'ul.page-numbers a.page-numbers, ul.page-numbers span{ value }',
     ) );
+    
+    /*
+    *   Color option for footer widgets
+    */
+    
+    $footer = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Footer Widgets Area', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Background Color', 'regala' ),
+        'id' => 'footer_bg_color',
+        'type' => 'color',
+        'default' => '#FFFFFF',
+        'css' => '.site-footer { background: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Text Color', 'regala' ),
+        'id' => 'footer_text_color',
+        'type' => 'color',
+        'default' => '#999',
+        'css' => '.footer-widgets { color: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Text Link Color', 'regala' ),
+        'id' => 'footer_link_color',
+        'type' => 'color',
+        'default' => '#DADFE1',
+        'css' => 'a, a:link, a:visited { color: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Hover Link Color', 'regala' ),
+        'id' => 'footer_hover_link_color',
+        'type' => 'color',
+        'default' => '#DADFE1',
+        'css' => 'a, a:link:hover, a:visited:hover { color: value }',
+    ) );
+    //DADFE1
+    //a, a:link, a:visited
 	/**
 	 * Create an admin panel & tabs
 	 * You should put options here that do not change the look of your theme
