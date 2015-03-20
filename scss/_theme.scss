@@ -71,11 +71,11 @@ h5 {
 h6 {
     font-size: 14px;
 }
-@media (max-width: 676px) {
+@media screen and (max-width: 710px) {
 	h1 {
 	    font-size: 50px;
 	}
-	h2 {
+	h2, body #masthead-inner.tagline h1.site-description {
 	    font-size: 40px;
 	}
 	h3 {
@@ -95,4 +95,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1em;
     margin-top: 50px;
     margin-bottom: 25px;
+}
+
+.site-footer {
+	padding-top: 50px;
 }

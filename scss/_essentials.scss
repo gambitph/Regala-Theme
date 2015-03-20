@@ -160,3 +160,9 @@ button:hover,
     box-shadow: none;
     outline: none;
 }
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin-bottom: 0;
+}
