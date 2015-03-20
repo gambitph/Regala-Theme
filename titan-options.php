@@ -293,7 +293,7 @@ function regala_create_options() {
         'name' => __( 'Text Color', 'regala' ),
         'id' => 'footer_text_color',
         'type' => 'color',
-        'default' => '#999',
+        'default' => '#555E67',
         'css' => '.footer-widgets { color: value }',
     ) );
     
@@ -301,16 +301,9 @@ function regala_create_options() {
         'name' => __( 'Text Link Color', 'regala' ),
         'id' => 'footer_link_color',
         'type' => 'color',
-        'default' => '#DADFE1',
-        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value }',
-    ) );
-    
-    $footer->createOption( array(
-        'name' => __( 'Hover Link Color', 'regala' ),
-        'id' => 'footer_hover_link_color',
-        'type' => 'color',
-        'default' => '#DADFE1',
-        'css' => '.footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
+        'default' => '#d9b760',
+        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value },
+        .footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
     ) );
 	
 	/*
