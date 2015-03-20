@@ -330,6 +330,39 @@ function regala_create_options() {
 		) );
 	}
 	
+
+	/**
+	 * Footer copyright
+	 */
+	$section = $titan->createThemeCustomizerSection( array(
+	    'name' => __( 'Footer Copyright Area', 'regala' ),
+		'panel' => __( 'Theme Options & Colors', 'regala' ),
+		'desc' => __( 'Colors & text of the bottom-most copyright area of the site', 'regala' ),
+	) );
+
+	$section->createOption( array(
+	    'name' => __( 'Copyright Text', 'regala' ),
+	    'id' => 'footer_copyright_text',
+	    'type' => 'text',
+		'default' => '&copy; ' . date( 'Y' ) . ', theme created by Gambit',
+	) );
+
+	$section->createOption( array(
+	    'name' => __( 'Background Color', 'regala' ),
+	    'id' => 'footer_copyright_bg_color',
+	    'type' => 'color',
+		'default' => '#000000',
+		'css' => '.site-info-container { background: value }',
+	) );
+
+	$section->createOption( array(
+	    'name' => __( 'Text Color', 'regala' ),
+	    'id' => 'footer_copyright_text_color',
+	    'type' => 'color',
+		'default' => '#ffffff',
+		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover { color: value }',
+	) );
+	
 	/*
 	* Header Caption
  	*/
