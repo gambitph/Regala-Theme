@@ -269,7 +269,7 @@ function regala_create_options() {
            'font-style' => 'italic',
 	   ),
 	   'desc' => __( 'Select a Style', 'regala' ),
-	   'css' => 'ul.page-numbers a.page-numbers { value }',
+	   'css' => 'ul.page-numbers a.page-numbers, ul.page-numbers span{ value }',
     ) );
 	/**
 	 * Create an admin panel & tabs
