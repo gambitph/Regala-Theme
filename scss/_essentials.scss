@@ -166,3 +166,11 @@ button:hover,
 .site-main .post-navigation {
 	margin-bottom: 0;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: .5em .8em;
+}
