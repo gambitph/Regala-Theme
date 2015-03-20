@@ -11,7 +11,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'theme1' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'regala' ),
 				'after'  => '</div>',
 			) );
     		?>
