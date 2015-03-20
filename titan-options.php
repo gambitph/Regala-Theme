@@ -262,7 +262,7 @@ function regala_create_options() {
         'type' => 'font',
     	   'default' => array(
 	       'color' => '#999',
-	       'line-height' => '1.6em',
+	       'line-height' => '1em',
 	       'font-size' => '16px',
 	       'font-family' => 'Playfair Display',
            'font-weight' => '900',
@@ -302,7 +302,7 @@ function regala_create_options() {
         'id' => 'footer_link_color',
         'type' => 'color',
         'default' => '#DADFE1',
-        'css' => 'a, a:link, a:visited { color: value }',
+        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value }',
     ) );
     
     $footer->createOption( array(
@@ -310,7 +310,7 @@ function regala_create_options() {
         'id' => 'footer_hover_link_color',
         'type' => 'color',
         'default' => '#DADFE1',
-        'css' => 'a, a:link:hover, a:visited:hover { color: value }',
+        'css' => '.footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
     ) );
     //DADFE1
     //a, a:link, a:visited
