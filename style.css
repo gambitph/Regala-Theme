@@ -1170,6 +1170,14 @@ header {
     font-size: 1.7em;
     position: relative;
     margin-left: 40vw; } }
+body.archive header {
+  height: 65vh;
+  min-height: 400px; }
+
+body.search header {
+  height: 65vh;
+  min-height: 400px; }
+
 body.single .padding {
   padding-right: 370px;
   position: relative; }

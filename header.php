@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package theme1
+ * @package regala
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -85,14 +85,22 @@ if ( is_single() && has_post_thumbnail() ) {
 		} else if ( is_archive() ) {
 			?>
 			<div id="masthead-inner">
-				<h1 class="site-description"><?php the_title() ?></h1>
+				<h1 class="site-description"><?php the_archive_title() ?></h1>
 	        </div>
 			<?php
 			
 		} else if ( is_search() ) {
-			
+			?>
+			<div id="masthead-inner">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'regala' ), '<span>' . get_search_query() . '</span>' ); ?></h1>    
+	        </div>
+			<?php
 		} else if ( is_404() ) {
-			
+			?>
+			<div id="masthead-inner">
+				<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'regala' ); ?></h1>    
+	        </div>
+			<?php
 		}
 		?>
 		

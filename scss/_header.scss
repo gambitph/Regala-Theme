@@ -95,3 +95,13 @@ header {
 	    margin-left: 40vw;
 	}
 }
+
+body.archive header {
+    height: 65vh;
+	 min-height: 400px;
+}
+
+body.search header {
+    height: 65vh;
+    min-height: 400px;
+}
