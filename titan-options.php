@@ -240,6 +240,37 @@ function regala_create_options() {
         'type' => 'upload',
     ) );
     
+    /*
+    *   Paging Navigation
+    */
+    $navigation = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Paging Navigation', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+    ) );
+    
+    $navigation->createOption( array(
+        'name' => __( 'Background Color Navigation', 'regala' ),
+        'id' => 'navigation_bg_color',
+        'type' => 'color',
+        'default' => '#222',
+        'css' => '.paging-navigation { background: value }',
+    ) );
+    
+    $navigation->createOption( array(
+        'name' => __( 'Font Navigation', 'regala' ),
+        'id' => 'navigation_fonts',
+        'type' => 'font',
+    	   'default' => array(
+	       'color' => '#999',
+	       'line-height' => '1.6em',
+	       'font-size' => '16px',
+	       'font-family' => 'Playfair Display',
+           'font-weight' => '900',
+           'font-style' => 'italic',
+	   ),
+	   'desc' => __( 'Select a Style', 'regala' ),
+	   'css' => 'ul.page-numbers a.page-numbers { value }',
+    ) );
 	/**
 	 * Create an admin panel & tabs
 	 * You should put options here that do not change the look of your theme
