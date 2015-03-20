@@ -11,11 +11,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-	<?php get_sidebar( 'footer' ); ?>
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'theme1' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'theme1' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'theme1' ), 'theme1', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+		<?php get_sidebar( 'footer' ); ?>
+		<div class="site-info-container">
+			<div class="site-info">
+				<?php
+					if ( class_exists( 'TitanFramework' ) ) {
+						$titan = TitanFramework::getInstance( 'regala' );
+						echo $titan->getOption( 'footer_copyright_text' );
+					}
+				?>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

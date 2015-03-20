@@ -1293,6 +1293,17 @@ body.single #footer-right {
   body.single.has-sidebar .with-sidebar {
     width: 80%;
     margin: 0 auto; } }
+/**
+ * Footer copyright
+ */
+.site-info {
+  width: 80%;
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 1em 0;
+  font-size: .8em;
+  font-style: italic; }
+
 .social-navigation {
   margin: 10px;
   vertical-align: top;
