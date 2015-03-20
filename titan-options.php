@@ -239,6 +239,79 @@ function regala_create_options() {
         'id' => 'featured_image5',
         'type' => 'upload',
     ) );
+    
+    /*
+    *   Paging Navigation
+    */
+    $navigation = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Paging Navigation', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+    ) );
+    
+    $navigation->createOption( array(
+        'name' => __( 'Background Color Navigation', 'regala' ),
+        'id' => 'navigation_bg_color',
+        'type' => 'color',
+        'default' => '#222',
+        'css' => '.paging-navigation { background: value }',
+    ) );
+    
+    $navigation->createOption( array(
+        'name' => __( 'Font Navigation', 'regala' ),
+        'id' => 'navigation_fonts',
+        'type' => 'font',
+    	   'default' => array(
+	       'color' => '#999',
+	       'line-height' => '1em',
+	       'font-size' => '16px',
+	       'font-family' => 'Playfair Display',
+           'font-weight' => '900',
+           'font-style' => 'italic',
+	   ),
+	   'desc' => __( 'Select a Style', 'regala' ),
+	   'css' => 'ul.page-numbers a.page-numbers, ul.page-numbers span{ value }',
+    ) );
+    
+    /*
+    *   Color option for footer widgets
+    */
+    
+    $footer = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Footer Widgets Area', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Background Color', 'regala' ),
+        'id' => 'footer_bg_color',
+        'type' => 'color',
+        'default' => '#FFFFFF',
+        'css' => '.site-footer { background: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Text Color', 'regala' ),
+        'id' => 'footer_text_color',
+        'type' => 'color',
+        'default' => '#999',
+        'css' => '.footer-widgets { color: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Text Link Color', 'regala' ),
+        'id' => 'footer_link_color',
+        'type' => 'color',
+        'default' => '#DADFE1',
+        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value }',
+    ) );
+    
+    $footer->createOption( array(
+        'name' => __( 'Hover Link Color', 'regala' ),
+        'id' => 'footer_hover_link_color',
+        'type' => 'color',
+        'default' => '#DADFE1',
+        'css' => '.footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
+    ) );
 	
 	/*
 	* Social Icons
