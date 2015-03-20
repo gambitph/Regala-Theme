@@ -74,11 +74,11 @@ function regala_post_nav() {
 	?>
 	<nav class="navigation post-navigation" role="navigation">
         <div class="post-nav-box clear">
-            <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'theme1' ); ?></h1>
+            <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'regala' ); ?></h1>
             <div class="nav-links">
                 <?php
-                previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'theme1' ) . '</div><h1>%link</h1></div>', '%title' );
-                next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'theme1' ) . '</div><h1>%link</h1></div>', '%title' );
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post', 'Previous post', 'regala' ) . '</div><h3>%link</h3></div>', '%title' );
+                next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post', 'Next post', 'regala' ) . '</div><h3>%link</h3></div>', '%title' );
                 ?>
             </div><!-- .nav-links -->
         </div><!-- .post-nav-box -->
@@ -152,33 +152,33 @@ function regala_entry_category() {
 }
 endif;
 
-if ( ! function_exists( 'theme1_entry_footer' ) ) :
+if ( ! function_exists( 'regala_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function theme1_entry_footer() {
+function regala_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'theme1' ) );
-		if ( $categories_list && regala_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'theme1' ) . '</span>', $categories_list );
-		}
+		// $categories_list = get_the_category_list( __( ', ', 'theme1' ) );
+		// if ( $categories_list && regala_categorized_blog() ) {
+		// 	printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'theme1' ) . '</span>', $categories_list );
+		// }
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'theme1' ) );
+		$tags_list = get_the_tag_list( '', __( ' ', 'theme1' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'theme1' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'regala' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'theme1' ), __( '1 Comment', 'theme1' ), __( '% Comments', 'theme1' ) );
+		comments_popup_link( __( 'Leave a comment', 'regala' ), __( '1 Comment', 'regala' ), __( '% Comments', 'regala' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'theme1' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'regala' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

@@ -239,47 +239,6 @@ function regala_create_options() {
         'id' => 'featured_image5',
         'type' => 'upload',
     ) );
-    
-	/**
-	 * Create an admin panel & tabs
-	 * You should put options here that do not change the look of your theme
-	 */
-	
-	$adminPanel = $titan->createAdminPanel( array(
-	    'name' => __( 'Theme Settings', 'regala' ),
-	) );
-	
-	$generalTab = $adminPanel->createTab( array(
-	    'name' => __( 'General', 'regala' ),
-	) );
-
-	$generalTab->createOption( array(
-	    'name' => __( 'Custom Javascript Code', 'regala' ),
-	    'id' => 'custom_js',
-	    'type' => 'code',
-	    'desc' => __( 'If you want to add some additional Javascript code into your site, add them here and it will be included in the frontend header. No need to add <code>script</code> tags', 'regala' ),
-	    'lang' => 'javascript',
-	) );
-	
-	$generalTab->createOption( array(
-	    'type' => 'save',
-	) );
-
-	
-	$footerTab = $adminPanel->createTab( array(
-	    'name' => __( 'Footer', 'regala' ),
-	) );
-	
-	$footerTab->createOption( array(
-		'name' => __( 'Copyright Text', 'regala' ),
-		'id' => 'copyright',
-		'type' => 'text',
-		'desc' => __( 'Enter your copyright text here (sample only)', 'regala' ),
-	) );
-	
-	$footerTab->createOption( array(
-	    'type' => 'save',
-	) );
 	
 	/*
 	* Social Icons

@@ -4,8 +4,10 @@ body {
 	line-height: 1.6em;
 	color: #555E67;
 }
-a, a:link, a:visited {
-	color: #DADFE1;
+a, a:link, a:visited,
+.saboxplugin-wrap .saboxplugin-web a {
+	color: #d9b760;
+//	color: #DADFE1;
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
@@ -27,8 +29,10 @@ body {
     input[type="reset"],
     input[type="submit"] {
 		&, &:link, &:visited {
-			color: #DADFE1;
-			border: 2px solid #DADFE1;
+//			color: #DADFE1;
+			color: #d9b760;
+//			border: 2px solid #DADFE1;
+			border: 2px solid #d9b760;
 			padding: 1.4em 2.4em;
 			text-transform: uppercase;
 			line-height: 1em;
@@ -37,11 +41,46 @@ body {
 			opacity: 1;
 			&:hover {
 				opacity: .6;
-				color: #DADFE1;
+				color: #d9b760;
+//				color: #DADFE1;
 			}
 		}
 	}
 }
+
+body.blog, body.archive, body.search {
+	article {
+		a, a:link, a:visited {
+			color: #DADFE1;
+			&:hover {
+				color: #F2F1EF;
+			}
+		}
+		.comment-reply-link,
+		.comment-edit-link,
+	    .btn, .btn-default, button,
+	    input[type="button"],
+	    input[type="reset"],
+	    input[type="submit"] {
+			&, &:link, &:visited {
+				color: #DADFE1;
+				border: 2px solid #DADFE1;
+				&:hover {
+					color: #DADFE1;
+				}
+			}
+		}
+	}
+}
+body.single #masthead-inner {
+	a, a:link, a:visited {
+		color: #DADFE1;
+		&:hover {
+			color: #F2F1EF;
+		}
+	}
+}
+
 body.blog, body.archive, body.search {
 	article {
 		color: #F2F1EF;
@@ -99,4 +138,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
 	padding-top: 50px;
+}
+
+
+/**
+ * Inner page post navigation
+ */
+.post-navigation {
+	.post-nav-box {
+		margin: 50px auto;
+		width: 80%;
+		max-width: 710px;
+	}
+	.nav-indicator {
+		font-style: italic;
+		font-size: .9em;
+	}
+	h3 {
+		margin: 0;
+	}
+	.nav-previous, .nav-next {
+	    border-top: 1px solid #ECF0F1;
+	    padding-top: 20px;
+		width: 45%;
+	}
+}
+
+
+/**
+ * Tags
+ */
+.tags-links {
+	font-style: italic;
+	font-size: .9em;
+	font-weight: bold;
+}
+span.tags-links a {
+	border: 1px solid #d9b760;
+	border-radius: 4px;
+	padding: .2em .5em;
+	margin-left: 7px;
+	font-weight: normal;
+}
+.edit-link {
+	float: right;
 }
