@@ -4,6 +4,31 @@
 	margin: 0 auto;
 	  
 	background: #fff;
+    position: relative;
+    padding-top: 50px;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+	> .genericon {
+		background: #d9b760;
+		color: #fff;
+		width: 70px;
+		line-height: 70px;
+		border-radius: 100%;
+		display: block;
+		border: 5px solid #fff;
+		box-sizing: content-box;
+		box-shadow: 0 0 0 1px #eee;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		font-size: 24px;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-o-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
 	.comment-respond:first-child #reply-title {
 		margin-top: 0;
 	}
@@ -13,34 +38,6 @@
 		margin-bottom: 50px;
 	}
 	
-	.comments-title {
-		background: #22a7f0;
-		display: inline-block;
-		padding: 25px 25px 25px 30px;
-		font-size: 20px;
-		color: #fff;
-		-webkit-transform: translateX(-80px);
-		-moz-transform: translateX(-80px);
-		-ms-transform: translateX(-80px);
-		-o-transform: translateX(-80px);
-		transform: translateX(-80px);
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			z-index: 1;
-			width: 0;
-			height: 0;
-			border-bottom: 15px solid transparent;
-			border-right: 30px solid #0e8cd1;
-			-webkit-transform: translateY(100%);
-			-moz-transform: translateY(100%);
-			-ms-transform: translateY(100%);
-			-o-transform: translateY(100%);
-			transform: translateY(100%);
-		}
-	}
 	article {
 		padding: 0;
 		margin-bottom: 50px;
@@ -73,6 +70,9 @@
 			left: 0;
 		}
 	}
+	.comment-meta {
+		position: relative;
+	}
 	.comment-metadata {
 		margin-left: 80px;
 		> a, > a:visited {
@@ -98,19 +98,13 @@
 	}
 	.comment-reply-link {
 		float: right;
-		border-color: #fff;
-		border-top: 0;
-		background-color: orange;
-		border-top-right-radius: 0;
-		border-top-left-radius: 0;
-		margin-right: 10px;
-		color: #fff;
-		font-family: "Unica One";
-		font-size: 14px;
-		&:hover {
-			background-color: transparent;
-			color: orange;
-			border-color: #ccc;
+		margin-top: 1em;
+		font-size: .8em;
+		padding: .8em 1.1em;
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
 		}
 	}
 	
@@ -133,5 +127,11 @@
 	
 	#respond {
 		margin-bottom: 30px;
+		input {
+			margin-left: 10px;
+			&[type="submit"] {
+				margin-left: 0;
+			}
+		}
 	}
 }

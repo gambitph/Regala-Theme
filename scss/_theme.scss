@@ -47,6 +47,16 @@ body {
 		}
 	}
 }
+body {
+	.comment-reply-link,
+	.comment-edit-link {
+		&, &:link, &:visited {
+			border-width: 1px;
+			padding: .5em .6em;
+			font-size: .9em;
+		}
+	}
+}
 
 body.blog, body.archive, body.search {
 	article {
@@ -56,8 +66,8 @@ body.blog, body.archive, body.search {
 				color: #F2F1EF;
 			}
 		}
-		.comment-reply-link,
-		.comment-edit-link,
+//		.comment-reply-link,
+//		.comment-edit-link,
 	    .btn, .btn-default, button,
 	    input[type="button"],
 	    input[type="reset"],
@@ -183,5 +193,7 @@ span.tags-links a {
 .edit-link {
 	float: right;
 }
-
+.entry-footer {
+	margin-top: 50px;
+}
 
