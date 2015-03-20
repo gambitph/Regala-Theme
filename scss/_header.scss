@@ -8,6 +8,12 @@ body.single {
 	  min-height: 400px;
 	}
 }
+body.page {
+	header {
+	  height: 30vh;
+	  min-height: 350px;
+	}
+}
 
 #page {
 	position: relative;

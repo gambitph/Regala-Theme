@@ -1,6 +1,7 @@
 .footer-widgets {
     max-width: 710px;
     margin: 0 auto;
+	width: 80%;
 }
 
 .footer-widgets #footer-left,
@@ -8,11 +9,12 @@
     display: inline-block;
     vertical-align: top;
     padding: 0;
-    width: 340px;
+	width: 48.5%;
+	margin: 0;
 }
 
 .footer-widgets #footer-left {
-    margin-right: 30px;
+    margin-right: 3%;
 }
 
 .footer-widgets #footer-left.widget {
@@ -55,14 +57,6 @@ body.single.has-sidebar #secondary {
     margin: 0 0 0 30px;
     padding: 0;
     width: 340px;
-}
-
-body.single #footer-left {
-    margin-left: 0;
-    margin-right: 30px;
-}
-body.single #footer-right {
-    margin: 0;
 }
 
 @media screen and (max-width: 710px) {

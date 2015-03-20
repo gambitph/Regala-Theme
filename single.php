@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package theme1
+ * @package regala
  */
 
 get_header(); ?>
