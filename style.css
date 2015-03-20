@@ -1109,6 +1109,14 @@ body.page header {
   height: 30vh;
   min-height: 350px; }
 
+body.archive header {
+  height: 65vh;
+  min-height: 350px; }
+
+body.search header {
+  height: 65vh;
+  min-height: 350px; }
+
 #page {
   position: relative; }
 
@@ -1213,11 +1221,6 @@ body.search .site-main .no-results {
 
 .genericon-close:before {
   content: '\f406'; }
-
-body.search header {
-  height: 65vh;
-  min-height: 400px;
-  margin-bottom: 50px; }
 
 body.search section {
   margin-bottom: 50px; }

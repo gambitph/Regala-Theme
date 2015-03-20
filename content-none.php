@@ -9,14 +9,13 @@
 ?>
 
 <section class="no-results not-found">
+
     <span class="genericon genericon-close"></span>
 	
 	    <h1 class="page-title"><?php _e( 'Nothing Found', 'theme1' ); ?></h1>
-	
-    	<div class="page-content">
-    		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-
-    			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'theme1' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+		
+		<div class="page-content">
+			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
     		<?php elseif ( is_search() ) : ?>
 
