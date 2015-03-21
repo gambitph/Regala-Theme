@@ -1,5 +1,5 @@
 .main-navigation {
-    z-index: 2;
+    z-index: 999;
     top: 0;
     left: 0;
     position: absolute;
@@ -83,8 +83,7 @@
     z-index: 999999;
 }
 
-.main-navigation.toggled .nav-menu,
-.main-navigation aside {
+.main-navigation.toggled .nav-menu {
     width: 100%;
     max-width: 500px;
     padding: 40px;
@@ -144,15 +143,25 @@
 }
 
 .main-navigation li a { 
-	padding: 1.3em 0; 
+    padding: 1em 1em 1em 0;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    display: inline-block;
 }
 
 .main-navigation li li a { 
-	padding-left: 4em; 
+	margin-left: 2em; 
 }
 
 .main-navigation li li li a { 
-	padding-left: 6em; 
+	margin-left: 4em; 
+}
+
+.main-navigation li li li li a { 
+	margin-left: 6em; 
+}
+
+.main-navigation li li li li li a { 
+	margin-left: 8em; 
 }
 
 .main-navigation ul ul,
@@ -192,6 +201,21 @@
     display: block;
 }
 
+
+/**
+ * Menu widget area
+ */
+.menu-widgets {
+	.widget {
+		width: 100%;
+		max-width: 500px;
+		padding: 40px;
+		margin: 0 auto;
+		.widget-title {
+			margin-top: 0;
+		}
+	}
+}
 
 
 /**

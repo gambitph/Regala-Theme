@@ -897,7 +897,7 @@ input[type="search"] {
   padding: .5em .8em; }
 
 .main-navigation {
-  z-index: 2;
+  z-index: 999;
   top: 0;
   left: 0;
   position: absolute;
@@ -974,8 +974,7 @@ input[type="search"] {
   background: transparent;
   z-index: 999999; }
 
-.main-navigation.toggled .nav-menu,
-.main-navigation aside {
+.main-navigation.toggled .nav-menu {
   width: 100%;
   max-width: 500px;
   padding: 40px;
@@ -1025,13 +1024,21 @@ input[type="search"] {
   float: none; }
 
 .main-navigation li a {
-  padding: 1.3em 0; }
+  padding: 1em 1em 1em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  display: inline-block; }
 
 .main-navigation li li a {
-  padding-left: 4em; }
+  margin-left: 2em; }
 
 .main-navigation li li li a {
-  padding-left: 6em; }
+  margin-left: 4em; }
+
+.main-navigation li li li li a {
+  margin-left: 6em; }
+
+.main-navigation li li li li li a {
+  margin-left: 8em; }
 
 .main-navigation ul ul,
 .main-navigation ul ul ul {
@@ -1063,6 +1070,17 @@ input[type="search"] {
 
 .main-navigation .widget ul {
   display: block; }
+
+/**
+ * Menu widget area
+ */
+.menu-widgets .widget {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  margin: 0 auto; }
+  .menu-widgets .widget .widget-title {
+    margin-top: 0; }
 
 /**
  * Page navigation
@@ -1105,19 +1123,28 @@ body.single header {
   height: 65vh;
   min-height: 400px; }
 
-body.page header {
-  height: 30vh;
-  min-height: 350px; }
+body.page #masthead {
+  height: auto;
+  min-height: 0; }
+  body.page #masthead #masthead-inner {
+    position: relative;
+    padding-top: 200px; }
 
-body.archive header {
-  height: 65vh;
-  min-height: 350px; }
+body.archive #masthead {
+  height: auto;
+  min-height: 0; }
+  body.archive #masthead #masthead-inner {
+    position: relative;
+    padding-top: 200px; }
 
-body.search header {
-  height: 65vh;
-  min-height: 350px; }
-  body.search header #masthead-inner h1 {
-    margin-top: 0; }
+body.search #masthead {
+  height: auto;
+  min-height: 0; }
+  body.search #masthead #masthead-inner {
+    position: relative;
+    padding-top: 200px; }
+body.search #masthead-inner h1 {
+  margin-top: 0; }
 
 #page {
   position: relative; }
@@ -1791,6 +1818,16 @@ body.blog .entry-content p:last-of-type, body.archive .entry-content p:last-of-t
     -o-transform: translateY(-100%);
     transform: translateY(-100%); } }
 @media screen and (max-width: 710px) {
+  body.blog article, body.archive article, body.search article {
+    height: auto;
+    padding: 200px 0 50px; }
+  body.blog .article-inner, body.archive .article-inner, body.search .article-inner {
+    position: relative;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    right: auto; } }
+@media screen and (max-height: 400px) {
   body.blog article, body.archive article, body.search article {
     height: auto;
     padding: 200px 0 50px; }

@@ -92,7 +92,7 @@ if ( is_single() && has_post_thumbnail() ) {
 		} else if ( is_search() ) {
 			?>
 			<div id="masthead-inner">
-				<span class="entry-category"><?php _e( 'Search Results for:', 'regala' ) ?></span>
+				<span class="search-label"><?php _e( 'Search Results for:', 'regala' ) ?></span>
 				<h1 class="site-description"><?php echo esc_html( get_search_query() ) ?></h1>    
 	        </div>
 			<?php
@@ -125,7 +125,7 @@ if ( is_single() && has_post_thumbnail() ) {
 		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
 		<div class="menu">
 		    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'inner-menu' ) ); ?>
-		    <?php get_sidebar('main-menu'); ?>
+		    <?php get_sidebar( 'main-menu' ); ?>
         </div>
 	</nav>
 	<?php

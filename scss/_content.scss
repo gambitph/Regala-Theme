@@ -80,7 +80,24 @@ body.blog, body.archive, body.search {
 	}
 }
 
+
+// Don't show fullscreen articles when in a small screen
 @media screen and (max-width: 710px) {
+	body.blog, body.archive, body.search {
+		article {
+			height: auto;
+			padding: 200px 0 50px;
+		}
+		.article-inner {
+		    position: relative;
+		    bottom: auto;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		}
+	}
+}
+@media screen and (max-height: 400px) {
 	body.blog, body.archive, body.search {
 		article {
 			height: auto;

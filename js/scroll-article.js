@@ -12,7 +12,7 @@ if ( typeof( Modernizr ) === 'undefined' ) {
 jQuery(document).ready(function($) {
 	function _isMobile() {
 		return ( Modernizr.touch && jQuery(window).width() <= 1000 ) || // touch device estimate
-	 	 	   ( window.screen.width <= 1281 && window.devicePixelRatio > 1 ); // device size estimate
+	 	 	   ( window.screen.width <= 1024 ); // device size estimate
 	}
 	if ( _isMobile() ) {
 		return;
