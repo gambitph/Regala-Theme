@@ -65,9 +65,37 @@ function regala_create_options() {
 		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover, .site-logo-link:hover, .site-logo-link:visited:hover, .site-logo-link:link:hover { opacity: value}',
 	) );
 	
-	/*
-	*   Tagline font and color options
-	*/
+	
+	/**
+	 * Social Icons
+	 */
+	
+	$social = $titan->createThemeCustomizerSection( array(
+	    'name' => __( 'Social Icons', 'regala' ),
+        'panel' => __( 'Theme Options & Colors', 'regala' ),
+		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
+	) );
+	
+	$social->createOption( array(
+	    'name' => __( 'Icon Color', 'regala' ),
+	    'id' => 'social_link_color',
+	    'type' => 'color',
+	    'default' => '#FFFFFF',
+		'css' => '.social-navigation a:before { color: value}',
+	) );
+	
+	for ( $i = 0; $i <= 10; $i++ ) {
+		$social->createOption( array(
+		    'name' => $i ? '' : __( 'Social Links', 'regala' ),
+		    'id' => 'social_' . $i,
+		    'type' => 'text',
+		) );
+	}
+	
+	
+	/**
+	 *   Tagline font and color options
+	 */
 
 	$font = $titan->createThemeCustomizerSection( array(
 	    'name' => __( 'Frontpage Tagline Area', 'regala' ),
@@ -112,35 +140,10 @@ function regala_create_options() {
 		'css' => '#masthead-inner.tagline { bottom: valuevh }',
 	) );
 	
-	/*
-	*   Social links color option
-	*/
-	$social = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Social Links', 'regala' ),
-	    'panel' => __( 'Theme Options & Colors', 'regala' ),
-	) );
 	
-	$social->createOption( array(
-	    'name' => __( 'Color Picker of the Social Links', 'regala' ),
-	    'id' => 'social_link_color',
-	    'type' => 'color',
-	    'desc' => __( 'This color changes the color of the social links', 'regala' ),
-	    'default' => '#FFFFFF',
-		'css' => '.social-navigation a:before { color: value}',
-	) );
-	
-	$social->createOption( array(
-	    'name' => __( 'Hover Color of the Social Links', 'regala' ),
-	    'id' => 'social_link_hover_color',
-	    'type' => 'color',
-	    'desc' => __( 'This color changes the hover color of the social links', 'regala' ),
-	    'default' => '#000000',
-		'css' => '.social-navigation a:hover:before { color: value}',
-	) );
-	
-	/*
-	*   Menu button color option
-	*/
+	/**
+	 *   Menu button color option
+	 */
 	
 	$menu = $titan->createThemeCustomizerSection( array(
 	   'name' => __( 'Main Menu', 'regala' ),
@@ -201,9 +204,10 @@ function regala_create_options() {
 		'css' => '.main-navigation .menu h1, .main-navigation .menu h2, .main-navigation .menu h3, .main-navigation .menu h4, .main-navigation .menu h5, .main-navigation .menu h6, .main-navigation .menu span, .main-navigation .menu p, .main-navigation .menu a, .main-navigation .menu a:visited, .main-navigation .menu div, .main-navigation.toggled .genericon-menu:before { color: value }',
 	) );
 	
-	/*
-	*   Default featured images
-	*/
+	
+	/**
+	 *   Default featured images
+	 */
     
     $image = $titan->createThemeCustomizerSection( array(
         'name' => __( 'Default Featured Images', 'regala' ),
@@ -240,9 +244,11 @@ function regala_create_options() {
         'type' => 'upload',
     ) );
     
-    /*
-    *   Paging Navigation
-    */
+	
+    /**
+     *   Paging Navigation
+     */
+	
     $navigation = $titan->createThemeCustomizerSection( array(
         'name' => __( 'Paging Navigation', 'regala' ),
         'panel' => __( 'Theme Options & Colors', 'regala' ),
@@ -272,9 +278,10 @@ function regala_create_options() {
 	   'css' => 'ul.page-numbers a.page-numbers, ul.page-numbers span{ value }',
     ) );
     
-    /*
-    *   Color option for footer widgets
-    */
+	
+    /**
+     *   Color option for footer widgets
+     */
     
     $footer = $titan->createThemeCustomizerSection( array(
         'name' => __( 'Footer Widgets Area', 'regala' ),
@@ -306,27 +313,11 @@ function regala_create_options() {
         .footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
     ) );
 	
-	/*
-	* Social Icons
-	*/
-	
-	$social = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Social Icons', 'regala' ),
-		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
-	) );
-	
-	for ( $i = 0; $i <= 10; $i++ ) {
-		$social->createOption( array(
-		    'name' => $i ? '' : __( 'Social Links', 'regala' ),
-		    'id' => 'social_' . $i,
-		    'type' => 'text',
-		) );
-	}
-	
 
 	/**
 	 * Footer copyright
 	 */
+	
 	$section = $titan->createThemeCustomizerSection( array(
 	    'name' => __( 'Footer Copyright Area', 'regala' ),
 		'panel' => __( 'Theme Options & Colors', 'regala' ),
@@ -356,9 +347,10 @@ function regala_create_options() {
 		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover { color: value }',
 	) );
 	
-	/*
-	* Header Caption
- 	*/
+	
+	/**
+	 * Header Caption
+ 	 */
  	
  	$caption = $titan->createThemeCustomizerSection( array(
  	    'name' => 'title_tagline',

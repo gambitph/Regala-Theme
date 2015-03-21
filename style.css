@@ -1375,9 +1375,10 @@ body.single.has-sidebar #secondary {
     -ms-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s;
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
   .social-navigation a:hover:before {
-    color: orange; }
+    opacity: .7; }
 
 .social-navigation a[href$="/feed/"]:before {
   content: "\f413"; }

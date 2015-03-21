@@ -22,10 +22,11 @@
 	    -o-transition: all .4s;
 	    transition: all .4s;
 		color: #fff;
+		opacity: 1;
 	}
 	&:hover {
 		&:before {
-			color: orange;
+			opacity: .7;
 		}
 	}
 }
