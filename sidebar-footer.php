@@ -10,7 +10,6 @@ if ( ! is_active_sidebar( 'footer-1' ) && ! is_active_sidebar( 'footer-2' ) && !
 
 $activeSidebars = 0;
 $activeSidebars += is_active_sidebar( 'footer-1' ) ? 1 : 0;
-$activeSidebars += is_active_sidebar( 'footer-2' ) ? 1 : 0;
 $activeSidebars += is_active_sidebar( 'footer-3' ) ? 1 : 0;
 ?>
 
