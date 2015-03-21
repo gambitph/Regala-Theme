@@ -92,7 +92,8 @@ if ( is_single() && has_post_thumbnail() ) {
 		} else if ( is_search() ) {
 			?>
 			<div id="masthead-inner">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'regala' ), '<span>' . get_search_query() . '</span>' ); ?></h1>    
+				<span class="entry-category"><?php _e( 'Search Results for:', 'regala' ) ?></span>
+				<h1 class="site-description"><?php echo esc_html( get_search_query() ) ?></h1>    
 	        </div>
 			<?php
 		} else if ( is_404() ) {

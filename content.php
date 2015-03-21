@@ -67,6 +67,7 @@ if ( ! empty( $imageAttributes ) ) {
 		<span class="entry-date"><?php regala_posted_on() ?></span>
 		<div class="entry-content">
 			<?php the_excerpt() ?>
+			<div class='clearfix'></div>
 			<?php echo '<a href="' . get_permalink() . '" class="btn" title="' . __( 'Continue Reading', 'regala' ) . ' ' . esc_attr( get_the_title() ) . '" rel="bookmark">' . __( 'Continue reading', 'regala' ) . '</a>' ?>
 		</div>
 	</div>

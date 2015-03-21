@@ -17,6 +17,9 @@ body.blog, body.archive, body.search {
 	}
 	.entry-title {
 		margin-top: 0;
+		&:empty {
+			display: none;
+		}
 	}
 	.entry-category {
 	    position: absolute;
@@ -38,9 +41,27 @@ body.blog, body.archive, body.search {
 		-o-transform: translateY(-100%) translateX(-100%);
 		transform: translateY(-100%) translateX(-100%);
 	}
+	// If the category is empty and there is a date, align the date to the title
+	.entry-category:empty + .entry-date {
+		top: 0;
+		transform: translateX(-100%);
+	}
+	// If there's no title, make our content align to the top
+	.entry-title:empty ~ .entry-content {
+		margin-top: 0;
+		p:first-of-type {
+			margin-top: 0;
+		}
+	}
 	.entry-date, .entry-category {
 		font-style: italic;
 		font-size: .9em;
+	}
+	article .btn {
+		margin-top: 1.5em;
+	}
+	.entry-content p:last-of-type {
+		margin-bottom: 0;
 	}
 }
 
@@ -126,5 +147,28 @@ body.page {
 	    margin: 50px auto 0;
 	    width: 80%;
 	    max-width: 710px;
+	}
+}
+
+
+/**
+ * Search
+ */
+body.search-no-results {
+	.page-title, .page-content {
+		text-align: center;
+	}
+	.page-content {
+		form {
+			margin-bottom: 1.5em;
+		}
+		.search-field {
+			display: block;
+			width: 100%;
+			margin-bottom: 1.5em;
+		}
+		.search-submit {
+			margin-bottom: 1.5em;
+		}
 	}
 }

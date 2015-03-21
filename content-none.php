@@ -12,7 +12,7 @@
 
     <span class="genericon genericon-close"></span>
 	
-	    <h1 class="page-title"><?php _e( 'Nothing Found', 'theme1' ); ?></h1>
+	    <h3 class="page-title"><?php _e( 'Nothing Found', 'regala' ); ?></h3>
 		
 		<div class="page-content">
 			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
