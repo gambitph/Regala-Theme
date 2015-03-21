@@ -174,3 +174,10 @@ input[type="password"],
 input[type="search"] {
 	padding: .5em .8em;
 }
+
+@media screen and (max-width: 955px) {
+
+	.main-navigation ul {
+		display: block;
+	}
+}
