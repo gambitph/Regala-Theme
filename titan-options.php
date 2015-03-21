@@ -258,7 +258,7 @@ function regala_create_options() {
         'name' => __( 'Background Color Navigation', 'regala' ),
         'id' => 'navigation_bg_color',
         'type' => 'color',
-        'default' => '#222',
+        'default' => '#c4b371',
         'css' => '.paging-navigation { background: value }',
     ) );
     
@@ -267,7 +267,7 @@ function regala_create_options() {
         'id' => 'navigation_fonts',
         'type' => 'font',
     	   'default' => array(
-	       'color' => '#999',
+	       'color' => '#ffffff',
 	       'line-height' => '1em',
 	       'font-size' => '16px',
 	       'font-family' => 'Playfair Display',
@@ -300,8 +300,9 @@ function regala_create_options() {
         'name' => __( 'Text Color', 'regala' ),
         'id' => 'footer_text_color',
         'type' => 'color',
-        'default' => '#555E67',
-        'css' => '.footer-widgets { color: value }',
+        'default' => '#616f7c',
+        'css' => '.footer-widgets { color: value } 
+			.footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
     ) );
     
     $footer->createOption( array(
@@ -309,8 +310,7 @@ function regala_create_options() {
         'id' => 'footer_link_color',
         'type' => 'color',
         'default' => '#d9b760',
-        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value },
-        .footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: value }',
+        'css' => '.footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: value }',
     ) );
 	
 

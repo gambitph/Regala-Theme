@@ -1224,29 +1224,66 @@ body.search .site-main .no-results {
 .genericon-close:before {
   content: '\f406'; }
 
-body.single .padding {
-  padding-right: 370px;
-  position: relative; }
+.widget-area .widget:first-child h1, .widget-area .widget:first-child h2, .widget-area .widget:first-child h3, .widget-area .widget:first-child h4, .widget-area .widget:first-child h5, .widget-area .widget:first-child h6 {
+  margin-top: 0; }
+.widget-area li {
+  list-style: none;
+  padding: .3em 0;
+  border-top: 1px solid #f1f1f1; }
+  .widget-area li:first-child {
+    border-top: none; }
+  .widget-area li li:first-child {
+    border-top: 1px solid #f1f1f1; }
+  .widget-area li ul {
+    padding-top: .3em; }
+    .widget-area li ul li:last-child {
+      padding-bottom: 0; }
 
-body.single .with-sidebar {
-  margin: 0 auto;
-  width: 1080px; }
+.widget-area a, .widget-area a:visited {
+  color: #888; }
+  .widget-area a:hover, .widget-area a:visited:hover {
+    color: #d9b760; }
 
-body.single .padding {
-  display: inline-block;
-  vertical-align: top;
-  width: 710px;
-  padding: 0;
-  margin: 0; }
+.widget input[type="search"],
+.widget input[type="text"],
+.widget input[type="password"],
+.widget input[type="email"],
+.widget #subscribe-email input,
+.widget textarea {
+  width: 100%;
+  padding: .5em .8em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
 
-body.single .widget-area {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 30px;
-  padding: 0;
-  margin: 0 0 0 30px;
-  padding: 0;
-  width: 340px; }
+.widget_calendar th, .widget_calendar td {
+  text-align: center; }
+.widget_calendar a, .widget_calendar a:visited {
+  color: orange; }
+  .widget_calendar a:hover, .widget_calendar a:visited:hover {
+    color: #888; }
+
+.widget_recent_comments .recentcomments {
+  color: #bbb; }
+.widget_recent_comments .comment-author-link a, .widget_recent_comments .comment-author-link a:visited {
+  color: orange; }
+  .widget_recent_comments .comment-author-link a:hover, .widget_recent_comments .comment-author-link a:visited:hover {
+    color: #888; }
+
+.widget_tag_cloud .tagcloud a, .widget_tag_cloud .tagcloud a:visited {
+  font-size: 14px !important;
+  background: #fafafa;
+  padding: .1em .4em;
+  border-radius: 3px;
+  border: 1px solid #ECF0F1;
+  color: #aaa;
+  text-transform: uppercase; }
+  .widget_tag_cloud .tagcloud a:hover, .widget_tag_cloud .tagcloud a:visited:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #d9b760; }
+
+footer .widget-grofile {
+  text-align: center; }
 
 .footer-widgets {
   max-width: 710px;

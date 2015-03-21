@@ -1,28 +1,96 @@
-body.single .padding {
-	padding-right: 370px;
-	position: relative;
+// Widgets
+.widget-area {
+	.widget:first-child {
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+		}
+	}
+	li {
+		list-style: none;
+		padding: .3em 0;
+		border-top: 1px solid #f1f1f1;
+		&:first-child {
+			border-top: none;
+		}
+		li {
+			&:first-child {
+				border-top: 1px solid #f1f1f1;
+			}
+		}
+		ul {
+			padding-top: .3em;
+			li:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+.widget-area {
+	a, a:visited {
+		color: #888;
+		&:hover {
+			color: #d9b760;
+		}
+	}
 }
 
-body.single .with-sidebar {
-    margin: 0 auto;
-    width: 1080px;
+.widget {
+	input[type="search"],
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	#subscribe-email input,
+	textarea {
+		width: 100%;
+		padding: .5em .8em;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
 }
-
-body.single .padding {
-    display: inline-block;
-    vertical-align: top;
-    width: 710px;
-    padding: 0;
-    margin: 0;
+.widget_calendar {
+	th, td {
+		text-align: center;
+	}
+	a, a:visited {
+		color: orange;
+		&:hover {
+			color: #888;
+		}
+	}
 }
-
-body.single .widget-area {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 30px;
-    padding: 0;
-    margin: 0 0 0 30px;
-    padding: 0;
-    width: 340px;
+.widget_recent_comments {
+	.recentcomments {
+		color: #bbb;
+	}
+	.comment-author-link {
+		a, a:visited {
+			color: orange;
+			&:hover {
+				color: #888;
+			}
+		}
+	}
 }
-
+.widget_tag_cloud {
+	.tagcloud {
+		a, a:visited {
+			font-size: 14px !important;
+	        background: #fafafa;
+	        padding: .1em .4em;
+	        border-radius: 3px;
+	        border: 1px solid #ECF0F1;
+	        color: #aaa;
+			text-transform: uppercase;
+	        &:hover {
+	            background: transparent;
+	            border-color: transparent;
+	            color: #d9b760;
+	        }
+		}
+	}
+}
+footer {
+	.widget-grofile {
+		text-align: center;
+	}
+}
