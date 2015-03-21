@@ -1074,32 +1074,14 @@ header, body.home header, body.home.page header {
   height: 100vh;
   min-height: 600px; }
 
-body.single header {
-  height: 65vh;
-  min-height: 400px; }
-
-body.page #masthead {
+body.page #masthead, body.single #masthead, body.archive #masthead, body.search #masthead {
   height: auto;
   min-height: 0; }
-  body.page #masthead #masthead-inner {
+  body.page #masthead #masthead-inner, body.single #masthead #masthead-inner, body.archive #masthead #masthead-inner, body.search #masthead #masthead-inner {
     position: relative;
     padding-top: 200px; }
-
-body.archive #masthead {
-  height: auto;
-  min-height: 0; }
-  body.archive #masthead #masthead-inner {
-    position: relative;
-    padding-top: 200px; }
-
-body.search #masthead {
-  height: auto;
-  min-height: 0; }
-  body.search #masthead #masthead-inner {
-    position: relative;
-    padding-top: 200px; }
-body.search #masthead-inner h1 {
-  margin-top: 0; }
+    body.page #masthead #masthead-inner h1, body.single #masthead #masthead-inner h1, body.archive #masthead #masthead-inner h1, body.search #masthead #masthead-inner h1 {
+      margin-top: 20px; }
 
 #page {
   position: relative; }
@@ -1796,7 +1778,6 @@ body.blog .entry-content p:last-of-type, body.archive .entry-content p:last-of-t
  * Single page title
  */
 body.single .entry-category {
-  position: absolute;
   font-style: italic;
   font-size: .9em; }
 body.single .entry-date {
