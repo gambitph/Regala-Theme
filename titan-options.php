@@ -152,7 +152,7 @@ function regala_create_options() {
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
 		'default' => '#373A3C',
-		'css' => '.menu { background: value }',
+		'css' => '#site-navigation { background: value }',
 	) );
 	
 	$menu->createOption( array(

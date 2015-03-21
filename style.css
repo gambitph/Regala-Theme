@@ -899,16 +899,16 @@ input[type="search"] {
 @media screen and (max-width: 955px) {
   .main-navigation ul {
     display: block; } }
-.main-navigation {
+#site-navigation {
   z-index: 999;
   top: 0;
   left: 0;
   position: absolute;
-  background: #4d4d4d;
+  background: #373A3C;
   right: 0; }
-  .main-navigation a, .main-navigation a:link, .main-navigation a:visited {
+  #site-navigation a, #site-navigation a:link, #site-navigation a:visited {
     display: inline-block; }
-  .main-navigation .menu-container h4 {
+  #site-navigation .menu-container h4 {
     margin-top: 0; }
 
 /* Small menu */
@@ -1082,6 +1082,8 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
     padding-top: 200px; }
     body.page #masthead #masthead-inner h1, body.single #masthead #masthead-inner h1, body.archive #masthead #masthead-inner h1, body.search #masthead #masthead-inner h1 {
       margin-top: 20px; }
+    body.page #masthead #masthead-inner .entry-category:empty ~ h1.site-description, body.single #masthead #masthead-inner .entry-category:empty ~ h1.site-description, body.archive #masthead #masthead-inner .entry-category:empty ~ h1.site-description, body.search #masthead #masthead-inner .entry-category:empty ~ h1.site-description {
+      margin-top: 0; }
 
 #page {
   position: relative; }
@@ -1252,7 +1254,8 @@ footer .widget-grofile {
 .footer-widgets {
   max-width: 710px;
   margin: 0 auto 1.5em;
-  width: 80%; }
+  width: 80%;
+  padding-top: 50px; }
 
 .footer-widgets #footer-left,
 .footer-widgets #footer-right {
@@ -1605,7 +1608,7 @@ body.single #masthead-inner a, body.single #masthead-inner a:link, body.single #
 body.blog article, body.archive article, body.search article {
   color: #F2F1EF; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .site-logo-link {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-style: italic; }
@@ -1650,9 +1653,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1em;
   margin-top: 50px;
   margin-bottom: 25px; }
-
-.site-footer {
-  padding-top: 50px; }
 
 /**
  * Inner page post navigation

@@ -97,7 +97,7 @@ body.blog, body.archive, body.search {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .site-logo-link {
     font-family: 'Playfair Display', serif;
 	font-weight: 900;
 	font-style: italic;
@@ -144,10 +144,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1em;
     margin-top: 50px;
     margin-bottom: 25px;
-}
-
-.site-footer {
-	padding-top: 50px;
 }
 
 

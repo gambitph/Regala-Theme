@@ -12,6 +12,9 @@ body.page, body.single, body.archive, body.search {
 			h1 {
 				margin-top: 20px;
 			}
+			.entry-category:empty ~ h1.site-description {
+				margin-top: 0;
+			}
 		}
 	}
 }
