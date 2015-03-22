@@ -127,11 +127,11 @@ if ( ! function_exists( 'regala_entry_category' ) ) :
  */
 function regala_entry_category() {
 	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
+	// if ( 'post' == get_post_type() ) {
 		
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( ', ' );
-		if ( $categories_list && regala_categorized_blog() ) {
+		if ( $categories_list ) {
 			printf( '<span class="cat-links">' . __( '%1$s', 'regala' ) . '</span>', $categories_list );
 		}
 
@@ -140,7 +140,7 @@ function regala_entry_category() {
 		// if ( $tags_list ) {
 		// 	printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'regala' ) . '</span>', $tags_list );
 		// }
-	}
+	// }
 	//
 	// if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 	// 	echo '<span class="comments-link">';

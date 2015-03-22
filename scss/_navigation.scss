@@ -2,7 +2,7 @@
     z-index: 999;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     background: #373A3C;
     right: 0;
 	a, a:link, a:visited {
@@ -87,6 +87,9 @@
     
 .main-navigation li { 
 	float: none; 
+}
+.main-navigation ul ul li:hover > ul {
+	left: auto;
 }
 
 .main-navigation li a { 

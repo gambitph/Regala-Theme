@@ -86,36 +86,36 @@ add_action( 'after_setup_theme', 'theme1_setup' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function theme1_widgets_init() {
+function regala_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'theme1' ),
+		'name'          => __( 'Sidebar', 'regala' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer Left', 'theme1' ),
-		'id'            => 'footer-1',
-		'description'   => __( 'The left footer widget area', 'theme1' ),
+		'description'   => __( 'The sidebar available in pages & blog posts', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Right', 'theme1' ),
+		'name'          => __( 'Footer Left', 'regala' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'The left footer widget area', 'regala' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Right', 'regala' ),
 		'id'            => 'footer-3',
-		'description'   => __( 'The right footer widget area', 'theme1' ),
+		'description'   => __( 'The right footer widget area', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) ); 
 	register_sidebar( array(
-		'name'          => __( 'Main Menu Widgets', 'theme1' ),
+		'name'          => __( 'Main Menu Widgets', 'regala' ),
 		'id'            => 'main-menu',
 		'description'   => __( 'Widgets here appear in the main menu of the site.', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -124,7 +124,7 @@ function theme1_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'theme1_widgets_init' );
+add_action( 'widgets_init', 'regala_widgets_init' );
 
 /**
  * Enqueue scripts and styles.

@@ -17,7 +17,11 @@
 <?php wp_head(); ?>
 <?php 
 
-// Get the header image to display
+$bodyClasses = '';
+
+/**
+ * Get the header image to display
+ */
 $headerImageUrl = '';
 $headerImageGradientColor = '';
 if ( get_header_image() ) {
@@ -32,7 +36,20 @@ if ( is_single() && has_post_thumbnail() ) {
 		$headerImageGradientColor = '41,51,56';
 	}
 }
+if ( ! empty( $headerImageUrl ) ) {
+	$bodyClasses = ' has-header-image';
+}
 
+/**
+ * Add sidebar class
+ */
+if ( is_single() || is_page() ) {	
+	if ( is_active_sidebar( 'sidebar-1' ) ) {
+		$bodyClasses .= ' has-sidebar';
+	}
+}
+	
+	
 ?>
 <style id="regala_header">
 	header {
@@ -41,7 +58,7 @@ if ( is_single() && has_post_thumbnail() ) {
 </style>
 </head>
 
-<body <?php body_class( ! empty( $headerImageUrl ) ? 'has-header-image' : '' ) ?>>
+<body <?php body_class( $bodyClasses ) ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'regala' ); ?></a>
 	<?php
