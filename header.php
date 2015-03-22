@@ -24,17 +24,25 @@ $bodyClasses = '';
  */
 $headerImageUrl = '';
 $headerImageGradientColor = '';
+$stop1Opacity = 0.4;
+$stop2Opacity = 0.3;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
 }
-if ( is_single() && has_post_thumbnail() ) {
+if ( ( is_single() || is_page() ) && has_post_thumbnail() ) {
 	$imageAttachment = wp_get_attachment_image_src( get_post_thumbnail_id(), 'regala-wallpaper' );
 
 	if ( ! empty( $imageAttachment ) ) {
 		$headerImageUrl = $imageAttachment[0];
-		$headerImageGradientColor = '41,51,56';
 	}
+}
+if ( is_single() || is_page() ) {
+	
+	$headerImageGradientColor = '41,51,56';
+	$stop1Opacity = 0.7;
+	$stop2Opacity = 0.5;
+	
 }
 if ( ! empty( $headerImageUrl ) ) {
 	$bodyClasses = ' has-header-image';
@@ -53,7 +61,7 @@ if ( is_single() || is_page() ) {
 ?>
 <style id="regala_header">
 	header {
-		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,0.4) 0%,rgba(<?php echo $headerImageGradientColor ?>,0.3) 48%,rgba(<?php echo $headerImageGradientColor ?>,0) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
+		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop1Opacity ?>) 0%,rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop2Opacity ?>) 48%,rgba(<?php echo $headerImageGradientColor ?>,0) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
 	}
 </style>
 </head>

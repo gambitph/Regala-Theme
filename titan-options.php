@@ -41,7 +41,7 @@ function regala_create_options() {
 	    'type' => 'color',
 	    'desc' => __( 'This color changes the color of the text logo', 'regala' ),
 	    'default' => '#FFFFFF',
-		'css' => '.site-title:visited, .site-title:hover, .site-title:link { color: value}',
+		'css' => '.site-title, .site-logo-link { &:visited, &:link, & { &, &:hover { color: value } } }',
 	) );
 	
 	$section->createOption( array(
