@@ -1837,7 +1837,7 @@ body.single article.post {
 /**
  * Page body
  */
-body.page article {
+body.page article.page {
   margin: 50px auto 0;
   width: 80%;
   max-width: 710px; }
