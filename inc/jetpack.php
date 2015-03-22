@@ -3,20 +3,20 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package theme1
+ * @package regala
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function theme1_jetpack_setup() {
+function regala_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'theme1_jetpack_setup' );
+add_action( 'after_setup_theme', 'regala_jetpack_setup' );
 
 /**
  * Make all videos responsive

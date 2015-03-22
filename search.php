@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package theme1
+ * @package regala
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package theme1
+ * @package regala
  */
 
 if ( ! function_exists( 'regala_paging_nav' ) ) :
@@ -49,7 +49,7 @@ if ( ! function_exists( 'regala_paging_nav' ) ) :
 
  	?>
  	<nav class="navigation paging-navigation" role="navigation">
- 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'theme1' ); ?></h1>
+ 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'regala' ); ?></h1>
  			<?php echo $links; ?>
  	</nav><!-- .navigation -->
  	<?php
@@ -160,13 +160,13 @@ function regala_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		// $categories_list = get_the_category_list( __( ', ', 'theme1' ) );
+		// $categories_list = get_the_category_list( __( ', ', 'regala' ) );
 		// if ( $categories_list && regala_categorized_blog() ) {
-		// 	printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'theme1' ) . '</span>', $categories_list );
+		// 	printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'regala' ) . '</span>', $categories_list );
 		// }
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ' ', 'theme1' ) );
+		$tags_list = get_the_tag_list( '', __( ' ', 'regala' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'regala' ) . '</span>', $tags_list );
 		}
@@ -310,12 +310,12 @@ function regala_categorized_blog() {
 /**
  * Flush out the transients used in regala_categorized_blog.
  */
-function theme1_category_transient_flusher() {
+function regala_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'theme1_categories' );
+	delete_transient( 'regala_categories' );
 }
-add_action( 'edit_category', 'theme1_category_transient_flusher' );
-add_action( 'save_post',     'theme1_category_transient_flusher' );
+add_action( 'edit_category', 'regala_category_transient_flusher' );
+add_action( 'save_post',     'regala_category_transient_flusher' );

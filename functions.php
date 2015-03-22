@@ -1,8 +1,8 @@
 <?php
 /**
- * theme1 functions and definitions
+ * regala functions and definitions
  *
- * @package theme1
+ * @package regala
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600; /* pixels */
 }
 
-if ( ! function_exists( 'theme1_setup' ) ) :
+if ( ! function_exists( 'regala_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'theme1_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function theme1_setup() {
+function regala_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on theme1, use a find and replace
-	 * to change 'theme1' to the name of your theme in all the template files
+	 * If you're building a theme based on regala, use a find and replace
+	 * to change 'regala' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'theme1', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'regala', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -52,8 +52,8 @@ function theme1_setup() {
     
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'theme1' ),
-		'social' => __( 'Social Menu', 'theme1' ),
+		'primary' => __( 'Primary Menu', 'regala' ),
+		'social' => __( 'Social Menu', 'regala' ),
 	) );
 
 	/*
@@ -73,13 +73,13 @@ function theme1_setup() {
 	// ) );
 
 	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'theme1_custom_background_args', array(
+	// add_theme_support( 'custom-background', apply_filters( 'regala_custom_background_args', array(
 	//         'default-color' => 'ffffff',
 	//         'default-image' => '',
 	//     ) ) );
 }
-endif; // theme1_setup
-add_action( 'after_setup_theme', 'theme1_setup' );
+endif; // regala_setup
+add_action( 'after_setup_theme', 'regala_setup' );
 
 /**
  * Register widget area.
@@ -140,20 +140,20 @@ function regala_scripts() {
 	
 	wp_enqueue_style( 'regala-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style( 'theme1-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic' );      
+	wp_enqueue_style( 'regala-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic' );      
 	                                         
-    // wp_enqueue_style( 'theme1_fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+    // wp_enqueue_style( 'regala_fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     
     wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
-    // wp_enqueue_script( 'theme1-background-picture', get_template_directory_uri() . '/js/background-picture.js', array( 'jquery' ), '20150216', true );
+    // wp_enqueue_script( 'regala-background-picture', get_template_directory_uri() . '/js/background-picture.js', array( 'jquery' ), '20150216', true );
     
-    // wp_enqueue_script( 'theme1-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20140404', true );
+    // wp_enqueue_script( 'regala-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20140404', true );
     
-    // wp_enqueue_script( 'theme1-masonry-settings.js', get_template_directory_uri() . '/js/masonry-settings.js', array( 'masonry' ), '20140129'. true );
+    // wp_enqueue_script( 'regala-masonry-settings.js', get_template_directory_uri() . '/js/masonry-settings.js', array( 'masonry' ), '20140129'. true );
     
-	wp_enqueue_script( 'theme1-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'regala-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'theme1-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'regala-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
