@@ -187,6 +187,12 @@ body.search-no-results, body.error404 {
 			margin-bottom: 1.5em;
 		}
 	}
+	.page-content .widget-area {
+		margin-top: 50px;
+		ul {
+			padding-left: 0;
+		}
+	}
 }
 
 

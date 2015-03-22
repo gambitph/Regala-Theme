@@ -896,6 +896,10 @@ input[type="password"],
 input[type="search"] {
   padding: .5em .8em; }
 
+input,
+input[type="search"] {
+  box-sizing: border-box; }
+
 @media screen and (max-width: 955px) {
   .main-navigation ul {
     display: block; } }
@@ -1842,6 +1846,10 @@ body.search-no-results .page-content .search-field, body.error404 .page-content 
   margin-bottom: 1.5em; }
 body.search-no-results .page-content .search-submit, body.error404 .page-content .search-submit {
   margin-bottom: 1.5em; }
+body.search-no-results .page-content .widget-area, body.error404 .page-content .widget-area {
+  margin-top: 50px; }
+  body.search-no-results .page-content .widget-area ul, body.error404 .page-content .widget-area ul {
+    padding-left: 0; }
 
 /**
  * Password required
