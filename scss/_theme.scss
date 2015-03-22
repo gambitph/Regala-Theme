@@ -193,3 +193,23 @@ span.tags-links a {
 .entry-footer {
 	margin-top: 50px;
 }
+
+
+/**
+ * 404
+ */
+body.error404 {
+	.page-content {
+		.widget-area li {
+		    margin: 0 auto;
+		    left: 50%;
+		    position: relative;
+		    -webkit-transform: translateX(-50%);
+		    -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		    -o-transform: translateX(-50%);
+		    transform: translateX(-50%);
+		    padding: .3em 1em;
+		}
+	}
+}

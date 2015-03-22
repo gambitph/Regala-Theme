@@ -2,7 +2,7 @@ header, body.home header, body.home.page header {
 	height: 100vh;
 	min-height: 600px;
 }
-body.page, body.single, body.archive, body.search {
+body.page, body.single, body.archive, body.search, body.error404 {
 	#masthead {
 		height: auto;
 		min-height: 0;
@@ -107,7 +107,7 @@ header {
 }
 
 
-body.search .site-main .no-results{
+body.search .site-main .no-results, body.error404 .page-content {
 	width: 80%;
 	max-width: 710px;
 	margin: 0 auto;

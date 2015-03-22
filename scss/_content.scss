@@ -170,7 +170,7 @@ body.page {
 /**
  * Search
  */
-body.search-no-results {
+body.search-no-results, body.error404 {
 	.page-title, .page-content {
 		text-align: center;
 	}
