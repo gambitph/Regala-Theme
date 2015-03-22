@@ -1829,6 +1829,16 @@ body.search-no-results .page-content .search-field {
 body.search-no-results .page-content .search-submit {
   margin-bottom: 1.5em; }
 
+/**
+ * Password required
+ */
+article.post-password-required p:first-of-type {
+  font-weight: bold; }
+article.post-password-required [name="post_password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em; }
+
 #comments {
   width: 80%;
   max-width: 710px;
