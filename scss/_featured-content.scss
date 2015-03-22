@@ -81,13 +81,13 @@
         }
     }
     .featured-item:hover {
-        border-color: orange;
+        border-color: #d9b760;
         img {
             opacity: 0.6;
             transform: scale(1.05);
         }
         figcaption {
-           color: orange;
+           color: #d9b760;
         }
     }
     &:after {

@@ -763,7 +763,7 @@ table {
 
 blockquote, q {
   margin: 0 -1em;
-  box-shadow: -5px 0 0 orange;
+  box-shadow: -5px 0 0 #d9b760;
   padding: 0 1em;
   color: #777;
   font-style: italic;
@@ -1282,14 +1282,14 @@ body.has-sidebar #content #secondary {
 .widget_calendar th, .widget_calendar td {
   text-align: center; }
 .widget_calendar a, .widget_calendar a:visited {
-  color: orange; }
+  color: #d9b760; }
   .widget_calendar a:hover, .widget_calendar a:visited:hover {
     color: #888; }
 
 .widget_recent_comments .recentcomments {
   color: #bbb; }
 .widget_recent_comments .comment-author-link a, .widget_recent_comments .comment-author-link a:visited {
-  color: orange; }
+  color: #d9b760; }
   .widget_recent_comments .comment-author-link a:hover, .widget_recent_comments .comment-author-link a:visited:hover {
     color: #888; }
 
@@ -1935,7 +1935,7 @@ article.post-password-required [name="post_password"] {
         vertical-align: middle;
         font-style: normal; }
       #comments .comment-metadata > a:hover, #comments .comment-metadata > a:visited:hover {
-        color: orange; }
+        color: #d9b760; }
   #comments .edit-link {
     float: right; }
   #comments .comment-reply-link {
