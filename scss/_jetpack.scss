@@ -25,7 +25,7 @@ body {
 			background: $contentBackgroundColor;
 			color: $decorColor;
 			background: #fff;
-			font-family: "Unica One";
+			font-family: "Playfair Display", serif;
 			padding: 30px 50px;
 			font-size: 18px;
 			text-align: center;
@@ -86,7 +86,7 @@ body {
 			text-align: left;
 		}
         h3.sd-title {
-			font-family: "Unica One";
+			font-family: "Playfair Display", serif;
             &:before {
                 display: none;
             }
@@ -106,7 +106,7 @@ body {
                 box-shadow: none;
                 line-height: 30px;
                 padding: 1px 10px 0px 7px;
-				font-family: "Unica One";
+				font-family: "Playfair Display", serif;
 				text-transform: uppercase;
                 &:before {
                     left: 2px;
@@ -141,7 +141,7 @@ body {
 body {
     div#jp-relatedposts h3.jp-relatedposts-headline {
         font-size: 18px;
-        font-family: "Unica One";
+        font-family: "Playfair Display", serif;
         text-align: center;
         display: block;
         width: 100%;
@@ -163,7 +163,7 @@ body {
         text-decoration: none;
     }
     div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
-        font-family: "Unica One";
+        font-family: "Playfair Display", serif;
         font-size: 22px;
         color: #6e6e6e;
         text-decoration: none;
@@ -180,7 +180,7 @@ body {
     }
     div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
         color: #d9b760;
-        font-family: "Unica One";
+        font-family: "Playfair Display", serif;
     }
     .jp-relatedposts-post-img {
         margin-bottom: 1em;
@@ -195,7 +195,7 @@ body {
 body {
     div.sharedaddy.jetpack-likes-widget-wrapper {
         h3.sd-title {
-			font-family: "Unica One";
+			font-family: "Playfair Display", serif;
             display: none;
         }
     }

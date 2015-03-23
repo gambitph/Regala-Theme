@@ -77,6 +77,9 @@ function regala_setup() {
 	//         'default-color' => 'ffffff',
 	//         'default-image' => '',
 	//     ) ) );
+	
+	// Remove the header text
+	defined( 'NO_HEADER_TEXT' ) or define( 'NO_HEADER_TEXT', true );
 }
 endif; // regala_setup
 add_action( 'after_setup_theme', 'regala_setup' );
