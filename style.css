@@ -1,9 +1,9 @@
 /*
 Theme Name: Regala
-Theme URI: http://demos2.gambit.ph/regala
+Theme URI: http://underscores.me/
 Author: Gambit
-Author URI: http://gambit.ph
-Description: An image heavy theme aimed towards photographers and illustrators
+Author URI: http://underscores.me/
+Description: Photography theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Regala is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Verdant is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -905,6 +905,10 @@ input[type="search"] {
     display: block; } }
 #comments .pingback + .comment {
   margin-top: 50px; }
+
+.entry-content, #comments, h1, h2, h3, h4, h5, h6, p {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
 
 #site-navigation {
   z-index: 999;
