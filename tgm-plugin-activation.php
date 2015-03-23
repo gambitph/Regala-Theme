@@ -44,11 +44,6 @@ function gambit_theme_register_required_plugins() {
             'slug'      => 'simple-author-box',
             'required'  => false,
         ),
-        // array(
-        //     'name'      => 'WordPress SEO by Yoast',
-        //     'slug'      => 'wordpress-seo',
-        //     'required'  => false,
-        // ),
  
     );
  
