@@ -1824,7 +1824,7 @@ body.single .entry-date {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%); }
-body.single article.post {
+body.single article.hentry {
   width: 80%;
   max-width: 710px;
   margin: 0 auto; }
