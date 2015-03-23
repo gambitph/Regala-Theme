@@ -1379,6 +1379,10 @@ body.single .padding {
   font-size: .8em;
   font-style: italic; }
 
+#site-navigation #main-menu .inner-menu .menu-widgets .widget_tag_cloud .tagcloud a {
+  background: none;
+  border: none; }
+
 .social-navigation {
   margin: 10px;
   vertical-align: top;
