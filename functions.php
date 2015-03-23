@@ -143,7 +143,7 @@ function regala_scripts() {
 	
 	wp_enqueue_style( 'regala-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style( 'regala-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic' );      
+	// wp_enqueue_style( 'regala-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic' );
 	                                         
     // wp_enqueue_style( 'regala_fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     
