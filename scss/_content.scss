@@ -19,6 +19,7 @@ body.blog, body.archive, body.search {
 		margin-top: 0;
 		-ms-word-wrap: break-word;
 		word-wrap: break-word;
+		word-break: break-word;
 		&:empty {
 			display: none;
 		}

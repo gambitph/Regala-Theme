@@ -172,3 +172,66 @@ function regala_the_site_logo( $html, $logo, $size ) {
 	return $html;
 }
 add_filter( 'jetpack_the_site_logo', 'regala_the_site_logo', 10, 3 );
+
+
+/**
+ * This snippet will make `is_active_sidebar` work correctly with Custom Sidebars
+ * @author Benjamin Intal
+ * @see https://wordpress.org/support/topic/is_active_sidebar-not-reflecting-new-sidebar?replies=2#post-6483681
+ * @see https://gist.github.com/bfintal/5b565eb32e8472e755a9
+ */
+
+/**
+ * Gathers all the sidebar IDs and the replacement IDs
+ */
+add_action( 'cs_predetermineReplacements', 'gambit_theme_custom_sidebars_determine_replacements' );
+function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
+	global $_verdant_sidebar_ids_to_replace;
+	$_verdant_sidebar_ids_to_replace = array();
+	
+	$customSidebarReplacer = CustomSidebarsReplacer::instance();
+	
+	$replacements = $customSidebarReplacer->determine_replacements( $defaults );
+
+	foreach ( $replacements as $sb_id => $replace_info ) {
+
+		if ( ! is_array( $replace_info ) || count( $replace_info ) < 3 ) {
+			continue;
+		}
+
+		// Fix rare message "illegal offset type in isset or empty"
+		$replacement = (string) @$replace_info[0];
+		$replacement_type = (string) @$replace_info[1];
+		$extra_index = (string) @$replace_info[2];
+
+		$check = $customSidebarReplacer->is_valid_replacement( $sb_id, $replacement, $replacement_type, $extra_index );
+
+		if ( $check ) {
+			$_verdant_sidebar_ids_to_replace[ $sb_id ] = $replacement;
+		}
+	}
+}
+
+
+/**
+ * Checks the sidebars being replaced and make corresponding is_active_sidebar calls to work
+ */
+add_filter( 'is_active_sidebar', 'verdant_custom_sidebars_is_active_sidebar', 10, 2 );
+function verdant_custom_sidebars_is_active_sidebar( $is_active_sidebar, $index ) {
+	global $_verdant_sidebar_ids_to_replace;
+	
+	if ( empty( $_verdant_sidebar_ids_to_replace ) ) {
+		return $is_active_sidebar;
+	}
+	
+	if ( ! empty( $_verdant_sidebar_ids_to_replace[ $index ] ) ) {
+		// Return the current value if it's the same replacement	
+		if ( $_verdant_sidebar_ids_to_replace[ $index ] == $index ) {
+			return $is_active_sidebar;
+		}
+		
+		return is_active_sidebar( $_verdant_sidebar_ids_to_replace[ $index ] );
+	}
+	
+	return $is_active_sidebar;
+}
