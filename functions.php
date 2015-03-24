@@ -49,6 +49,7 @@ function regala_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 400, 225, true );
 	add_image_size( 'regala-wallpaper', 1600, 1024, true );
+	add_image_size( 'jetpack-portfolio', 600, 400, true );
     
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

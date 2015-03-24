@@ -60,7 +60,7 @@ if ( is_single() || is_page() ) {
 	
 ?>
 <style id="regala_header">
-	header {
+	header#masthead {
 		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop1Opacity ?>) 0%,rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop2Opacity ?>) 48%,rgba(<?php echo $headerImageGradientColor ?>,0) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
 	}
 </style>
