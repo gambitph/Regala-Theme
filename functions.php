@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 600; /* pixels */
+	$content_width = 710; /* pixels */
 }
 
 if ( ! function_exists( 'regala_setup' ) ) :
