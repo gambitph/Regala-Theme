@@ -147,6 +147,11 @@ function regala_scripts() {
 	// wp_enqueue_style( 'regala-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic' );
 	                                         
     // wp_enqueue_style( 'regala_fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	
+	if ( ! class_exists( 'TitanFramework' ) ) {
+		wp_enqueue_style( 'regala-playfair-font', '//fonts.googleapis.com/css?family=Playfair+Display%3A900italic%2C400&#038;subset=latin%2Clatin-ext' );
+		wp_enqueue_style( 'regala-gudea-font', '//fonts.googleapis.com/css?family=Gudea%3A200%2C400&#038;subset=latin%2Clatin-ext' );
+	}
     
     wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
     // wp_enqueue_script( 'regala-background-picture', get_template_directory_uri() . '/js/background-picture.js', array( 'jquery' ), '20150216', true );
