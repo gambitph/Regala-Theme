@@ -794,6 +794,8 @@ ul, ol {
 
 .site-main ul, .site-main ol {
   padding-left: 1.9em; }
+.site-main p:first-of-type {
+  margin-top: 0; }
 
 pre {
   background: #ECF0F1;
@@ -2186,8 +2188,6 @@ span.tags-links a {
   border-color: #d9b760; }
 
 body .jetpack-portfolio-shortcode {
-  margin-left: -50px;
-  margin-right: -50px;
   background: #000; }
 body .jetpack-portfolio-shortcode .portfolio-entry {
   margin: 0;

@@ -60,7 +60,7 @@ add_action( 'after_setup_theme', 'regala_jetpack_site_logo' );
 
 
 function gambit_theme_jetpack_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-	if ( get_post_type( $post_id ) == 'jetpack-portfolio' && $size == 'full' ) {
+	if ( get_post_type( $post_id ) == 'jetpack-portfolio' && ( $size == 'full' || $size == 'large' ) ) {
 		$size = 'jetpack-portfolio';
 		return get_the_post_thumbnail( $post_id, $size, $attr );
 	}
