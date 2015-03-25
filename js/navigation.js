@@ -41,6 +41,7 @@
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 			jQuery('html').css('overflow', 'hidden');
-		}	
+			jQuery(window).trigger('resize');
+		}
 	};
 } )();
