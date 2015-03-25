@@ -919,7 +919,13 @@ input[type="search"] {
   left: 0;
   position: fixed;
   background: #373A3C;
-  right: 0; }
+  right: 0;
+  bottom: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
   #site-navigation a, #site-navigation a:link, #site-navigation a:visited {
     display: inline-block; }
   #site-navigation .menu-container h4 {
@@ -969,7 +975,7 @@ input[type="search"] {
   z-index: 999999; }
 
 .main-navigation.toggled {
-  bottom: 0;
+  bottom: 0 !important;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden; }
