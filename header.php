@@ -24,8 +24,8 @@ $bodyClasses = '';
  */
 $headerImageUrl = '';
 $headerImageGradientColor = '';
-$stop1Opacity = 0.4;
-$stop2Opacity = 0.3;
+$stop1Opacity = 0.6;
+$stop2Opacity = 0.4;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
