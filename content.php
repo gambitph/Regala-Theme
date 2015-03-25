@@ -54,7 +54,7 @@ if ( ! empty( $imageAttributes ) ) {
 	?>
 	<style>
 	article.post-<?php the_ID(); ?> {
-        background: linear-gradient(45deg, rgba(41,51,56,0.4) 0%,rgba(41,51,56,0.3) 48%,rgba(41,51,56,0) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
+        background: linear-gradient(45deg, rgba(41,51,56,0.6) 0%,rgba(41,51,56,0.4) 48%,rgba(41,51,56,0) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
 	}
 	</style>
 	<?php
