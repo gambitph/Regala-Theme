@@ -3,7 +3,7 @@
  * TGM Plugin Activation 
  * See: http://jetpack.me/
  *
- * @package Verdant
+ * @package Regala
  */
 	
 require_once( 'inc/class-tgm-plugin-activation.php' );
