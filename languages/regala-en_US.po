@@ -1,0 +1,712 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Verdant 1.0\n"
+"POT-Creation-Date: 2015-03-26 17:24+0800\n"
+"PO-Revision-Date: 2015-03-26 17:24+0800\n"
+"Last-Translator: Benjamin Intal <bf.intal@gambit.ph>\n"
+"Language-Team: Gambit <info@gambit.ph>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../comments.php:36 ../comments.php:54
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:38 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../content-page.php:15 ../content-single.php:14
+msgid "Pages:"
+msgstr ""
+
+#: ../content-page.php:22 ../inc/template-tags.php:181
+msgid "Edit"
+msgstr ""
+
+#: ../content.php:71
+msgid "Continue Reading"
+msgstr ""
+
+#: ../content.php:71
+msgid "Continue reading"
+msgstr ""
+
+#: ../functions.php:56
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:57
+msgid "Social Menu"
+msgstr ""
+
+#: ../functions.php:95
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:97
+msgid "The sidebar available in pages & blog posts"
+msgstr ""
+
+#: ../functions.php:104
+msgid "Footer Left"
+msgstr ""
+
+#: ../functions.php:106
+msgid "The left footer widget area"
+msgstr ""
+
+#: ../functions.php:113
+msgid "Footer Right"
+msgstr ""
+
+#: ../functions.php:115
+msgid "The right footer widget area"
+msgstr ""
+
+#: ../functions.php:122
+msgid "Main Menu Widgets"
+msgstr ""
+
+#: ../functions.php:124
+msgid "Widgets here appear in the main menu of the site."
+msgstr ""
+
+#: ../header.php:71
+msgid "Skip to content"
+msgstr ""
+
+#: ../header.php:120
+msgid "Search Results for:"
+msgstr ""
+
+#: ../header.php:127
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../header.php:155 ../titan-options.php:358
+msgid "Menu"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:161 ../tgm-plugin-activation.php:66
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:162 ../tgm-plugin-activation.php:67
+msgid "Install Plugins"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:163 ../tgm-plugin-activation.php:68
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:175 ../tgm-plugin-activation.php:80
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:177
+#: ../inc/class-tgm-plugin-activation.php:1939 ../tgm-plugin-activation.php:81
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:178
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:531
+#: ../inc/class-tgm-plugin-activation.php:2156
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1166
+msgid "Private Repository"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1169
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1174
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1177
+msgid "Required"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1177
+msgid "Recommended"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1180
+msgid "Not Installed"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1182
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1287
+#: ../inc/class-tgm-plugin-activation.php:1395
+msgid "Install"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1309
+#: ../inc/class-tgm-plugin-activation.php:1396
+msgid "Activate"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1358
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1374
+msgid "Plugin"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1375
+msgid "Source"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1376
+msgid "Type"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1377
+msgid "Status"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1922
+msgid "Install package not available."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1923
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1924
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1925
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1926
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1927
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1938
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2052
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2053
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2053
+#: ../inc/class-tgm-plugin-activation.php:2062
+msgid "Show Details"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2053
+#: ../inc/class-tgm-plugin-activation.php:2062
+msgid "Hide Details"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2054
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2055
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2059
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2060
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2061
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2062
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2063
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2064
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/custom-header.php:41
+msgid "Mountain"
+msgstr ""
+
+#: ../inc/custom-header.php:49
+msgid "Night"
+msgstr ""
+
+#: ../inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/template-tags.php:43
+msgid "Previous"
+msgstr ""
+
+#: ../inc/template-tags.php:44
+msgid "Next"
+msgstr ""
+
+#: ../inc/template-tags.php:52
+msgid "Posts navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:77
+msgid "Post navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:135
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#. $categories_list = get_the_category_list( __( ', ', 'regala' ) );
+#. if ( $categories_list && regala_categorized_blog() ) {
+#. printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'regala' ) . '</span>', $categories_list );
+#. }
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:169
+msgid " "
+msgstr ""
+
+#: ../inc/template-tags.php:171
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: ../inc/template-tags.php:177
+msgid "Leave a comment"
+msgstr ""
+
+#: ../inc/template-tags.php:177
+msgid "1 Comment"
+msgstr ""
+
+#: ../inc/template-tags.php:177
+msgid "% Comments"
+msgstr ""
+
+#: ../inc/template-tags.php:198
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:200
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:202
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:204
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:206
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:208
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:230
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: ../inc/template-tags.php:234
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:236
+msgid "Archives"
+msgstr ""
+
+#: ../tgm-plugin-activation.php:69
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../tgm-plugin-activation.php:82
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../titan-framework-checker.php:88
+msgid "Titan Framework needs to be installed."
+msgstr ""
+
+#: ../titan-framework-checker.php:91
+msgid "Click here to search for the plugin."
+msgstr ""
+
+#: ../titan-framework-checker.php:110
+msgid "Titan Framework needs to be activated."
+msgstr ""
+
+#: ../titan-framework-checker.php:113
+msgid "Click here to go to the plugins page and activate it."
+msgstr ""
+
+#: ../titan-options.php:26
+msgid "Logo"
+msgstr ""
+
+#: ../titan-options.php:27 ../titan-options.php:74 ../titan-options.php:324
+#: ../titan-options.php:351 ../titan-options.php:447 ../titan-options.php:495
+#: ../titan-options.php:535 ../titan-options.php:569 ../titan-options.php:604
+msgid "Theme Options & Colors"
+msgstr ""
+
+#: ../titan-options.php:31
+msgid "Background Color of the Logo"
+msgstr ""
+
+#: ../titan-options.php:34
+msgid "This color changes the background of your logo"
+msgstr ""
+
+#: ../titan-options.php:39
+msgid "Text Color of the Logo"
+msgstr ""
+
+#: ../titan-options.php:42
+msgid "This color changes the color of the text logo"
+msgstr ""
+
+#: ../titan-options.php:48
+msgid "Background Opacity"
+msgstr ""
+
+#: ../titan-options.php:58
+msgid "Hover Opacity"
+msgstr ""
+
+#: ../titan-options.php:73
+msgid "Fonts"
+msgstr ""
+
+#: ../titan-options.php:75
+msgid "Change the fonts used across your site"
+msgstr ""
+
+#: ../titan-options.php:79
+msgid "Headings Font"
+msgstr ""
+
+#: ../titan-options.php:82
+msgid "Select the font for all headings in the site"
+msgstr ""
+
+#: ../titan-options.php:104
+msgid "Heading 1 Size"
+msgstr ""
+
+#: ../titan-options.php:107
+msgid "The size of all <code>h1</code> headings"
+msgstr ""
+
+#: ../titan-options.php:128
+msgid "Heading 2 Size"
+msgstr ""
+
+#: ../titan-options.php:131
+msgid "The size of all <code>h2</code> headings"
+msgstr ""
+
+#: ../titan-options.php:154
+msgid "Heading 3 Size"
+msgstr ""
+
+#: ../titan-options.php:157
+msgid "The size of all <code>h3</code> headings"
+msgstr ""
+
+#: ../titan-options.php:180
+msgid "Heading 4 Size"
+msgstr ""
+
+#: ../titan-options.php:183
+msgid "The size of all <code>h4</code> headings"
+msgstr ""
+
+#: ../titan-options.php:207
+msgid "Heading 5 Size"
+msgstr ""
+
+#: ../titan-options.php:210
+msgid "The size of all <code>h5</code> headings"
+msgstr ""
+
+#: ../titan-options.php:233
+msgid "Heading 6 Size"
+msgstr ""
+
+#: ../titan-options.php:236
+msgid "The size of all <code>h6</code> headings"
+msgstr ""
+
+#: ../titan-options.php:259
+msgid "Body Font"
+msgstr ""
+
+#: ../titan-options.php:262
+msgid "The normal body font"
+msgstr ""
+
+#: ../titan-options.php:323
+msgid "Social Icons"
+msgstr ""
+
+#: ../titan-options.php:329
+msgid "Icon Color"
+msgstr ""
+
+#: ../titan-options.php:338
+msgid "Social Links"
+msgstr ""
+
+#: ../titan-options.php:350
+msgid "Main Menu"
+msgstr ""
+
+#: ../titan-options.php:355
+msgid "Menu Title"
+msgstr ""
+
+#: ../titan-options.php:362
+msgid "Menu Button Icon Color"
+msgstr ""
+
+#: ../titan-options.php:370
+msgid "Menu Button Background Color"
+msgstr ""
+
+#: ../titan-options.php:378
+msgid "Menu Button Opacity"
+msgstr ""
+
+#: ../titan-options.php:389
+msgid "Menu Button Hover Opacity"
+msgstr ""
+
+#: ../titan-options.php:400
+msgid "Menu Area Background Color"
+msgstr ""
+
+#: ../titan-options.php:408
+msgid "Menu Area Text Color"
+msgstr ""
+
+#: ../titan-options.php:426
+msgid "Menu Area Link Color"
+msgstr ""
+
+#: ../titan-options.php:446
+msgid "Frontpage Tagline Area"
+msgstr ""
+
+#: ../titan-options.php:451
+msgid "Tagline Heading Font"
+msgstr ""
+
+#: ../titan-options.php:462 ../titan-options.php:558
+msgid "Select a Style"
+msgstr ""
+
+#: ../titan-options.php:467
+msgid "Tagline Caption Text Color"
+msgstr ""
+
+#: ../titan-options.php:470
+msgid "This color changes the color of the tagline caption"
+msgstr ""
+
+#: ../titan-options.php:476
+msgid "Bottom Offset"
+msgstr ""
+
+#: ../titan-options.php:479
+msgid ""
+"You can move your tagline upward by adding a bottom offset. A lower number "
+"means your tagline will be closer to the bottom of the screen"
+msgstr ""
+
+#: ../titan-options.php:494
+msgid "Default Featured Images"
+msgstr ""
+
+#: ../titan-options.php:499
+msgid "Image 1"
+msgstr ""
+
+#: ../titan-options.php:505
+msgid "Image 2"
+msgstr ""
+
+#: ../titan-options.php:511
+msgid "Image 3"
+msgstr ""
+
+#: ../titan-options.php:517
+msgid "Image 4"
+msgstr ""
+
+#: ../titan-options.php:523
+msgid "Image 5"
+msgstr ""
+
+#: ../titan-options.php:534
+msgid "Paging Navigation"
+msgstr ""
+
+#: ../titan-options.php:539
+msgid "Background Color Navigation"
+msgstr ""
+
+#: ../titan-options.php:547
+msgid "Font Navigation"
+msgstr ""
+
+#: ../titan-options.php:568
+msgid "Footer Widgets Area"
+msgstr ""
+
+#: ../titan-options.php:573 ../titan-options.php:616
+msgid "Background Color"
+msgstr ""
+
+#: ../titan-options.php:581 ../titan-options.php:624
+msgid "Text Color"
+msgstr ""
+
+#: ../titan-options.php:590
+msgid "Text Link Color"
+msgstr ""
+
+#: ../titan-options.php:603
+msgid "Footer Copyright Area"
+msgstr ""
+
+#: ../titan-options.php:605
+msgid "Colors & text of the bottom-most copyright area of the site"
+msgstr ""
+
+#: ../titan-options.php:609
+msgid "Copyright Text"
+msgstr ""
+
+#: ../titan-options.php:641
+msgid "Home Page Tagline Caption"
+msgstr ""
+
+#: ../titan-options.php:651
+msgid "Main / Highlight / Link Color"
+msgstr ""
