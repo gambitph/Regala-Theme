@@ -930,6 +930,8 @@ input[type="search"] {
     display: inline-block; }
   #site-navigation .menu-container h4 {
     margin-top: 0; }
+  #site-navigation .menu-container {
+    margin-bottom: 100px; }
 
 /* Small menu */
 .menu-toggle {
@@ -998,7 +1000,11 @@ input[type="search"] {
 .main-navigation li a {
   padding: 1em 1em 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  display: inline-block; }
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 1.1em;
+  line-height: 1.2em;
+  padding: .7em .7em .7em 0; }
 
 .main-navigation li li a {
   margin-left: 2em; }

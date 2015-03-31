@@ -131,10 +131,16 @@ function regala_titan_custom_css() {
 	$opacity = $titan->getOption( 'logo_bg_opacity' );
 	$rgb = regala_hex2rgb( $bg );
 	
+	$innerMenuColor = $titan->getOption( 'inner_menu_color' );
+	$innerMenuColorRGB = regala_hex2rgb( $innerMenuColor );
+	
 	echo "<style>
 	    .site-title, .site-logo-link {
     		background: rgba({$rgb[0]}, {$rgb[1]}, {$rgb[2]}, {$opacity});
     	}
+		#site-navigation { 
+			background: rgba({$innerMenuColorRGB[0]}, {$innerMenuColorRGB[1]}, {$innerMenuColorRGB[2]}, 0.98);
+		}
     </style>";
 }
 add_action( 'wp_head', 'regala_titan_custom_css' );

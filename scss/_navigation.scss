@@ -17,6 +17,9 @@
 	.menu-container h4 {
 		margin-top: 0;
 	}
+	.menu-container {
+		margin-bottom: 100px;
+	}
 }
 
 /* Small menu */
@@ -102,6 +105,14 @@
     padding: 1em 1em 1em 0;
     border-bottom: 1px solid rgba(0,0,0,.07);
     display: inline-block;
+	
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+//    font-family: "Playfair Display";
+//    font-weight: 900;
+//    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding: .7em .7em .7em 0;
 }
 
 .main-navigation li li a { 

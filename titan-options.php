@@ -85,7 +85,8 @@ function regala_create_options() {
 	    ),
 		'css' => '.paging-navigation li span, .paging-navigation li a, .paging-navigation li a:link, .paging-navigation li a:visited,
 		h1, h2, h3, h4, h5, h6, .site-logo-link,
-		body .saboxplugin-wrap .saboxplugin-authorname
+		body .saboxplugin-wrap .saboxplugin-authorname,
+		.main-navigation li a
 		{ value }',
 	) );
 	
@@ -389,8 +390,8 @@ function regala_create_options() {
 	    'name' => __( 'Menu Area Background Color', 'regala' ),
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
-		'default' => '#373A3C',
-		'css' => '#site-navigation { background: value }',
+		'default' => '#212527',
+		// 'css' => '#site-navigation { background: value }',
 	) );
 	
 	$menu->createOption( array(
@@ -529,7 +530,7 @@ function regala_create_options() {
         'name' => __( 'Background Color Navigation', 'regala' ),
         'id' => 'navigation_bg_color',
         'type' => 'color',
-        'default' => '#c4b371',
+        'default' => '#ffffff',
         'css' => '.paging-navigation { background: value }',
     ) );
     
@@ -538,9 +539,9 @@ function regala_create_options() {
         'id' => 'navigation_fonts',
         'type' => 'font',
 	    	   'default' => array(
-		       'color' => '#ffffff',
+		       'color' => '#c4b371',
 		       'line-height' => '1em',
-		       'font-size' => '16px',
+		       'font-size' => '28px',
 		       'font-family' => 'Playfair Display',
 	           'font-weight' => '900',
 	           'font-style' => 'italic',
