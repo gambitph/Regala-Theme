@@ -1145,7 +1145,10 @@ body.blog #site-top, body.archive #site-top, body.search #site-top {
 
 @media screen and (max-width: 710px) {
   .site-title, .site-logo-link {
-    padding-top: 5vw; } }
+    padding-top: 5vw; }
+
+  #site-top {
+    right: 5vw; } }
 header {
   background-size: cover;
   background-position: center;
