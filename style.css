@@ -1131,7 +1131,7 @@ body.blog #site-top, body.archive #site-top, body.search #site-top {
   font-size: 2em;
   line-height: 1em;
   background: rgba(0, 0, 0, 0.7);
-  padding: .4em .8em;
+  padding: 40px .8em .4em;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -ms-transition: all .4s;
@@ -1143,6 +1143,9 @@ body.blog #site-top, body.archive #site-top, body.search #site-top {
   .site-title:hover, .site-logo-link:hover {
     opacity: .8; }
 
+@media screen and (max-width: 710px) {
+  .site-title, .site-logo-link {
+    padding-top: 5vw; } }
 header {
   background-size: cover;
   background-position: center;
@@ -1397,6 +1400,7 @@ body.single .padding {
 
 .social-navigation {
   margin: 10px;
+  margin-top: 40px;
   vertical-align: top;
   display: inline-block; }
 
@@ -1407,7 +1411,7 @@ body.single .padding {
   text-align: center;
   line-height: 20px;
   text-decoration: none;
-  padding: 5px; }
+  padding: 0 5px; }
   .social-navigation a:before {
     font-family: 'genericons';
     display: block;
