@@ -22,8 +22,8 @@
 /* Small menu */
 .menu-toggle {
     position: fixed;
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	background: #F2F1EF;
 	display: block;
     text-decoration: none;
@@ -49,10 +49,10 @@
 	}
 }
 
-.genericon-menu {
+.menu-toggle .genericon-menu {
 	&:before {
 	    color: #333;
-	    font-size: 25px;
+	    font-size: 16px;
 	}
 }
 // This fixes the retina display issue in Chrome

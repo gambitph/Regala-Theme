@@ -54,17 +54,6 @@ function regala_create_options() {
 		'step' => '0.01',
 	) );
 	
-	$section->createOption( array(
-	    'name' => __( 'Hover Opacity', 'regala' ),
-	    'id' => 'logo_hover_opacity',
-	    'type' => 'number',
-		'default' => '0.7',
-		'min' => '0.0',
-		'max' => '1.0',
-		'step' => '0.01',
-		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover, .site-logo-link:hover, .site-logo-link:visited:hover, .site-logo-link:link:hover { opacity: value}',
-	) );
-	
 	
 	/**
 	 * Fonts

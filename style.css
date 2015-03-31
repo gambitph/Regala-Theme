@@ -934,8 +934,8 @@ input[type="search"] {
 /* Small menu */
 .menu-toggle {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: #F2F1EF;
   display: block;
   text-decoration: none;
@@ -959,9 +959,9 @@ input[type="search"] {
     -o-transition: color .4s ease-in-out;
     transition: color .4s ease-in-out; }
 
-.genericon-menu:before {
+.menu-toggle .genericon-menu:before {
   color: #333;
-  font-size: 25px; }
+  font-size: 16px; }
 
 #main-menu, .genericon-menu {
   -webkit-transform: translateZ(0);
@@ -1122,13 +1122,15 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
   right: 40px;
   z-index: 1; }
 
+body.blog #site-top, body.archive #site-top, body.search #site-top {
+  position: fixed; }
+
 .site-title, .site-logo-link {
   display: inline-block;
   background: black;
   font-size: 2em;
   line-height: 1em;
   background: rgba(0, 0, 0, 0.7);
-  opacity: 0.8;
   padding: .4em .8em;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
@@ -1139,7 +1141,7 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
     color: #fff;
     text-decoration: none; }
   .site-title:hover, .site-logo-link:hover {
-    opacity: 1; }
+    opacity: .8; }
 
 header {
   background-size: cover;
