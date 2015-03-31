@@ -1,6 +1,7 @@
 header#masthead, body.home header#masthead, body.home.page header#masthead {
 	height: 100vh;
 	min-height: 600px;
+	text-shadow: 3px 3px 10px rgba(41,51,56,.12);
 }
 body.page, body.single, body.archive, body.search, body.error404 {
 	#masthead {

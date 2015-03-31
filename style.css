@@ -1095,7 +1095,8 @@ input[type="search"] {
       display: inline-block; } }
 header#masthead, body.home header#masthead, body.home.page header#masthead {
   height: 100vh;
-  min-height: 600px; }
+  min-height: 600px;
+  text-shadow: 3px 3px 10px rgba(41, 51, 56, 0.12); }
 
 body.page #masthead, body.single #masthead, body.archive #masthead, body.search #masthead, body.error404 #masthead {
   height: auto;
@@ -1764,7 +1765,8 @@ body.blog article, body.archive article, body.search article {
   background-size: cover;
   background-position: center;
   position: relative;
-  margin: 0; }
+  margin: 0;
+  text-shadow: 3px 3px 10px rgba(41, 51, 56, 0.12); }
 body.blog .article-inner, body.archive .article-inner, body.search .article-inner {
   max-width: 710px;
   width: 80%;
@@ -1908,6 +1910,9 @@ article.post-password-required [name="post_password"] {
   display: block;
   width: 100%;
   margin-bottom: 1.5em; }
+
+.entry-content .alignleft, .entry-content .alignright, .entry-content .alignnone, .entry-content .aligncenter {
+  border-radius: 5px; }
 
 #comments {
   width: 80%;

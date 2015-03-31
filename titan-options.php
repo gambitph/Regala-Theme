@@ -440,6 +440,7 @@ function regala_create_options() {
 	   'name' => __( 'Tagline Heading Font', 'regala' ),
 	   'id' => 'tagline_font',
 	   'type' => 'font',
+	   'show_text_shadow' => false,
 	   'default' => array(
 	       'color' => '#FFFFFF',
 	       'line-height' => '1.1em',
