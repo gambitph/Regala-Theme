@@ -24,8 +24,9 @@ $bodyClasses = '';
  */
 $headerImageUrl = '';
 $headerImageGradientColor = '';
-$stop1Opacity = 0.4;
-$stop2Opacity = 0.3;
+$stop1Opacity = 0.5;
+$stop2Opacity = 0.4;
+$stop3Opacity = 0.14;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
@@ -61,7 +62,7 @@ if ( is_single() || is_page() ) {
 ?>
 <style id="regala_header">
 	header#masthead {
-		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop1Opacity ?>) 0%,rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop2Opacity ?>) 48%,rgba(<?php echo $headerImageGradientColor ?>,0) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
+		background-image: linear-gradient(45deg, rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop1Opacity ?>) 0%,rgba(<?php echo $headerImageGradientColor ?>,<?php echo $stop2Opacity ?>) 48%,rgba(<?php echo $headerImageGradientColor ?>, <?php echo $stop3Opacity ?>) 100%), url( <?php echo esc_url( $headerImageUrl ) ?> );
 	}
 </style>
 </head>

@@ -54,7 +54,7 @@ if ( ! empty( $imageAttributes ) ) {
 	?>
 	<style>
 	article.post-<?php the_ID(); ?> {
-        background: linear-gradient(45deg, rgba(41,51,56,0.6) 0%,rgba(41,51,56,0.4) 48%,rgba(41,51,56,0) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
+        background: linear-gradient(45deg, rgba(41,51,56,0.6) 0%,rgba(41,51,56,0.4) 48%,rgba(41,51,56,0.1) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
 	}
 	</style>
 	<?php
@@ -68,7 +68,7 @@ if ( ! empty( $imageAttributes ) ) {
 		<div class="entry-content">
 			<?php the_excerpt() ?>
 			<div class='clearfix'></div>
-			<?php echo '<a href="' . get_permalink() . '" class="btn" title="' . __( 'Continue Reading', 'regala' ) . ' ' . esc_attr( get_the_title() ) . '" rel="bookmark">' . __( 'Continue reading', 'regala' ) . '</a>' ?>
+			<?php // echo '<a href="' . get_permalink() . '" class="btn" title="' . __( 'Continue Reading', 'regala' ) . ' ' . esc_attr( get_the_title() ) . '" rel="bookmark">' . __( 'Continue reading', 'regala' ) . '</a>' ?>
 		</div>
 	</div>
 </article>
