@@ -920,12 +920,7 @@ input[type="search"] {
   position: fixed;
   background: #373A3C;
   right: 0;
-  bottom: 100%;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+  bottom: 100%; }
   #site-navigation a, #site-navigation a:link, #site-navigation a:visited {
     display: inline-block; }
   #site-navigation .menu-container h4 {
@@ -1103,6 +1098,13 @@ header#masthead, body.home header#masthead, body.home.page header#masthead {
   height: 100vh;
   min-height: 600px;
   text-shadow: 3px 3px 10px rgba(41, 51, 56, 0.12); }
+
+header#masthead, body.blog article, body.archive article, body.search article, body.single .entry-content img, body.page .entry-content img {
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
 
 body.page #masthead, body.single #masthead, body.archive #masthead, body.search #masthead, body.error404 #masthead {
   height: auto;

@@ -153,6 +153,8 @@ function regala_scripts() {
 		wp_enqueue_style( 'regala-gudea-font', '//fonts.googleapis.com/css?family=Gudea%3A200%2C400&#038;subset=latin%2Clatin-ext' );
 	}
     
+    wp_enqueue_script( 'regala-waitforimages', get_template_directory_uri() . '/js/min/fadein-images-min.js', array( 'jquery' ), '20150216', true );
+    
     wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
     // wp_enqueue_script( 'regala-background-picture', get_template_directory_uri() . '/js/background-picture.js', array( 'jquery' ), '20150216', true );
     

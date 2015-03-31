@@ -139,7 +139,7 @@ function regala_titan_custom_css() {
     		background: rgba({$rgb[0]}, {$rgb[1]}, {$rgb[2]}, {$opacity});
     	}
 		#site-navigation { 
-			background: rgba({$innerMenuColorRGB[0]}, {$innerMenuColorRGB[1]}, {$innerMenuColorRGB[2]}, 0.98);
+			background: rgba({$innerMenuColorRGB[0]}, {$innerMenuColorRGB[1]}, {$innerMenuColorRGB[2]}, 0.95);
 		}
     </style>";
 }

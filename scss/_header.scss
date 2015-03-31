@@ -3,6 +3,13 @@ header#masthead, body.home header#masthead, body.home.page header#masthead {
 	min-height: 600px;
 	text-shadow: 3px 3px 10px rgba(41,51,56,.12);
 }
+header#masthead, body.blog article, body.archive article, body.search article, body.single .entry-content img, body.page .entry-content img {
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-ms-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
 body.page, body.single, body.archive, body.search, body.error404 {
 	#masthead {
 		height: auto;
