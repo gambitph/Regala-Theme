@@ -158,3 +158,20 @@ body.search .site-main .no-results, body.error404 .page-content {
 .genericon-close:before {
   content: '\f406';
 }
+
+
+// Fade effect on the top of the screen to still make the logo & menu visible
+@media screen and (max-width: 1000px) {
+	body.blog, body.archive, body.search {
+		> #page:after {
+			position: fixed;
+		    content: '';
+		    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    height: 20vh;
+		    z-index: 0;
+		}
+	}
+}

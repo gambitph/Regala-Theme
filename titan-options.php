@@ -48,7 +48,7 @@ function regala_create_options() {
 	    'name' => __( 'Background Opacity', 'regala' ),
 	    'id' => 'logo_bg_opacity',
 	    'type' => 'number',
-		'default' => '0.5',
+		'default' => '0.0',
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
@@ -314,13 +314,13 @@ function regala_create_options() {
 		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
 	) );
 	
-	$social->createOption( array(
-	    'name' => __( 'Icon Color', 'regala' ),
-	    'id' => 'social_link_color',
-	    'type' => 'color',
-	    'default' => '#FFFFFF',
-		'css' => '.social-navigation a:before { color: value}',
-	) );
+	// $social->createOption( array(
+	//     'name' => __( 'Icon Color', 'regala' ),
+	//     'id' => 'social_link_color',
+	//     'type' => 'color',
+	//     'default' => '#FFFFFF',
+	// 	'css' => '.social-navigation a:before { color: value}',
+	// ) );
 	
 	for ( $i = 0; $i <= 10; $i++ ) {
 		$social->createOption( array(
@@ -614,7 +614,7 @@ function regala_create_options() {
 	    'id' => 'footer_copyright_text_color',
 	    'type' => 'color',
 		'default' => '#ffffff',
-		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover { color: value }',
+		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover, .social-navigation a:before, .social-navigation a:link:before, .social-navigation a:visited:before { color: value }',
 	) );
 	
 	

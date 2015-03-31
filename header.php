@@ -174,9 +174,11 @@ if ( is_single() || is_page() ) {
 	 */
 	?>
 	<div id="site-top">   
-		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
-
 		<?php
+		/*
+		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
+		*/
+		
 		if ( function_exists( 'jetpack_the_site_logo' ) ) {
 			jetpack_the_site_logo();
 		} else {

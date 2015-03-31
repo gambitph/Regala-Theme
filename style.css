@@ -1226,6 +1226,16 @@ body.search .site-main .no-results, body.error404 .page-content {
 .genericon-close:before {
   content: '\f406'; }
 
+@media screen and (max-width: 1000px) {
+  body.blog > #page:after, body.archive > #page:after, body.search > #page:after {
+    position: fixed;
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 20vh;
+    z-index: 0; } }
 body.has-sidebar #content #secondary {
   margin: 0 auto;
   max-width: 710px;
@@ -1402,9 +1412,10 @@ body.single .padding {
   border: none; }
 
 .social-navigation {
-  margin: 10px;
-  margin-top: 40px;
-  vertical-align: top;
+  float: right;
+  margin: 0;
+  vertical-align: middle;
+  font-style: normal;
   display: inline-block; }
 
 .social-navigation a {
@@ -1412,13 +1423,13 @@ body.single .padding {
   height: 20px;
   width: 30px;
   text-align: center;
-  line-height: 20px;
+  line-height: 25px;
   text-decoration: none;
   padding: 0 5px; }
   .social-navigation a:before {
     font-family: 'genericons';
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
     -ms-transition: all .4s;

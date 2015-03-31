@@ -20,6 +20,7 @@
 						echo $titan->getOption( 'footer_copyright_text' );
 					}
 				?>
+				<span class="social-navigation"><?php regala_create_social_icons() ?></span>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
