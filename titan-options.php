@@ -567,6 +567,7 @@ function regala_create_options() {
     $footer = $titan->createThemeCustomizerSection( array(
         'name' => __( 'Footer Widgets Area', 'regala' ),
         'panel' => __( 'Theme Options & Colors', 'regala' ),
+        'desc' => __( 'Colors for the footer widgets', 'verdant' ),
     ) );
     
     $footer->createOption( array(

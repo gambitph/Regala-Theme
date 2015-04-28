@@ -1883,6 +1883,11 @@ article.post-password-required [name="post_password"] {
   width: 100%;
   margin-bottom: 1.5em; }
 
+body.home article.category-sticky .article-inner {
+  border: 2px solid rgba(71, 52, 52, 0.04);
+  padding: 20px;
+  border-radius: 10px; }
+
 #comments {
   width: 80%;
   max-width: 710px;

@@ -244,7 +244,7 @@ function the_archive_title( $before = '', $after = '' ) {
 	$title = apply_filters( 'get_the_archive_title', $title );
 
 	if ( ! empty( $title ) ) {
-		echo $before . $title . $after;
+		echo $before . esc_attr( $title ) . $after;
 	}
 }
 endif;
@@ -271,7 +271,7 @@ function the_archive_description( $before = '', $after = '' ) {
 		 *
 		 * @param string $description Archive description to be displayed.
 		 */
-		echo $before . $description . $after;
+		echo $before . esc_attr( $description ) . $after;
 	}
 }
 endif;

@@ -212,3 +212,9 @@ article.post-password-required {
 	    margin-bottom: 1.5em;
 	}
 }
+
+body.home article.category-sticky .article-inner {
+    border: 2px solid rgba(71, 52, 52, 0.04);
+    padding: 20px;
+    border-radius: 10px;
+}

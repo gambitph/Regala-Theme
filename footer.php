@@ -17,7 +17,7 @@
 				<?php
 					if ( class_exists( 'TitanFramework' ) ) {
 						$titan = TitanFramework::getInstance( 'regala' );
-						echo $titan->getOption( 'footer_copyright_text' );
+						echo esc_attr( $titan->getOption( 'footer_copyright_text' ) );
 					}
 				?>
 			</div>
