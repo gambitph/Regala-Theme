@@ -1,8 +1,8 @@
 /*
 Theme Name: Regala
-Theme URI: http://underscores.me/
+Theme URI: http://demos2.gambit.ph/regala
 Author: Gambit
-Author URI: http://underscores.me/
+Author URI: http://gambit.ph/
 Description: Photography theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Verdant is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Regala is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -919,17 +919,20 @@ input[type="search"] {
   left: 0;
   position: fixed;
   background: #373A3C;
-  right: 0; }
+  right: 0;
+  bottom: 100%; }
   #site-navigation a, #site-navigation a:link, #site-navigation a:visited {
     display: inline-block; }
   #site-navigation .menu-container h4 {
     margin-top: 0; }
+  #site-navigation .menu-container {
+    margin-bottom: 100px; }
 
 /* Small menu */
 .menu-toggle {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: #F2F1EF;
   display: block;
   text-decoration: none;
@@ -953,9 +956,9 @@ input[type="search"] {
     -o-transition: color .4s ease-in-out;
     transition: color .4s ease-in-out; }
 
-.genericon-menu:before {
+.menu-toggle .genericon-menu:before {
   color: #333;
-  font-size: 25px; }
+  font-size: 16px; }
 
 #main-menu, .genericon-menu {
   -webkit-transform: translateZ(0);
@@ -969,7 +972,7 @@ input[type="search"] {
   z-index: 999999; }
 
 .main-navigation.toggled {
-  bottom: 0;
+  bottom: 0 !important;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden; }
@@ -992,7 +995,11 @@ input[type="search"] {
 .main-navigation li a {
   padding: 1em 1em 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  display: inline-block; }
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 1.1em;
+  line-height: 1.2em;
+  padding: .7em .7em .7em 0; }
 
 .main-navigation li li a {
   margin-left: 2em; }
@@ -1089,7 +1096,15 @@ input[type="search"] {
       display: inline-block; } }
 header#masthead, body.home header#masthead, body.home.page header#masthead {
   height: 100vh;
-  min-height: 600px; }
+  min-height: 600px;
+  text-shadow: 3px 3px 10px rgba(41, 51, 56, 0.12); }
+
+header#masthead, body.blog article, body.archive article, body.search article, body.single .entry-content img, body.page .entry-content img {
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
 
 body.page #masthead, body.single #masthead, body.archive #masthead, body.search #masthead, body.error404 #masthead {
   height: auto;
@@ -1116,14 +1131,16 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
   right: 40px;
   z-index: 1; }
 
+body.blog #site-top, body.archive #site-top, body.search #site-top {
+  position: fixed; }
+
 .site-title, .site-logo-link {
   display: inline-block;
   background: black;
   font-size: 2em;
   line-height: 1em;
   background: rgba(0, 0, 0, 0.7);
-  opacity: 0.8;
-  padding: .4em .8em;
+  padding: 40px .8em .4em;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -ms-transition: all .4s;
@@ -1133,8 +1150,14 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
     color: #fff;
     text-decoration: none; }
   .site-title:hover, .site-logo-link:hover {
-    opacity: 1; }
+    opacity: .8; }
 
+@media screen and (max-width: 710px) {
+  .site-title, .site-logo-link {
+    padding-top: 5vw; }
+
+  #site-top {
+    right: 5vw; } }
 header {
   background-size: cover;
   background-position: center;
@@ -1212,6 +1235,16 @@ body.search .site-main .no-results, body.error404 .page-content {
 .genericon-close:before {
   content: '\f406'; }
 
+@media screen and (max-width: 1000px) {
+  body.blog > #page:after, body.archive > #page:after, body.search > #page:after {
+    position: fixed;
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 20vh;
+    z-index: 0; } }
 body.has-sidebar #content #secondary {
   margin: 0 auto;
   max-width: 710px;
@@ -1335,11 +1368,11 @@ footer .widget-grofile {
   display: inline-block;
   vertical-align: top;
   padding: 0;
-  width: 48.5%;
+  width: 47.5%;
   margin: 0; }
 
 .footer-widgets #footer-left {
-  margin-right: 3%; }
+  margin-right: 5%; }
 
 .footer-widgets #footer-left.widget {
   margin: 0; }
@@ -1388,8 +1421,10 @@ body.single .padding {
   border: none; }
 
 .social-navigation {
-  margin: 10px;
-  vertical-align: top;
+  float: right;
+  margin: 0;
+  vertical-align: middle;
+  font-style: normal;
   display: inline-block; }
 
 .social-navigation a {
@@ -1397,13 +1432,13 @@ body.single .padding {
   height: 20px;
   width: 30px;
   text-align: center;
-  line-height: 20px;
+  line-height: 25px;
   text-decoration: none;
-  padding: 5px; }
+  padding: 0 5px; }
   .social-navigation a:before {
     font-family: 'genericons';
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
     -ms-transition: all .4s;
@@ -1738,7 +1773,8 @@ body.blog article, body.archive article, body.search article {
   background-size: cover;
   background-position: center;
   position: relative;
-  margin: 0; }
+  margin: 0;
+  text-shadow: 3px 3px 10px rgba(41, 51, 56, 0.12); }
 body.blog .article-inner, body.archive .article-inner, body.search .article-inner {
   max-width: 710px;
   width: 80%;
@@ -1883,10 +1919,15 @@ article.post-password-required [name="post_password"] {
   width: 100%;
   margin-bottom: 1.5em; }
 
+<<<<<<< HEAD
 body.home article.category-sticky .article-inner {
   border: 2px solid rgba(71, 52, 52, 0.04);
   padding: 20px;
   border-radius: 10px; }
+=======
+.entry-content .alignleft, .entry-content .alignright, .entry-content .alignnone, .entry-content .aligncenter {
+  border-radius: 5px; }
+>>>>>>> origin/master
 
 #comments {
   width: 80%;

@@ -1,6 +1,8 @@
 .social-navigation {
-	margin: 10px;
-	vertical-align: top;
+    float: right;
+    margin: 0;
+    vertical-align: middle;
+    font-style: normal;
 	display: inline-block;
 }
 .social-navigation a {
@@ -8,14 +10,14 @@
 	height: 20px;
 	width: 30px;
 	text-align: center;
-	line-height: 20px;
+	line-height: 25px;
 	text-decoration: none;
-	padding: 5px;
+	padding: 0 5px;
 	
 	&:before {
 		font-family: 'genericons';
 		display: block;
-		font-size: 20px;
+		font-size: 16px;
 	    -webkit-transition: all .4s;
 	    -moz-transition: all .4s;
 	    -ms-transition: all .4s;

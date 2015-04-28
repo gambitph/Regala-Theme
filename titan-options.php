@@ -48,21 +48,10 @@ function regala_create_options() {
 	    'name' => __( 'Background Opacity', 'regala' ),
 	    'id' => 'logo_bg_opacity',
 	    'type' => 'number',
-		'default' => '0.5',
+		'default' => '0.0',
 		'min' => '0.0',
 		'max' => '1.0',
 		'step' => '0.01',
-	) );
-	
-	$section->createOption( array(
-	    'name' => __( 'Hover Opacity', 'regala' ),
-	    'id' => 'logo_hover_opacity',
-	    'type' => 'number',
-		'default' => '0.7',
-		'min' => '0.0',
-		'max' => '1.0',
-		'step' => '0.01',
-		'css' => '.site-title:hover, .site-title:visited:hover, .site-title:link:hover, .site-logo-link:hover, .site-logo-link:visited:hover, .site-logo-link:link:hover { opacity: value}',
 	) );
 	
 	
@@ -96,7 +85,8 @@ function regala_create_options() {
 	    ),
 		'css' => '.paging-navigation li span, .paging-navigation li a, .paging-navigation li a:link, .paging-navigation li a:visited,
 		h1, h2, h3, h4, h5, h6, .site-logo-link,
-		body .saboxplugin-wrap .saboxplugin-authorname
+		body .saboxplugin-wrap .saboxplugin-authorname,
+		.main-navigation li a
 		{ value }',
 	) );
 	
@@ -325,13 +315,13 @@ function regala_create_options() {
 		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
 	) );
 	
-	$social->createOption( array(
-	    'name' => __( 'Icon Color', 'regala' ),
-	    'id' => 'social_link_color',
-	    'type' => 'color',
-	    'default' => '#FFFFFF',
-		'css' => '.social-navigation a:before { color: value}',
-	) );
+	// $social->createOption( array(
+	//     'name' => __( 'Icon Color', 'regala' ),
+	//     'id' => 'social_link_color',
+	//     'type' => 'color',
+	//     'default' => '#FFFFFF',
+	// 	'css' => '.social-navigation a:before { color: value}',
+	// ) );
 	
 	for ( $i = 0; $i <= 10; $i++ ) {
 		$social->createOption( array(
@@ -400,8 +390,8 @@ function regala_create_options() {
 	    'name' => __( 'Menu Area Background Color', 'regala' ),
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
-		'default' => '#373A3C',
-		'css' => '#site-navigation { background: value }',
+		'default' => '#212527',
+		// 'css' => '#site-navigation { background: value }',
 	) );
 	
 	$menu->createOption( array(
@@ -451,6 +441,7 @@ function regala_create_options() {
 	   'name' => __( 'Tagline Heading Font', 'regala' ),
 	   'id' => 'tagline_font',
 	   'type' => 'font',
+	   'show_text_shadow' => false,
 	   'default' => array(
 	       'color' => '#FFFFFF',
 	       'line-height' => '1.1em',
@@ -539,7 +530,7 @@ function regala_create_options() {
         'name' => __( 'Background Color Navigation', 'regala' ),
         'id' => 'navigation_bg_color',
         'type' => 'color',
-        'default' => '#c4b371',
+        'default' => '#ffffff',
         'css' => '.paging-navigation { background: value }',
     ) );
     
@@ -548,9 +539,9 @@ function regala_create_options() {
         'id' => 'navigation_fonts',
         'type' => 'font',
 	    	   'default' => array(
-		       'color' => '#ffffff',
+		       'color' => '#c4b371',
 		       'line-height' => '1em',
-		       'font-size' => '16px',
+		       'font-size' => '28px',
 		       'font-family' => 'Playfair Display',
 	           'font-weight' => '900',
 	           'font-style' => 'italic',
@@ -626,7 +617,7 @@ function regala_create_options() {
 	    'id' => 'footer_copyright_text_color',
 	    'type' => 'color',
 		'default' => '#ffffff',
-		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover { color: value }',
+		'css' => '.site-info-container, .site-info-container a:hover, .site-info-container a:visited:hover, .social-navigation a:before, .social-navigation a:link:before, .social-navigation a:visited:before { color: value }',
 	) );
 	
 	

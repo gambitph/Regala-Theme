@@ -131,10 +131,16 @@ function regala_titan_custom_css() {
 	$opacity = $titan->getOption( 'logo_bg_opacity' );
 	$rgb = regala_hex2rgb( $bg );
 	
+	$innerMenuColor = $titan->getOption( 'inner_menu_color' );
+	$innerMenuColorRGB = regala_hex2rgb( $innerMenuColor );
+	
 	echo "<style>
 	    .site-title, .site-logo-link {
     		background: rgba({$rgb[0]}, {$rgb[1]}, {$rgb[2]}, {$opacity});
     	}
+		#site-navigation { 
+			background: rgba({$innerMenuColorRGB[0]}, {$innerMenuColorRGB[1]}, {$innerMenuColorRGB[2]}, 0.95);
+		}
     </style>";
 }
 add_action( 'wp_head', 'regala_titan_custom_css' );
@@ -186,8 +192,8 @@ add_filter( 'jetpack_the_site_logo', 'regala_the_site_logo', 10, 3 );
  */
 add_action( 'cs_predetermineReplacements', 'gambit_theme_custom_sidebars_determine_replacements' );
 function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
-	global $_verdant_sidebar_ids_to_replace;
-	$_verdant_sidebar_ids_to_replace = array();
+	global $_gambit_theme_sidebar_ids_to_replace;
+	$_gambit_theme_sidebar_ids_to_replace = array();
 	
 	$customSidebarReplacer = CustomSidebarsReplacer::instance();
 	
@@ -207,7 +213,7 @@ function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
 		$check = $customSidebarReplacer->is_valid_replacement( $sb_id, $replacement, $replacement_type, $extra_index );
 
 		if ( $check ) {
-			$_verdant_sidebar_ids_to_replace[ $sb_id ] = $replacement;
+			$_gambit_theme_sidebar_ids_to_replace[ $sb_id ] = $replacement;
 		}
 	}
 }
@@ -216,21 +222,21 @@ function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
 /**
  * Checks the sidebars being replaced and make corresponding is_active_sidebar calls to work
  */
-add_filter( 'is_active_sidebar', 'verdant_custom_sidebars_is_active_sidebar', 10, 2 );
-function verdant_custom_sidebars_is_active_sidebar( $is_active_sidebar, $index ) {
-	global $_verdant_sidebar_ids_to_replace;
+add_filter( 'is_active_sidebar', 'gambit_theme_custom_sidebars_is_active_sidebar', 10, 2 );
+function gambit_theme_custom_sidebars_is_active_sidebar( $is_active_sidebar, $index ) {
+	global $_gambit_theme_sidebar_ids_to_replace;
 	
-	if ( empty( $_verdant_sidebar_ids_to_replace ) ) {
+	if ( empty( $_gambit_theme_sidebar_ids_to_replace ) ) {
 		return $is_active_sidebar;
 	}
 	
-	if ( ! empty( $_verdant_sidebar_ids_to_replace[ $index ] ) ) {
+	if ( ! empty( $_gambit_theme_sidebar_ids_to_replace[ $index ] ) ) {
 		// Return the current value if it's the same replacement	
-		if ( $_verdant_sidebar_ids_to_replace[ $index ] == $index ) {
+		if ( $_gambit_theme_sidebar_ids_to_replace[ $index ] == $index ) {
 			return $is_active_sidebar;
 		}
 		
-		return is_active_sidebar( $_verdant_sidebar_ids_to_replace[ $index ] );
+		return is_active_sidebar( $_gambit_theme_sidebar_ids_to_replace[ $index ] );
 	}
 	
 	return $is_active_sidebar;

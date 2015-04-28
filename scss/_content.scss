@@ -5,6 +5,7 @@ body.blog, body.archive, body.search {
 		background-position: center;
 		position: relative;
 		margin: 0;
+		text-shadow: 3px 3px 10px rgba(41,51,56,.12);
 	}
 	.article-inner {
 		max-width: 710px;
@@ -213,8 +214,14 @@ article.post-password-required {
 	}
 }
 
+<<<<<<< HEAD
 body.home article.category-sticky .article-inner {
     border: 2px solid rgba(71, 52, 52, 0.04);
     padding: 20px;
     border-radius: 10px;
+=======
+
+.entry-content .alignleft, .entry-content .alignright,  .entry-content .alignnone, .entry-content .aligncenter {
+  border-radius: 5px;
+>>>>>>> origin/master
 }
