@@ -202,3 +202,7 @@ require get_template_directory() . '/titan-framework-checker.php';
  * Load Titan Framework options
  */
 require get_template_directory() . '/titan-options.php';
+/**
+ * Load Titan Framework options
+ */
+//require get_template_directory() . '/plugin.php';

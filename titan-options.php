@@ -477,46 +477,6 @@ function regala_create_options() {
 	) );
 	
 	
-	/**
-	 *   Default featured images
-	 */
-    
-    $image = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Default Featured Images', 'regala' ),
-        'panel' => __( 'Theme Options & Colors', 'regala' ),
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 1', 'regala' ),
-        'id' => 'featured_image',
-        'type' => 'upload',
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 2', 'regala' ),
-        'id' => 'featured_image2',
-        'type' => 'upload',
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 3', 'regala' ),
-        'id' => 'featured_image3',
-        'type' => 'upload',
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 4', 'regala' ),
-        'id' => 'featured_image4',
-        'type' => 'upload', 
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 5', 'regala' ),
-        'id' => 'featured_image5',
-        'type' => 'upload',
-    ) );
-    
-	
     /**
      *   Paging Navigation
      */
