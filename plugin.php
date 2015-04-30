@@ -20,12 +20,12 @@ function regala_default_image_options() {
     /**
      *   Default featured images
      */
-
+     
     $image = $titan->createThemeCustomizerSection( array(
         'name' => __( 'Default Featured Images', 'regala' ),
         'desc' => __( 'Upload a photo that you want to use as Featured Image in your Posts/Pages', 'regala' ),
     ) );
-
+    
     $image->createOption( array(
         'name' => __( 'Image 1', 'regala' ),
         'id' => 'featured_image',
@@ -55,5 +55,5 @@ function regala_default_image_options() {
         'id' => 'featured_image5',
         'type' => 'upload',
     ) );
-
+    
 }

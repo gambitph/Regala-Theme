@@ -163,6 +163,21 @@ function regala_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'regala_scripts' );
 
+add_action( 'customize_controls_enqueue_scripts', 'regala_init_customizer' );
+
+function regala_init_customizer() {
+    if ( class_exists( 'TitanFramework' ) ) {
+		$titan = TitanFramework::getInstance( 'regala' );
+		// if ( ! empty( $option = __( 'Menu', 'regala' ) ) ){
+		//            
+		//        } else 
+		if ( function_exists( 'regala_create_options' ) ) { 
+		
+		} else {
+		      wp_enqueue_script( 'regala-customizer', get_template_directory_uri() . '/js/min/customizer-min.js', array( 'jquery' ), '20150429', true );
+	      }
+	}
+}
 /**
  * Implement the Custom Header feature.
  */
@@ -202,7 +217,8 @@ require get_template_directory() . '/titan-framework-checker.php';
  * Load Titan Framework options
  */
 require get_template_directory() . '/titan-options.php';
+
 /**
  * Load Titan Framework options
  */
-//require get_template_directory() . '/plugin.php';
+require get_template_directory() . '/plugin.php';
