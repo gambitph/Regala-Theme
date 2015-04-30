@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Regala 1.0\n"
-"POT-Creation-Date: 2015-03-26 17:24+0800\n"
-"PO-Revision-Date: 2015-03-26 17:24+0800\n"
+"POT-Creation-Date: 2015-04-30 23:10+0800\n"
+"PO-Revision-Date: 2015-04-30 23:11+0800\n"
 "Last-Translator: Benjamin Intal <bf.intal@gambit.ph>\n"
 "Language-Team: Gambit <info@gambit.ph>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -62,14 +62,6 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../content.php:71
-msgid "Continue Reading"
-msgstr ""
-
-#: ../content.php:71
-msgid "Continue reading"
-msgstr ""
-
 #: ../functions.php:56
 msgid "Primary Menu"
 msgstr ""
@@ -110,19 +102,19 @@ msgstr ""
 msgid "Widgets here appear in the main menu of the site."
 msgstr ""
 
-#: ../header.php:71
+#: ../header.php:73
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:120
+#: ../header.php:122
 msgid "Search Results for:"
 msgstr ""
 
-#: ../header.php:127
+#: ../header.php:129
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: ../header.php:155 ../titan-options.php:358
+#: ../header.php:157
 msgid "Menu"
 msgstr ""
 
@@ -430,6 +422,35 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
+#: ../plugin.php:25
+msgid "Default Featured Images"
+msgstr ""
+
+#: ../plugin.php:26
+msgid ""
+"Upload a photo that you want to use as Featured Image in your Posts/Pages"
+msgstr ""
+
+#: ../plugin.php:30
+msgid "Image 1"
+msgstr ""
+
+#: ../plugin.php:36
+msgid "Image 2"
+msgstr ""
+
+#: ../plugin.php:42
+msgid "Image 3"
+msgstr ""
+
+#: ../plugin.php:48
+msgid "Image 4"
+msgstr ""
+
+#: ../plugin.php:54
+msgid "Image 5"
+msgstr ""
+
 #: ../tgm-plugin-activation.php:69
 msgid "Something went wrong with the plugin API."
 msgstr ""
@@ -453,260 +474,4 @@ msgstr ""
 
 #: ../titan-framework-checker.php:113
 msgid "Click here to go to the plugins page and activate it."
-msgstr ""
-
-#: ../titan-options.php:26
-msgid "Logo"
-msgstr ""
-
-#: ../titan-options.php:27 ../titan-options.php:74 ../titan-options.php:324
-#: ../titan-options.php:351 ../titan-options.php:447 ../titan-options.php:495
-#: ../titan-options.php:535 ../titan-options.php:569 ../titan-options.php:604
-msgid "Theme Options & Colors"
-msgstr ""
-
-#: ../titan-options.php:31
-msgid "Background Color of the Logo"
-msgstr ""
-
-#: ../titan-options.php:34
-msgid "This color changes the background of your logo"
-msgstr ""
-
-#: ../titan-options.php:39
-msgid "Text Color of the Logo"
-msgstr ""
-
-#: ../titan-options.php:42
-msgid "This color changes the color of the text logo"
-msgstr ""
-
-#: ../titan-options.php:48
-msgid "Background Opacity"
-msgstr ""
-
-#: ../titan-options.php:58
-msgid "Hover Opacity"
-msgstr ""
-
-#: ../titan-options.php:73
-msgid "Fonts"
-msgstr ""
-
-#: ../titan-options.php:75
-msgid "Change the fonts used across your site"
-msgstr ""
-
-#: ../titan-options.php:79
-msgid "Headings Font"
-msgstr ""
-
-#: ../titan-options.php:82
-msgid "Select the font for all headings in the site"
-msgstr ""
-
-#: ../titan-options.php:104
-msgid "Heading 1 Size"
-msgstr ""
-
-#: ../titan-options.php:107
-msgid "The size of all <code>h1</code> headings"
-msgstr ""
-
-#: ../titan-options.php:128
-msgid "Heading 2 Size"
-msgstr ""
-
-#: ../titan-options.php:131
-msgid "The size of all <code>h2</code> headings"
-msgstr ""
-
-#: ../titan-options.php:154
-msgid "Heading 3 Size"
-msgstr ""
-
-#: ../titan-options.php:157
-msgid "The size of all <code>h3</code> headings"
-msgstr ""
-
-#: ../titan-options.php:180
-msgid "Heading 4 Size"
-msgstr ""
-
-#: ../titan-options.php:183
-msgid "The size of all <code>h4</code> headings"
-msgstr ""
-
-#: ../titan-options.php:207
-msgid "Heading 5 Size"
-msgstr ""
-
-#: ../titan-options.php:210
-msgid "The size of all <code>h5</code> headings"
-msgstr ""
-
-#: ../titan-options.php:233
-msgid "Heading 6 Size"
-msgstr ""
-
-#: ../titan-options.php:236
-msgid "The size of all <code>h6</code> headings"
-msgstr ""
-
-#: ../titan-options.php:259
-msgid "Body Font"
-msgstr ""
-
-#: ../titan-options.php:262
-msgid "The normal body font"
-msgstr ""
-
-#: ../titan-options.php:323
-msgid "Social Icons"
-msgstr ""
-
-#: ../titan-options.php:329
-msgid "Icon Color"
-msgstr ""
-
-#: ../titan-options.php:338
-msgid "Social Links"
-msgstr ""
-
-#: ../titan-options.php:350
-msgid "Main Menu"
-msgstr ""
-
-#: ../titan-options.php:355
-msgid "Menu Title"
-msgstr ""
-
-#: ../titan-options.php:362
-msgid "Menu Button Icon Color"
-msgstr ""
-
-#: ../titan-options.php:370
-msgid "Menu Button Background Color"
-msgstr ""
-
-#: ../titan-options.php:378
-msgid "Menu Button Opacity"
-msgstr ""
-
-#: ../titan-options.php:389
-msgid "Menu Button Hover Opacity"
-msgstr ""
-
-#: ../titan-options.php:400
-msgid "Menu Area Background Color"
-msgstr ""
-
-#: ../titan-options.php:408
-msgid "Menu Area Text Color"
-msgstr ""
-
-#: ../titan-options.php:426
-msgid "Menu Area Link Color"
-msgstr ""
-
-#: ../titan-options.php:446
-msgid "Frontpage Tagline Area"
-msgstr ""
-
-#: ../titan-options.php:451
-msgid "Tagline Heading Font"
-msgstr ""
-
-#: ../titan-options.php:462 ../titan-options.php:558
-msgid "Select a Style"
-msgstr ""
-
-#: ../titan-options.php:467
-msgid "Tagline Caption Text Color"
-msgstr ""
-
-#: ../titan-options.php:470
-msgid "This color changes the color of the tagline caption"
-msgstr ""
-
-#: ../titan-options.php:476
-msgid "Bottom Offset"
-msgstr ""
-
-#: ../titan-options.php:479
-msgid ""
-"You can move your tagline upward by adding a bottom offset. A lower number "
-"means your tagline will be closer to the bottom of the screen"
-msgstr ""
-
-#: ../titan-options.php:494
-msgid "Default Featured Images"
-msgstr ""
-
-#: ../titan-options.php:499
-msgid "Image 1"
-msgstr ""
-
-#: ../titan-options.php:505
-msgid "Image 2"
-msgstr ""
-
-#: ../titan-options.php:511
-msgid "Image 3"
-msgstr ""
-
-#: ../titan-options.php:517
-msgid "Image 4"
-msgstr ""
-
-#: ../titan-options.php:523
-msgid "Image 5"
-msgstr ""
-
-#: ../titan-options.php:534
-msgid "Paging Navigation"
-msgstr ""
-
-#: ../titan-options.php:539
-msgid "Background Color Navigation"
-msgstr ""
-
-#: ../titan-options.php:547
-msgid "Font Navigation"
-msgstr ""
-
-#: ../titan-options.php:568
-msgid "Footer Widgets Area"
-msgstr ""
-
-#: ../titan-options.php:573 ../titan-options.php:616
-msgid "Background Color"
-msgstr ""
-
-#: ../titan-options.php:581 ../titan-options.php:624
-msgid "Text Color"
-msgstr ""
-
-#: ../titan-options.php:590
-msgid "Text Link Color"
-msgstr ""
-
-#: ../titan-options.php:603
-msgid "Footer Copyright Area"
-msgstr ""
-
-#: ../titan-options.php:605
-msgid "Colors & text of the bottom-most copyright area of the site"
-msgstr ""
-
-#: ../titan-options.php:609
-msgid "Copyright Text"
-msgstr ""
-
-#: ../titan-options.php:641
-msgid "Home Page Tagline Caption"
-msgstr ""
-
-#: ../titan-options.php:651
-msgid "Main / Highlight / Link Color"
 msgstr ""
