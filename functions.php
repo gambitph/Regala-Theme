@@ -163,6 +163,12 @@ function regala_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'regala_scripts' );
 
+
+add_action( 'admin_init', 'regala_editor_styles' );
+function regala_editor_styles() {
+	add_editor_style( get_template_directory_uri() . '/css/editor.css' );
+}
+
 add_action( 'customize_controls_enqueue_scripts', 'regala_init_customizer' );
 
 function regala_init_customizer() {

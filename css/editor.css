@@ -1,0 +1,244 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);
+@import url(http://fonts.googleapis.com/css?family=Gudea:400,700,400italic);
+body {
+  font-family: 'Gudea', sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #555E67; }
+
+a, a:link, a:visited,
+.saboxplugin-wrap .saboxplugin-web a {
+  color: #d9b760;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  text-decoration: none; }
+  a:hover, a:link:hover, a:visited:hover,
+  .saboxplugin-wrap .saboxplugin-web a:hover {
+    color: #555E67;
+    text-decoration: none; }
+
+body .comment-reply-link, body .comment-reply-link:link, body .comment-reply-link:visited,
+body .comment-edit-link,
+body .comment-edit-link:link,
+body .comment-edit-link:visited,
+body .btn,
+body .btn:link,
+body .btn:visited, body .btn-default, body .btn-default:link, body .btn-default:visited, body button, body button:link, body button:visited,
+body input[type="button"],
+body input[type="button"]:link,
+body input[type="button"]:visited,
+body input[type="reset"],
+body input[type="reset"]:link,
+body input[type="reset"]:visited,
+body input[type="submit"],
+body input[type="submit"]:link,
+body input[type="submit"]:visited {
+  color: #d9b760;
+  border: 2px solid #d9b760;
+  padding: 1.4em 2.4em;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: .9em;
+  display: inline-block;
+  opacity: 1; }
+  body .comment-reply-link:hover, body .comment-reply-link:link:hover, body .comment-reply-link:visited:hover,
+  body .comment-edit-link:hover,
+  body .comment-edit-link:link:hover,
+  body .comment-edit-link:visited:hover,
+  body .btn:hover,
+  body .btn:link:hover,
+  body .btn:visited:hover, body .btn-default:hover, body .btn-default:link:hover, body .btn-default:visited:hover, body button:hover, body button:link:hover, body button:visited:hover,
+  body input[type="button"]:hover,
+  body input[type="button"]:link:hover,
+  body input[type="button"]:visited:hover,
+  body input[type="reset"]:hover,
+  body input[type="reset"]:link:hover,
+  body input[type="reset"]:visited:hover,
+  body input[type="submit"]:hover,
+  body input[type="submit"]:link:hover,
+  body input[type="submit"]:visited:hover {
+    opacity: .6;
+    color: #d9b760; }
+
+body .comment-reply-link, body .comment-reply-link:link, body .comment-reply-link:visited,
+body .comment-edit-link,
+body .comment-edit-link:link,
+body .comment-edit-link:visited {
+  border-width: 1px;
+  padding: .5em .6em;
+  font-size: .9em; }
+
+body.blog article a, body.blog article a:link, body.blog article a:visited, body.archive article a, body.archive article a:link, body.archive article a:visited, body.search article a, body.search article a:link, body.search article a:visited {
+  color: #DADFE1; }
+  body.blog article a:hover, body.blog article a:link:hover, body.blog article a:visited:hover, body.archive article a:hover, body.archive article a:link:hover, body.archive article a:visited:hover, body.search article a:hover, body.search article a:link:hover, body.search article a:visited:hover {
+    color: #F2F1EF; }
+body.blog article .btn, body.blog article .btn:link, body.blog article .btn:visited, body.blog article .btn-default, body.blog article .btn-default:link, body.blog article .btn-default:visited, body.blog article button, body.blog article button:link, body.blog article button:visited,
+body.blog article input[type="button"],
+body.blog article input[type="button"]:link,
+body.blog article input[type="button"]:visited,
+body.blog article input[type="reset"],
+body.blog article input[type="reset"]:link,
+body.blog article input[type="reset"]:visited,
+body.blog article input[type="submit"],
+body.blog article input[type="submit"]:link,
+body.blog article input[type="submit"]:visited, body.archive article .btn, body.archive article .btn:link, body.archive article .btn:visited, body.archive article .btn-default, body.archive article .btn-default:link, body.archive article .btn-default:visited, body.archive article button, body.archive article button:link, body.archive article button:visited,
+body.archive article input[type="button"],
+body.archive article input[type="button"]:link,
+body.archive article input[type="button"]:visited,
+body.archive article input[type="reset"],
+body.archive article input[type="reset"]:link,
+body.archive article input[type="reset"]:visited,
+body.archive article input[type="submit"],
+body.archive article input[type="submit"]:link,
+body.archive article input[type="submit"]:visited, body.search article .btn, body.search article .btn:link, body.search article .btn:visited, body.search article .btn-default, body.search article .btn-default:link, body.search article .btn-default:visited, body.search article button, body.search article button:link, body.search article button:visited,
+body.search article input[type="button"],
+body.search article input[type="button"]:link,
+body.search article input[type="button"]:visited,
+body.search article input[type="reset"],
+body.search article input[type="reset"]:link,
+body.search article input[type="reset"]:visited,
+body.search article input[type="submit"],
+body.search article input[type="submit"]:link,
+body.search article input[type="submit"]:visited {
+  color: #DADFE1;
+  border: 2px solid #DADFE1; }
+  body.blog article .btn:hover, body.blog article .btn:link:hover, body.blog article .btn:visited:hover, body.blog article .btn-default:hover, body.blog article .btn-default:link:hover, body.blog article .btn-default:visited:hover, body.blog article button:hover, body.blog article button:link:hover, body.blog article button:visited:hover,
+  body.blog article input[type="button"]:hover,
+  body.blog article input[type="button"]:link:hover,
+  body.blog article input[type="button"]:visited:hover,
+  body.blog article input[type="reset"]:hover,
+  body.blog article input[type="reset"]:link:hover,
+  body.blog article input[type="reset"]:visited:hover,
+  body.blog article input[type="submit"]:hover,
+  body.blog article input[type="submit"]:link:hover,
+  body.blog article input[type="submit"]:visited:hover, body.archive article .btn:hover, body.archive article .btn:link:hover, body.archive article .btn:visited:hover, body.archive article .btn-default:hover, body.archive article .btn-default:link:hover, body.archive article .btn-default:visited:hover, body.archive article button:hover, body.archive article button:link:hover, body.archive article button:visited:hover,
+  body.archive article input[type="button"]:hover,
+  body.archive article input[type="button"]:link:hover,
+  body.archive article input[type="button"]:visited:hover,
+  body.archive article input[type="reset"]:hover,
+  body.archive article input[type="reset"]:link:hover,
+  body.archive article input[type="reset"]:visited:hover,
+  body.archive article input[type="submit"]:hover,
+  body.archive article input[type="submit"]:link:hover,
+  body.archive article input[type="submit"]:visited:hover, body.search article .btn:hover, body.search article .btn:link:hover, body.search article .btn:visited:hover, body.search article .btn-default:hover, body.search article .btn-default:link:hover, body.search article .btn-default:visited:hover, body.search article button:hover, body.search article button:link:hover, body.search article button:visited:hover,
+  body.search article input[type="button"]:hover,
+  body.search article input[type="button"]:link:hover,
+  body.search article input[type="button"]:visited:hover,
+  body.search article input[type="reset"]:hover,
+  body.search article input[type="reset"]:link:hover,
+  body.search article input[type="reset"]:visited:hover,
+  body.search article input[type="submit"]:hover,
+  body.search article input[type="submit"]:link:hover,
+  body.search article input[type="submit"]:visited:hover {
+    color: #DADFE1; }
+
+body.single #masthead-inner a, body.single #masthead-inner a:link, body.single #masthead-inner a:visited {
+  color: #DADFE1; }
+  body.single #masthead-inner a:hover, body.single #masthead-inner a:link:hover, body.single #masthead-inner a:visited:hover {
+    color: #F2F1EF; }
+
+body.blog article, body.archive article, body.search article {
+  color: #F2F1EF; }
+
+h1, h2, h3, h4, h5, h6, .site-logo-link {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic; }
+
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 50px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+@media screen and (max-width: 710px) {
+  h1 {
+    font-size: 50px; }
+
+  h2, body #masthead-inner.tagline h1.site-description {
+    font-size: 40px; }
+
+  h3 {
+    font-size: 22px; }
+
+  h4 {
+    font-size: 18px; }
+
+  h5 {
+    font-size: 16px; }
+
+  h6 {
+    font-size: 14px; } }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  margin-top: 50px;
+  margin-bottom: 25px; }
+
+/**
+ * Inner page post navigation
+ */
+.post-navigation .post-nav-box {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 710px; }
+.post-navigation .nav-indicator {
+  font-style: italic;
+  font-size: .9em; }
+.post-navigation h3 {
+  margin: 0; }
+.post-navigation .nav-previous, .post-navigation .nav-next {
+  border-top: 1px solid #ECF0F1;
+  padding-top: 20px;
+  width: 45%; }
+
+/**
+ * Tags
+ */
+.tags-links {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold; }
+
+span.tags-links a {
+  border: 1px solid #d9b760;
+  border-radius: 4px;
+  padding: .2em .5em;
+  margin: 0 0 7px 7px;
+  display: inline-block;
+  font-weight: normal; }
+
+.edit-link {
+  display: block;
+  text-align: right; }
+
+.entry-footer {
+  margin-top: 50px; }
+
+/**
+ * 404
+ */
+body.error404 .page-content .widget-area li {
+  margin: 0 auto;
+  left: 50%;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: .3em 1em; }
