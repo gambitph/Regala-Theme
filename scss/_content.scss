@@ -214,14 +214,12 @@ article.post-password-required {
 	}
 }
 
-<<<<<<< HEAD
+.entry-content .alignleft, .entry-content .alignright,  .entry-content .alignnone, .entry-content .aligncenter {
+  border-radius: 5px;
+}
+
 body.home article.category-sticky .article-inner {
     border: 2px solid rgba(71, 52, 52, 0.04);
     padding: 20px;
     border-radius: 10px;
-=======
-
-.entry-content .alignleft, .entry-content .alignright,  .entry-content .alignnone, .entry-content .aligncenter {
-  border-radius: 5px;
->>>>>>> origin/master
 }

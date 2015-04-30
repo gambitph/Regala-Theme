@@ -3,12 +3,12 @@ Theme Name: Regala
 Theme URI: http://demos2.gambit.ph/regala
 Author: Gambit
 Author URI: http://gambit.ph/
-Description: A clean photography blogging theme geared towards showcasing your photos in full screen
+Description: Photography theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: regala
-Tags: responsive, gold, one-column, two-columns, right-sidebar, fluid-layout, custom-colors
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1919,15 +1919,13 @@ article.post-password-required [name="post_password"] {
   width: 100%;
   margin-bottom: 1.5em; }
 
-<<<<<<< HEAD
+.entry-content .alignleft, .entry-content .alignright, .entry-content .alignnone, .entry-content .aligncenter {
+  border-radius: 5px; }
+
 body.home article.category-sticky .article-inner {
   border: 2px solid rgba(71, 52, 52, 0.04);
   padding: 20px;
   border-radius: 10px; }
-=======
-.entry-content .alignleft, .entry-content .alignright, .entry-content .alignnone, .entry-content .aligncenter {
-  border-radius: 5px; }
->>>>>>> origin/master
 
 #comments {
   width: 80%;
