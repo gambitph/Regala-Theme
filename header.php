@@ -25,9 +25,9 @@ $bodyClasses = '';
 $headerImageUrl = '';
 $headerImageGradientColor = '';
 
-$stop1Opacity = 0.5;
-$stop2Opacity = 0.4;
-$stop3Opacity = 0.2;
+$stop1Opacity = 0.9;
+$stop2Opacity = 0.85;
+$stop3Opacity = 0.8;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
@@ -42,9 +42,6 @@ if ( ( is_single() || is_page() ) && has_post_thumbnail() ) {
 if ( is_single() || is_page() ) {
 
 	$headerImageGradientColor = '41,51,56';
-	$stop1Opacity = 0.9;
-	$stop2Opacity = 0.85;
-	$stop3Opacity = 0.8;
 
 }
 if ( ! empty( $headerImageUrl ) ) {
