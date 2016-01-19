@@ -110,7 +110,7 @@ body {
         padding: .5em .8em;
         vertical-align: middle;
         border-radius: 3px;
-            
+
         -webkit-transition: all .4s;
         -moz-transition: all .4s;
         -ms-transition: all .4s;
@@ -118,7 +118,7 @@ body {
         transition: all .4s;
         &:hover {
 			box-shadow: none;
-            border-color: #eee;
+            border-color: #d9b760;
             color: #333;
         }
     }
@@ -194,7 +194,7 @@ input[type="search"] {
 }
 
 .entry-content, #comments, h1, h2, h3, h4, h5, h6, p, .widget {
-	-ms-word-wrap: break-word; 
+	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	word-break: break-word;
 }

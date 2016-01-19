@@ -50,7 +50,7 @@ function regala_setup() {
 	set_post_thumbnail_size( 400, 225, true );
 	add_image_size( 'regala-wallpaper', 1600, 1024, true );
 	add_image_size( 'jetpack-portfolio', 600, 400, true );
-    
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'regala' ),
@@ -78,7 +78,7 @@ function regala_setup() {
 	//         'default-color' => 'ffffff',
 	//         'default-image' => '',
 	//     ) ) );
-	
+
 	// Remove the header text
 	defined( 'NO_HEADER_TEXT' ) or define( 'NO_HEADER_TEXT', true );
 }
@@ -117,7 +117,7 @@ function regala_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	) ); 
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Main Menu Widgets', 'regala' ),
 		'id'            => 'main-menu',
@@ -134,25 +134,24 @@ add_action( 'widgets_init', 'regala_widgets_init' );
  * Enqueue scripts and styles.
  */
 function regala_scripts() {
-    
+
     // Use our copy of genericons instead of Jetpack's since we are using a newer version
 	// wp_deregister_style( 'genericons' );
 
 	if ( ! wp_script_is( 'genericons', 'registered' ) ) {
 		wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css' );
 	}
-	
+
 	wp_enqueue_style( 'regala-style', get_stylesheet_uri() );
-	
-	if ( ! class_exists( 'TitanFramework' ) ) {
-		wp_enqueue_style( 'regala-playfair-font', '//fonts.googleapis.com/css?family=Playfair+Display%3A900italic%2C400&#038;subset=latin%2Clatin-ext' );
-		wp_enqueue_style( 'regala-gudea-font', '//fonts.googleapis.com/css?family=Gudea%3A200%2C400&#038;subset=latin%2Clatin-ext' );
+
+	if ( ! class_exists( 'TitanFramework' ) || ! class_exists( 'GambitRegalaPro' ) ) {
+		wp_enqueue_style( 'regala-font', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Playfair+Display:700&subset=latin,latin-ext' );
 	}
-    
+
     wp_enqueue_script( 'regala-waitforimages', get_template_directory_uri() . '/js/min/fadein-images-min.js', array( 'jquery' ), '20150216', true );
-    
+
     wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
-    
+
 	wp_enqueue_script( 'regala-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'regala-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -175,10 +174,10 @@ function regala_init_customizer() {
     if ( class_exists( 'TitanFramework' ) ) {
 		$titan = TitanFramework::getInstance( 'regala' );
 		// if ( ! empty( $option = __( 'Menu', 'regala' ) ) ){
-		//            
-		//        } else 
-		if ( function_exists( 'regala_create_options' ) ) { 
-		
+		//
+		//        } else
+		if ( function_exists( 'regala_create_options' ) ) {
+
 		} else {
 		      wp_enqueue_script( 'regala-customizer', get_template_directory_uri() . '/js/min/customizer-min.js', array( 'jquery' ), '20150429', true );
 	      }

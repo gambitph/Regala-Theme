@@ -15,7 +15,7 @@
 		<div class="site-info-container">
 			<div class="site-info">
 				<?php
-					if ( class_exists( 'TitanFramework' ) ) {
+					if ( class_exists( 'TitanFramework' ) && class_exists( 'GambitRegalaPro' ) ) {
 						$titan = TitanFramework::getInstance( 'regala' );
 						echo esc_attr( $titan->getOption( 'footer_copyright_text' ) );
 					}

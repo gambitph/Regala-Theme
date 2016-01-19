@@ -3,13 +3,13 @@ global $fillerFeaturedImageIDs;
 
 // Get filler featured images for posts without featured images
 if ( empty( $fillerFeaturedImageIDs ) ) {
-    
+
     if ( class_exists( 'TitanFramework' ) ) {
-	
+
         $titan = TitanFramework::getInstance( 'regala' );
-    
+
         $fillerFeaturedImageIDs = array();
-    
+
         $imageID = $titan->getOption( 'featured_image' );
         if ( ! empty( $imageID ) ) {
             $fillerFeaturedImageIDs[] = $imageID;
@@ -30,23 +30,23 @@ if ( empty( $fillerFeaturedImageIDs ) ) {
         if ( ! empty( $imageID ) ) {
             $fillerFeaturedImageIDs[] = $imageID;
         }
-    
+
     }
 }
 
 $imageAttributes = null;
 
 // If the post has a featured image, show it
-if ( has_post_thumbnail() ) { 
+if ( has_post_thumbnail() ) {
     $imageAttributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'regala-wallpaper' );
-	
+
 // If the post doesn't have a featured image, then use a filler image if there is one
 } else if ( ! empty( $fillerFeaturedImageIDs ) ) {
-        
+
     // Cycle through the list of filler images
     $imageID = array_shift( $fillerFeaturedImageIDs );
     $fillerFeaturedImageIDs[] = $imageID;
-    
+
     $imageAttributes = wp_get_attachment_image_src( $imageID, 'regala-wallpaper' );
 }
 

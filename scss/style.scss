@@ -3,12 +3,12 @@ Theme Name: Regala
 Theme URI: http://demos2.gambit.ph/regala
 Author: Gambit
 Author URI: http://gambit.ph/
-Description: Photography theme
+Description: A clean photography blogging theme. Elegant, lightweight and minimal, the theme is geared towards showcasing your photos in full screen. Default images can be set for blog posts with no featured images.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: regala
-Tags:
+Tags: responsive-layout, white, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -760,7 +760,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 80px 0 0;
 }
 
 .page-links {

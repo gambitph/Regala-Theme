@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);
 @import url(http://fonts.googleapis.com/css?family=Gudea:400,700,400italic);
 body {
-  font-family: 'Gudea', sans-serif;
-  font-size: 16px;
-  line-height: 1.6em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.8em;
   color: #555E67; }
 
 a, a:link, a:visited,
@@ -60,8 +60,7 @@ body input[type="submit"]:visited {
   body input[type="submit"]:hover,
   body input[type="submit"]:link:hover,
   body input[type="submit"]:visited:hover {
-    opacity: .6;
-    color: #d9b760; }
+    color: #555E67; }
 
 body .comment-reply-link, body .comment-reply-link:link, body .comment-reply-link:visited,
 body .comment-edit-link,
@@ -145,8 +144,7 @@ body.blog article, body.archive article, body.search article {
 
 h1, h2, h3, h4, h5, h6, .site-logo-link {
   font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-style: italic; }
+  font-weight: 700; }
 
 h1 {
   font-size: 60px; }

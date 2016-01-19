@@ -7,8 +7,7 @@ h1, h2, h3, h4, h5, h6, .site-logo-link,
 body .saboxplugin-wrap .saboxplugin-authorname {
 
 	font-family: 'Playfair Display', serif;
-	font-weight: 900;
-	font-style: italic;
+	font-weight: 700;
 }
 
 .social-navigation a:before { color: #fff }
@@ -20,7 +19,7 @@ body .saboxplugin-wrap .saboxplugin-authorname {
 #site-navigation { background: #373A3C }
 #main-menu { color: #d3d2d1 }
 #main-menu {
-	a, a:visited { 
+	a, a:visited {
 		&:hover {
 			color: #d3d2d1;
 		}
@@ -30,35 +29,33 @@ body .saboxplugin-wrap .saboxplugin-authorname {
 	color: #d3d2d1;
 }
 #main-menu {
-	a, a:visited { 
+	a, a:visited {
 		color: #d9b760;
 	}
 }
 .main-navigation.toggled .genericon-menu:before {
 	color: #d9b760;
 }
-#masthead-inner.tagline h1.site-description { 
+#masthead-inner.tagline h1.site-description {
     color: #FFFFFF;
     line-height: 1.1em;
     font-size: 50px;
     font-family: 'Playfair Display', serif;
-    font-weight: 900;
-	font-style: italic;
+    font-weight: 700;
 }
 p.tagline-description { color: #fff }
 #masthead-inner.tagline { bottom: 20vh }
 
 .paging-navigation { background: #c4b371 }
-ul.page-numbers a.page-numbers, ul.page-numbers span{ 
+ul.page-numbers a.page-numbers, ul.page-numbers span{
 	color: #ffffff;
 	line-height: 1em;
 	font-size: 16px;
 	font-family: 'Playfair Display', serif;
-	font-weight: 900;
-	font-style: italic;
+	font-weight: 700;
  }
  .site-footer { background: #fff }
- .footer-widgets { color: #616f7c } 
+ .footer-widgets { color: #616f7c }
 .footer-widgets a:hover, .footer-widgets a:link:hover, .footer-widgets a:visited:hover { color: #616f7c }
 
 .footer-widgets a, .footer-widgets a:link, .footer-widgets a:visited { color: #d9b760 }

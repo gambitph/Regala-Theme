@@ -15,7 +15,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<?php 
+<?php
 
 $bodyClasses = '';
 
@@ -27,7 +27,7 @@ $headerImageGradientColor = '';
 
 $stop1Opacity = 0.5;
 $stop2Opacity = 0.4;
-$stop3Opacity = 0.14;
+$stop3Opacity = 0.2;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
@@ -40,11 +40,12 @@ if ( ( is_single() || is_page() ) && has_post_thumbnail() ) {
 	}
 }
 if ( is_single() || is_page() ) {
-	
+
 	$headerImageGradientColor = '41,51,56';
-	$stop1Opacity = 0.7;
-	$stop2Opacity = 0.5;
-	
+	$stop1Opacity = 0.9;
+	$stop2Opacity = 0.85;
+	$stop3Opacity = 0.8;
+
 }
 if ( ! empty( $headerImageUrl ) ) {
 	$bodyClasses = ' has-header-image';
@@ -53,13 +54,13 @@ if ( ! empty( $headerImageUrl ) ) {
 /**
  * Add sidebar class
  */
-if ( is_single() || is_page() ) {	
+if ( is_single() || is_page() ) {
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		$bodyClasses .= ' has-sidebar';
 	}
 }
-	
-	
+
+
 ?>
 <style id="regala_header">
 	header#masthead {
@@ -72,29 +73,29 @@ if ( is_single() || is_page() ) {
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'regala' ); ?></a>
 	<?php
-		
-	
+
+
 	/**
 	 * Header image
-	 */	
+	 */
 	if ( ! empty( $headerImageUrl ) ) : ?>
 	<header id="masthead" class="site-header" role="banner">
-		
-		<?php 
+
+		<?php
 		// For the frontpage, display the site tagline
 		if ( is_home() || is_front_page() ) {
 			?>
 			<div id="masthead-inner" class="tagline">
-			
+
 				<?php if ( get_bloginfo( 'description' ) ) : ?>
 				<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
-				<?php endif; ?>	
-		
+				<?php endif; ?>
+
 				<?php regala_get_home_caption() ?>
-        
+
 	        </div>
 			<?php
-		
+
 		// For the rest of the pages, display the title
 		} else if ( is_single() ) {
 			?>
@@ -108,19 +109,19 @@ if ( is_single() || is_page() ) {
 				<h1 class="site-description"><?php the_title() ?></h1>
 	        </div>
 			<?php
-			
+
 		} else if ( is_archive() ) {
 			?>
 			<div id="masthead-inner">
 				<h1 class="site-description"><?php the_archive_title() ?></h1>
 	        </div>
 			<?php
-			
+
 		} else if ( is_search() ) {
 			?>
 			<div id="masthead-inner">
 				<span class="search-label"><?php _e( 'Search Results for:', 'regala' ) ?></span>
-				<h1 class="site-description"><?php echo esc_html( get_search_query() ) ?></h1>    
+				<h1 class="site-description"><?php echo esc_html( get_search_query() ) ?></h1>
 	        </div>
 			<?php
 		} else if ( is_404() ) {
@@ -129,7 +130,7 @@ if ( is_single() || is_page() ) {
 				<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'regala' ); ?></h1>
 	        </div>
 			<?php
-		
+
 		// For the rest of the pages, display the title
 		} else {
 			?>
@@ -139,14 +140,14 @@ if ( is_single() || is_page() ) {
 			<?php
 		}
 		?>
-		
+
 	</header>
 	<?php endif;
-	
+
 
 	/**
 	 * Main menu
-	 */	
+	 */
 	?>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
@@ -168,29 +169,28 @@ if ( is_single() || is_page() ) {
         </div>
 	</nav>
 	<?php
-	
-	
+
+
 	/**
 	 * Logo & social icons
 	 */
 	?>
-	<div id="site-top">   
+	<div id="site-top">
 		<?php
 		/*
 		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
 		*/
-		
+
 		if ( function_exists( 'jetpack_the_site_logo' ) ) {
 			jetpack_the_site_logo();
 		} else {
 			?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title site-logo-link" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a><?php
 		}
 		?>
-		
+
 	</div>
 	<?php
-		
-		
+
+
 	?>
 	<div id="content" class="site-content">
-

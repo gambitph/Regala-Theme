@@ -71,32 +71,32 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 endif;
 
 function regala_create_social_icons() {
-	if ( ! class_exists( 'TitanFramework' ) ) {
+	if ( ! class_exists( 'TitanFramework' ) && ! class_exists( 'GambitRegalaPro' ) ) {
 		return;
 	}
 	$titan = TitanFramework::getInstance( 'regala' );
-	
+
 	for ( $i = 0; $i <= 10; $i++ ) {
 		$url = $titan->getOption( 'social_' . $i );
 		if ( empty( $url ) ) {
 			continue;
 		}
-		
+
 		echo "<a href='" . esc_attr( $url ) . "' target='_blank'></a>";
 	}
 }
 
 function regala_get_home_caption() {
-	if ( ! class_exists( 'TitanFramework' ) ) {
+	if ( ! class_exists( 'TitanFramework' ) || ! class_exists( 'GambitRegalaPro' ) ) {
 	    return;
 	}
-	
+
 	$titan = TitanFramework::getInstance( 'regala' );
-	
+
 	if ( ! $titan->getOption( 'home_caption' ) ) {
 		return;
 	}
-	
+
 	echo "<p class='tagline-description'>" . $titan->getOption( 'home_caption' ) . "<p>";
 }
 
@@ -121,24 +121,24 @@ if ( ! function_exists( 'regala_hex2rgb' ) ) {
 }
 
 function regala_titan_custom_css() {
-    if ( ! class_exists( 'TitanFramework' ) ) {
+    if ( ! class_exists( 'TitanFramework' ) || ! class_exists( 'GambitRegalaPro' ) ) {
 	    return;
 	}
-	
+
 	$titan = TitanFramework::getInstance( 'regala' );
-	
+
 	$bg = $titan->getOption( 'logo_bg_color' );
 	$opacity = $titan->getOption( 'logo_bg_opacity' );
 	$rgb = regala_hex2rgb( $bg );
-	
+
 	$innerMenuColor = $titan->getOption( 'inner_menu_color' );
 	$innerMenuColorRGB = regala_hex2rgb( $innerMenuColor );
-	
+
 	echo "<style>
 	    .site-title, .site-logo-link {
     		background: rgba({$rgb[0]}, {$rgb[1]}, {$rgb[2]}, {$opacity});
     	}
-		#site-navigation { 
+		#site-navigation {
 			background: rgba({$innerMenuColorRGB[0]}, {$innerMenuColorRGB[1]}, {$innerMenuColorRGB[2]}, 0.95);
 		}
     </style>";
@@ -155,26 +155,26 @@ add_action( 'wp_head', 'regala_titan_custom_css' );
  * @see	jetpack_the_site_logo filter in Jetpack
  */
 function regala_the_site_logo( $html, $logo, $size ) {
-	
+
 	if ( empty( $logo ) ) {
 		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
 	}
 	if ( empty( $logo['url'] ) ) {
 		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
 	}
-	
+
 	// Checker, comes from jetpack_the_site_logo
 	if ( ! jetpack_has_site_logo() ) {
 		return $html;
 	}
-	
+
 	// Get the image size
 	$imageAttachment = wp_get_attachment_image_src( $logo['id'], $size );
-	
+
 	// Half the image size since we want a retina ready image
 	$html = preg_replace( '/width="(\d+)"/i', 'width="' . ( $imageAttachment[1] / 2 ) . '"', $html );
 	$html = preg_replace( '/height="(\d+)"/i', 'height="' . ( $imageAttachment[2] / 2 ) . '"', $html );
-	
+
 	return $html;
 }
 add_filter( 'jetpack_the_site_logo', 'regala_the_site_logo', 10, 3 );
@@ -194,9 +194,9 @@ add_action( 'cs_predetermineReplacements', 'gambit_theme_custom_sidebars_determi
 function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
 	global $_gambit_theme_sidebar_ids_to_replace;
 	$_gambit_theme_sidebar_ids_to_replace = array();
-	
+
 	$customSidebarReplacer = CustomSidebarsReplacer::instance();
-	
+
 	$replacements = $customSidebarReplacer->determine_replacements( $defaults );
 
 	foreach ( $replacements as $sb_id => $replace_info ) {
@@ -225,19 +225,19 @@ function gambit_theme_custom_sidebars_determine_replacements( $defaults ) {
 add_filter( 'is_active_sidebar', 'gambit_theme_custom_sidebars_is_active_sidebar', 10, 2 );
 function gambit_theme_custom_sidebars_is_active_sidebar( $is_active_sidebar, $index ) {
 	global $_gambit_theme_sidebar_ids_to_replace;
-	
+
 	if ( empty( $_gambit_theme_sidebar_ids_to_replace ) ) {
 		return $is_active_sidebar;
 	}
-	
+
 	if ( ! empty( $_gambit_theme_sidebar_ids_to_replace[ $index ] ) ) {
-		// Return the current value if it's the same replacement	
+		// Return the current value if it's the same replacement
 		if ( $_gambit_theme_sidebar_ids_to_replace[ $index ] == $index ) {
 			return $is_active_sidebar;
 		}
-		
+
 		return is_active_sidebar( $_gambit_theme_sidebar_ids_to_replace[ $index ] );
 	}
-	
+
 	return $is_active_sidebar;
 }
