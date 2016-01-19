@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Regala 1.0\n"
-"POT-Creation-Date: 2015-04-30 23:10+0800\n"
-"PO-Revision-Date: 2015-04-30 23:11+0800\n"
+"POT-Creation-Date: 2016-01-19 13:58+0800\n"
+"PO-Revision-Date: 2016-01-19 13:58+0800\n"
 "Last-Translator: Benjamin Intal <bf.intal@gambit.ph>\n"
 "Language-Team: Gambit <info@gambit.ph>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -62,6 +62,11 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: ../footer.php:24
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
 #: ../functions.php:56
 msgid "Primary Menu"
 msgstr ""
@@ -102,216 +107,242 @@ msgstr ""
 msgid "Widgets here appear in the main menu of the site."
 msgstr ""
 
-#: ../header.php:73
+#: ../header.php:74
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:122
+#: ../header.php:127
 msgid "Search Results for:"
 msgstr ""
 
-#: ../header.php:129
+#: ../header.php:134
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: ../header.php:157
+#: ../header.php:162
 msgid "Menu"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:161 ../tgm-plugin-activation.php:66
+#: ../inc/class-tgm-plugin-activation.php:301 ../tgm-plugin-activation.php:66
 msgid "Install Required Plugins"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:162 ../tgm-plugin-activation.php:67
+#: ../inc/class-tgm-plugin-activation.php:302 ../tgm-plugin-activation.php:67
 msgid "Install Plugins"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:163 ../tgm-plugin-activation.php:68
+#: ../inc/class-tgm-plugin-activation.php:303 ../tgm-plugin-activation.php:68
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:164
-msgid "Something went wrong."
+#: ../inc/class-tgm-plugin-activation.php:304 ../tgm-plugin-activation.php:69
+msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:175 ../tgm-plugin-activation.php:80
+#: ../inc/class-tgm-plugin-activation.php:365 ../tgm-plugin-activation.php:80
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:176
+#: ../inc/class-tgm-plugin-activation.php:366
 msgid "Return to the dashboard"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:177
-#: ../inc/class-tgm-plugin-activation.php:1939 ../tgm-plugin-activation.php:81
+#: ../inc/class-tgm-plugin-activation.php:367
+#: ../inc/class-tgm-plugin-activation.php:2957 ../tgm-plugin-activation.php:81
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:178
+#: ../inc/class-tgm-plugin-activation.php:368
 msgid "The following plugin was activated successfully:"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:179
+#: ../inc/class-tgm-plugin-activation.php:369
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:370
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:371
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:180
+#: ../inc/class-tgm-plugin-activation.php:372
 msgid "Dismiss this notice"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:531
-#: ../inc/class-tgm-plugin-activation.php:2156
-msgid "Return to the Dashboard"
+#: ../inc/class-tgm-plugin-activation.php:373
+msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1166
-msgid "Private Repository"
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:1169
-msgid "Pre-Packaged"
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:1174
-msgid "WordPress Repository"
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:1177
+#: ../inc/class-tgm-plugin-activation.php:2120
 msgid "Required"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1177
+#: ../inc/class-tgm-plugin-activation.php:2123
 msgid "Recommended"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1180
+#: ../inc/class-tgm-plugin-activation.php:2139
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2142
+msgid "External Source"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2145
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2162
 msgid "Not Installed"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1182
+#: ../inc/class-tgm-plugin-activation.php:2166
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1287
-#: ../inc/class-tgm-plugin-activation.php:1395
-msgid "Install"
+#: ../inc/class-tgm-plugin-activation.php:2168
+msgid "Active"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1309
-#: ../inc/class-tgm-plugin-activation.php:1396
-msgid "Activate"
+#: ../inc/class-tgm-plugin-activation.php:2174
+msgid "Required Update not Available"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1358
+#: ../inc/class-tgm-plugin-activation.php:2177
+msgid "Requires Update"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2180
+msgid "Update recommended"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2332
+msgid "Installed version:"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2340
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2352
+msgid "Available version:"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2375
 #, php-format
 msgid ""
-"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
-"Dashboard\">Return to the Dashboard</a>"
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1374
+#: ../inc/class-tgm-plugin-activation.php:2389
 msgid "Plugin"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1375
+#: ../inc/class-tgm-plugin-activation.php:2390
 msgid "Source"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1376
+#: ../inc/class-tgm-plugin-activation.php:2391
 msgid "Type"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1377
+#: ../inc/class-tgm-plugin-activation.php:2395
+msgid "Version"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2396
 msgid "Status"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1922
-msgid "Install package not available."
+#: ../inc/class-tgm-plugin-activation.php:2556
+msgid "Install"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1923
-#, php-format
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+#: ../inc/class-tgm-plugin-activation.php:2562
+msgid "Update"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1924
-msgid "Unpacking the package&#8230;"
+#: ../inc/class-tgm-plugin-activation.php:2565
+msgid "Activate"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1925
-msgid "Installing the plugin&#8230;"
+#: ../inc/class-tgm-plugin-activation.php:2596
+msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1926
-msgid "Plugin install failed."
+#: ../inc/class-tgm-plugin-activation.php:2598
+msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1927
-msgid "Plugin installed successfully."
+#: ../inc/class-tgm-plugin-activation.php:2634
+msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:1938
+#: ../inc/class-tgm-plugin-activation.php:2636
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2956
 msgid "Plugin activation failed."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2052
+#: ../inc/class-tgm-plugin-activation.php:3286
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:3288
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:3289
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:3293
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2053
+#: ../inc/class-tgm-plugin-activation.php:3294
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2053
-#: ../inc/class-tgm-plugin-activation.php:2062
-msgid "Show Details"
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:2053
-#: ../inc/class-tgm-plugin-activation.php:2062
-msgid "Hide Details"
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:2054
+#: ../inc/class-tgm-plugin-activation.php:3295
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2055
+#: ../inc/class-tgm-plugin-activation.php:3296
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2059
+#: ../inc/class-tgm-plugin-activation.php:3299
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2060
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:2061
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:2062
-#, php-format
-msgid "%1$s installed successfully."
-msgstr ""
-
-#: ../inc/class-tgm-plugin-activation.php:2063
+#: ../inc/class-tgm-plugin-activation.php:3301
 msgid "All installations have been completed."
 msgstr ""
 
-#: ../inc/class-tgm-plugin-activation.php:2064
+#: ../inc/class-tgm-plugin-activation.php:3302
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
@@ -327,6 +358,10 @@ msgstr ""
 #: ../inc/extras.php:52
 #, php-format
 msgid "Page %s"
+msgstr ""
+
+#: ../inc/extras.php:255
+msgid "Read More"
 msgstr ""
 
 #: ../inc/template-tags.php:43
@@ -449,10 +484,6 @@ msgstr ""
 
 #: ../plugin.php:54
 msgid "Image 5"
-msgstr ""
-
-#: ../tgm-plugin-activation.php:69
-msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: ../tgm-plugin-activation.php:82

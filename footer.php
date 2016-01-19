@@ -18,6 +18,10 @@
 					if ( class_exists( 'TitanFramework' ) && class_exists( 'GambitRegalaPro' ) ) {
 						$titan = TitanFramework::getInstance( 'regala' );
 						echo esc_attr( $titan->getOption( 'footer_copyright_text' ) );
+					} else {
+						?>
+						<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a>
+						<?php printf( __( 'Theme: %1$s by %2$s.', 'regala' ), 'Regala', '<a href="http://gambit.ph/" rel="designer">Gambit</a>' ); ?>
 					}
 				?>
 				<span class="social-navigation"><?php regala_create_social_icons() ?></span>
