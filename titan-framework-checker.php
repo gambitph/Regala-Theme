@@ -85,10 +85,10 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 			}
 
 			echo "<div class='error'><p><strong>"
-				. __( "Titan Framework needs to be installed.", "default" )
+				. __( "Titan Framework needs to be installed.", 'regala' )
 				. sprintf( " <a href='%s'>%s</a>",
 					admin_url( "plugin-install.php?tab=search&type=term&s=titan+framework" ),
-					__( "Click here to search for the plugin.", "default" ) )
+					__( "Click here to search for the plugin.", 'regala' ) )
 				. "</strong></p></div>";
 		}
 
@@ -107,10 +107,10 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 			}
 
 			echo "<div class='error'><p><strong>"
-				. __( "Titan Framework needs to be activated.", "default" )
+				. __( "Titan Framework needs to be activated.", 'regala' )
 				. sprintf( " <a href='%s'>%s</a>",
 					admin_url( "plugins.php" ),
-					__( "Click here to go to the plugins page and activate it.", "default" ) )
+					__( "Click here to go to the plugins page and activate it.", 'regala' ) )
 				. "</strong></p></div>";
 		}
 
