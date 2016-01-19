@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 	if ( ! $('body').is('.blog') && ! $('body').is('.archive') && ! $('body').is('.search') ) {
 		return;
 	}
-	
+
     if ( typeof $.easing.easeInOutCubic === 'undefined' ) {
         $.extend( $.easing, {
 			easeInOutCubic: function (x, t, b, c, d) {
@@ -29,17 +29,17 @@ jQuery(document).ready(function($) {
 		    }
         });
     }
-	
+
 	function isPastLastArticle() {
 		var last = $('article.post, #masthead').eq(-1);
 		if ( last.length > 0 ) {
-			if ( $(window).scrollTop() > last.offset().top + last.height() / 6 ) {
+			if ( $(window).scrollTop() > last.offset().top ) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
 	function getNearestArticle() {
 		var dist = 9999999;
 		var closestArticle = null;
@@ -54,23 +54,23 @@ jQuery(document).ready(function($) {
 				closestArticle = $(this);
 			}
 		});
-		
+
 		return closestArticle;
 	}
-	
+
 	var scrollTimer = null;
 	var isAutoScroll = false;
 	function scrollNearbyArticle() {
 		var nearestArticle = getNearestArticle();
-		
+
 		if ( nearestArticle === null ) {
 			return;
 		}
-		
+
 		if ( isPastLastArticle() ) {
 			return;
 		}
-		
+
 		$('body').animate({
 			scrollTop: nearestArticle.offset().top
 		}, {
@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
 			}
 		});
 	}
-	
+
 	function triggerScrollNearbyArticle() {
 		if ( scrollTimer !== null && ! isAutoScroll ) {
 			$('body').stop();
@@ -96,12 +96,12 @@ jQuery(document).ready(function($) {
 		}
 		isAutoScroll = false;
 	}
-	
+
 	$(window).scroll(function(e) {
 		e.preventDefault();
 		triggerScrollNearbyArticle();
 	});
-	
+
 	$(window).resize(function(e) {
 		e.preventDefault();
 		triggerScrollNearbyArticle();

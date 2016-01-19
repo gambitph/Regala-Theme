@@ -157,10 +157,12 @@ add_action( 'wp_head', 'regala_titan_custom_css' );
 function regala_the_site_logo( $html, $logo, $size ) {
 
 	if ( empty( $logo ) ) {
-		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
+		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-title site-logo-link" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a>';
+		// return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
 	}
 	if ( empty( $logo['url'] ) ) {
-		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
+		return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-title site-logo-link" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a>';
+		// return '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-logo-link" rel="home"><img class="site-logo attachment" width="160" src="' . get_template_directory_uri() . '/images/logo.png" title="Regala WordPress Theme"/></a>';
 	}
 
 	// Checker, comes from jetpack_the_site_logo

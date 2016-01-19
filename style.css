@@ -1136,10 +1136,8 @@ body.blog #site-top, body.archive #site-top, body.search #site-top {
 
 .site-title, .site-logo-link {
   display: inline-block;
-  background: black;
   font-size: 2em;
   line-height: 1em;
-  background: rgba(0, 0, 0, 0.7);
   padding: 40px .8em .4em;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
@@ -1150,7 +1148,7 @@ body.blog #site-top, body.archive #site-top, body.search #site-top {
     color: #fff;
     text-decoration: none; }
   .site-title:hover, .site-logo-link:hover {
-    opacity: .8; }
+    opacity: .9; }
 
 @media screen and (max-width: 710px) {
   .site-title, .site-logo-link {
@@ -2064,7 +2062,7 @@ body .saboxplugin-wrap .saboxplugin-authorname {
   background: #DADFE1; }
 
 .menu-toggle {
-  opacity: 0.7; }
+  opacity: 0.8; }
 
 .menu-toggle:hover {
   opacity: 1; }

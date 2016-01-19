@@ -49,10 +49,10 @@ body.blog, body.archive, body.search {
 
 .site-title, .site-logo-link {
 	display: inline-block;
-    background: black;
+    // background: black;
     font-size: 2em;
 	line-height: 1em;
-    background: rgba(0, 0, 0, .7);
+    // background: rgba(0, 0, 0, .7);
 	padding: 40px .8em .4em;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
@@ -64,7 +64,7 @@ body.blog, body.archive, body.search {
 		text-decoration: none;
 	}
 	&:hover {
-		opacity: .8;
+		opacity: .9;
 	}
 }
 @media screen and (max-width: 710px) {
