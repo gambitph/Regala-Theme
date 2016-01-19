@@ -18,12 +18,13 @@
 	},
 	"archive": {
 		"exclude": [
-			"/bin", 
-			"/vendor", 
+			"/bin",
+			"/vendor",
 			"/tests",
 			"*/composer.*",
-			"*/.*", 
+			"*/.*",
 			"*.dist",
+			"*.sh",
 			"*.md",
 			"*.codekit",
 			"*.rb",

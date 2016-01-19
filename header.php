@@ -25,9 +25,9 @@ $bodyClasses = '';
 $headerImageUrl = '';
 $headerImageGradientColor = '';
 
-$stop1Opacity = 0.9;
-$stop2Opacity = 0.85;
-$stop3Opacity = 0.8;
+$stop1Opacity = 0.5;
+$stop2Opacity = 0.4;
+$stop3Opacity = 0.2;
 if ( get_header_image() ) {
 	$headerImageUrl = get_header_image();
 	$headerImageGradientColor = '41,51,56';
@@ -39,9 +39,12 @@ if ( ( is_single() || is_page() ) && has_post_thumbnail() ) {
 		$headerImageUrl = $imageAttachment[0];
 	}
 }
-if ( is_single() || is_page() ) {
+if ( ! is_home() && ! is_front_page() ) {
 
 	$headerImageGradientColor = '41,51,56';
+	$stop1Opacity = 0.8;
+	$stop2Opacity = 0.7;
+	$stop3Opacity = 0.5;
 
 }
 if ( ! empty( $headerImageUrl ) ) {
