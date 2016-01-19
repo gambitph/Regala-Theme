@@ -1,11 +1,11 @@
 <?php
 /**
- * TGM Plugin Activation 
+ * TGM Plugin Activation
  * See: http://jetpack.me/
  *
  * @package Regala
  */
-	
+
 require_once( 'inc/class-tgm-plugin-activation.php' );
 
 add_action( 'tgmpa_register', 'gambit_theme_register_required_plugins' );
@@ -22,31 +22,31 @@ add_action( 'tgmpa_register', 'gambit_theme_register_required_plugins' );
  * TGM_Plugin_Activation class constructor.
  */
 function gambit_theme_register_required_plugins() {
- 
+
     /**
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
- 
+
         array(
             'name'      => 'Jetpack',
             'slug'      => 'jetpack',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Custom Sidebars',
             'slug'      => 'custom-sidebars',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Simple Author Box',
             'slug'      => 'simple-author-box',
             'required'  => false,
         ),
- 
+
     );
- 
+
     /**
      * Array of configuration settings. Amend each line as needed.
      * If you want the default strings to be available under your own theme domain,
@@ -83,8 +83,8 @@ function gambit_theme_register_required_plugins() {
             'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
         )
     );
- 
+
     tgmpa( $plugins, $config );
- 
+
 }
 ?>
