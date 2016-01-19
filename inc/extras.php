@@ -243,3 +243,17 @@ function gambit_theme_custom_sidebars_is_active_sidebar( $is_active_sidebar, $in
 
 	return $is_active_sidebar;
 }
+
+
+/**
+ * Replaces ellipses with a read more link.
+ *
+ * @param array $content The excerpt.
+ */
+function regala_replace_excerpt( $content ) {
+	return str_replace( array( '[...]', '[&hellip;]' ),
+		'&hellip; <a href="'. get_permalink() .'" class="more-link">' . __( 'Read More', 'regala' ) . '</a>',
+		$content
+	);
+}
+add_filter( 'the_excerpt', 'regala_replace_excerpt' );

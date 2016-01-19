@@ -872,11 +872,8 @@ p:empty {
 .format-chat p:first-of-type {
   margin-top: 0; }
 
-.more-link {
-  display: block;
-  margin: 1em 0 0; }
-  .more-link .meta-nav {
-    display: none; }
+.more-link .meta-nav {
+  display: none; }
 
 button:focus,
 button:active,
