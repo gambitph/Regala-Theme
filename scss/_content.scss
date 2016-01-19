@@ -1,3 +1,26 @@
+.entry-date {
+	font-style: italic;
+	font-size: .8em;
+	opacity: .85;
+}
+.entry-category a {
+	outline: none !important;
+    background: #6C7A89;
+    padding: .3em .8em;
+    font-size: 60%;
+    border-radius: 2px;
+    vertical-align: middle;
+	opacity: 1;
+	margin-right: 3px;
+	&:hover {
+		opacity: .85;
+	}
+}
+.entry-category {
+	margin-bottom: 10px;
+	display: block;
+}
+
 body.blog, body.archive, body.search {
 	article {
 		height: 100vh;
@@ -25,41 +48,16 @@ body.blog, body.archive, body.search {
 			display: none;
 		}
 	}
-	.entry-category {
-	    position: absolute;
-	    top: -20px;
-	    -webkit-transform: translateY(-100%);
-	    -moz-transform: translateY(-100%);
-	    -ms-transform: translateY(-100%);
-	    -o-transform: translateY(-100%);
-	    transform: translateY(-100%);
-	}
 	.entry-date {
-		position: absolute;
-		top: -20px;
-		left: -30px;
-		white-space: nowrap;
-		-webkit-transform: translateY(-100%) translateX(-100%);
-		-moz-transform: translateY(-100%) translateX(-100%);
-		-ms-transform: translateY(-100%) translateX(-100%);
-		-o-transform: translateY(-100%) translateX(-100%);
-		transform: translateY(-100%) translateX(-100%);
+		display: block;
+    	margin-top: -10px;
 	}
-	// If the category is empty and there is a date, align the date to the title
-	.entry-category:empty + .entry-date {
-		top: 0;
-		transform: translateX(-100%);
-	}
-	// If there's no title, make our content align to the top
-	.entry-title:empty ~ .entry-content {
+	// If there's no title, properly space the category.
+	.entry-title:empty ~ .entry-date {
 		margin-top: 0;
-		p:first-of-type {
-			margin-top: 0;
-		}
 	}
-	.entry-date, .entry-category {
-		font-style: italic;
-		font-size: .9em;
+	.entry-content {
+		margin: 1.5em 0 0;
 	}
 	article .btn {
 		margin-top: 1.5em;
@@ -67,20 +65,8 @@ body.blog, body.archive, body.search {
 	.entry-content p:last-of-type {
 		margin-bottom: 0;
 	}
-}
-
-@media screen and (max-width: 1000px) {
-	body.blog, body.archive, body.search {
-		.entry-date {
-			top: -20px;
-			left: auto;
-			right: 0;
-		    -webkit-transform: translateY(-100%);
-		    -moz-transform: translateY(-100%);
-		    -ms-transform: translateY(-100%);
-		    -o-transform: translateY(-100%);
-		    transform: translateY(-100%);
-		}
+	.format-aside .entry-date {
+		margin-top: 0;
 	}
 }
 
@@ -122,39 +108,10 @@ body.blog, body.archive, body.search {
  * Single page title
  */
 body.single {
-	.entry-category {
-	    font-style: italic;
-	    font-size: .9em;
-	}
-	.entry-date {
-	    position: absolute;
-	    left: -30px;
-	    font-style: italic;
-	    font-size: .9em;
-	    -webkit-transform: translateX(-100%);
-	    -moz-transform: translateX(-100%);
-	    -ms-transform: translateX(-100%);
-	    -o-transform: translateX(-100%);
-	    transform: translateX(-100%);
-	}
 	article.hentry {
 		width: 80%;
 		max-width: 710px;
 		margin: 0 auto;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	body.single {
-		.entry-date {
-			left: auto;
-			right: 0;
-		    -webkit-transform: translateX(0%);
-		    -moz-transform: translateX(0%);
-		    -ms-transform: translateX(0%);
-		    -o-transform: translateX(0%);
-		    transform: translateX(0%);
-		}
 	}
 }
 

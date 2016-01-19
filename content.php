@@ -54,7 +54,7 @@ if ( ! empty( $imageAttributes ) ) {
 	?>
 	<style>
 	article.post-<?php the_ID(); ?> {
-        background: linear-gradient(45deg, rgba(41,51,56,0.7) 0%,rgba(41,51,56,0.4) 48%,rgba(41,51,56,0.14) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
+        background: linear-gradient(45deg, rgba(41,51,56,0.55) 0%,rgba(41,51,56,0.35) 48%,rgba(41,51,56,0) 100%), url( <?php echo esc_url( $imageAttributes[0] ) ?> );
 	}
 	</style>
 	<?php
@@ -62,8 +62,8 @@ if ( ! empty( $imageAttributes ) ) {
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="article-inner">
-		<h2 class="entry-title"><?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
 		<span class="entry-category"><?php regala_entry_category() ?></span>
+		<h2 class="entry-title"><?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?></h2>
 		<span class="entry-date"><?php regala_posted_on() ?></span>
 		<div class="entry-content">
 			<?php the_excerpt() ?>

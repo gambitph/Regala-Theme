@@ -128,9 +128,9 @@ if ( ! function_exists( 'regala_entry_category' ) ) :
 function regala_entry_category() {
 	// Hide category and tag text for pages.
 	// if ( 'post' == get_post_type() ) {
-		
+
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( ', ' );
+		$categories_list = get_the_category_list( ' ' );
 		if ( $categories_list ) {
 			printf( '<span class="cat-links">' . __( '%1$s', 'regala' ) . '</span>', $categories_list );
 		}

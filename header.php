@@ -103,10 +103,14 @@ if ( is_single() || is_page() ) {
 				<?php
 				if ( 'post' == get_post_type() ) {
 					?><span class="entry-category"><?php regala_entry_category() ?></span><?php
-					?><span class="entry-date"><?php regala_posted_on() ?></span><?php
 				}
 				?>
 				<h1 class="site-description"><?php the_title() ?></h1>
+				<?php
+				if ( 'post' == get_post_type() ) {
+					?><span class="entry-date"><?php regala_posted_on() ?></span><?php
+				}
+				?>
 	        </div>
 			<?php
 
