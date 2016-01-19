@@ -86,6 +86,9 @@ jQuery(document).ready(function($) {
 	}
 
 	function triggerScrollNearbyArticle() {
+		if ( $(window).width() <= 900 ) {
+			return;
+		}
 		if ( scrollTimer !== null && ! isAutoScroll ) {
 			$('body').stop();
 			clearTimeout( scrollTimer );
